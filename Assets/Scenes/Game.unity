@@ -788,7 +788,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0417\u043E\u043B\u043E\u0442\u043E: \n99999999999\n"
+  m_Text: "\u0417\u043E\u043B\u043E\u0442\u043E: \n1337\n"
 --- !u!222 &950532951
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1299,7 +1299,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0416\u0435\u043B\u0435\u0437\u043E: \n99999999999\n"
+  m_Text: "\u0416\u0435\u043B\u0435\u0437\u043E: \n228\n"
 --- !u!222 &1567289073
 CanvasRenderer:
   m_ObjectHideFlags: 0

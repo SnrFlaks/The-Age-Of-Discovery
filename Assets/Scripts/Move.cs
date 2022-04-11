@@ -8,13 +8,13 @@ public class Move : MonoBehaviour
     private Rigidbody2D _rb;
     private float _speed;
 
-   private void Start()
+    private void Start()
     {
         _speed = 1500f;
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    
+
     private void FixedUpdate()
     {
         Moving();
@@ -22,7 +22,7 @@ public class Move : MonoBehaviour
 
     private void Moving()
     {
-        _rb.velocity = new Vector2(Input.GetAxis("Horizontal") * _speed * Time.fixedDeltaTime,Input.GetAxis("Vertical") * _speed * Time.fixedDeltaTime);
+        _rb.velocity = new Vector2(Input.GetAxis("Horizontal") * _speed * Time.fixedDeltaTime,
+            Input.GetAxis("Vertical") * _speed * Time.fixedDeltaTime);
     }
-    
 }
