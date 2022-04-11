@@ -10,7 +10,7 @@ public class Move : MonoBehaviour
 
    private void Start()
     {
-        _speed = 500f;
+        _speed = 1500f;
         _rb = GetComponent<Rigidbody2D>();
     }
 
