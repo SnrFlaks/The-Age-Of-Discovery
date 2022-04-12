@@ -27,6 +27,14 @@ public class Zoom : MonoBehaviour
         {
             if(Input.GetAxis("Mouse ScrollWheel") *  sensivity > 0){virtualCamera.m_Lens.OrthographicSize -= Input.GetAxis("Mouse ScrollWheel") * sensivity;}
         }
+        else if (virtualCamera.m_Lens.OrthographicSize < 1)
+        {
+            virtualCamera.m_Lens.OrthographicSize = 1;
+        }
+        else if (virtualCamera.m_Lens.OrthographicSize > 10)
+        {
+            virtualCamera.m_Lens.OrthographicSize = 10;
+        }
         else{virtualCamera.m_Lens.OrthographicSize -= Input.GetAxis("Mouse ScrollWheel") * sensivity;}
 
     }
