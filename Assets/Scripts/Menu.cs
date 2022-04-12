@@ -1,21 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 public class Menu : MonoBehaviour
 {
     [SerializeField] public GameObject blur;
-
     public void Exit()
     {
-      Application.Quit();  
+        Application.Quit();
     }
     public void StartGame()
     {
         SceneManager.LoadScene(1);
     }
-
-    
 }
