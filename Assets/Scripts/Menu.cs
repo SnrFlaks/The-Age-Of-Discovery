@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] public GameObject blur;
+    
 
     public void Exit()
     {
