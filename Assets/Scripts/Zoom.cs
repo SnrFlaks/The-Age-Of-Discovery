@@ -13,7 +13,7 @@ public class Zoom : MonoBehaviour
 
     private void Start()
     {
-        sensivity = 5f;
+        sensivity = 10f;
     }
 
     void Update()
