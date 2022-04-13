@@ -12,9 +12,10 @@ using Slider = UnityEngine.UI.Slider;
 public class SettingsMenu : MonoBehaviour
 {
     [SerializeField] private Slider volumeSlider;
-    private AudioSource audio;
     [SerializeField] private Text label;
     [SerializeField] private GameObject insideSettings;
+    private AudioSource audio;
+    
   
     private void Start()
     {
