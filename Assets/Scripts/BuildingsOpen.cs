@@ -17,7 +17,7 @@ public class BuildingsOpen : MonoBehaviour
     void Update() {
         var point = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
         var cellP = buildingsInMap.WorldToCell(point);
-        Debug.Log(buildingsInMap.GetTile(cellP) + "\t" + buildings[0]);
+        //Debug.Log(buildingsInMap.GetTile(cellP) + "\t" + buildings[0]);
         if (Input.GetMouseButtonDown(0) && buildingsInMap.GetTile(cellP) == buildings[0])
         {
             buildMenu.SetActive(true);

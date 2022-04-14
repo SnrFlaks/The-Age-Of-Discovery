@@ -73,7 +73,7 @@
       "dependencies": {}
     },
     "com.unity.2d.tilemap.extras": {
-      "version": "file:D:/time/2d-extras-4eff73f468142907629f09b4a88bceb2f0148dc5",
+      "version": "file:F:/2d-extras-master",
       "depth": 0,
       "source": "local",
       "dependencies": {
