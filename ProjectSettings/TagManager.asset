@@ -44,3 +44,6 @@ TagManager:
   - name: UI
     uniqueID: 3168709527
     locked: 0
+  - name: Settings
+    uniqueID: 2481468183
+    locked: 0
