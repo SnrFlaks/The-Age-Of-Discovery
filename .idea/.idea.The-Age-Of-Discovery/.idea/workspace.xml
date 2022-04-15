@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/panelMenu.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/panelMenu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/panelStartMenu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/panelStartMenu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillAnimTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillAnimTile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,22 +29,24 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/BottomButHotBar.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ButtonGroupRectStatus.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Dildomatic/Assets/Scripts/Moldavia.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarVItems.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ConvSts.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarBut.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ButtonGroupRectStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/BottomButHotBar.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Menu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WallCreate.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FPSView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -55,6 +56,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -95,7 +97,9 @@
       <workItem from="1649840713443" duration="1216000" />
       <workItem from="1649871876264" duration="1065000" />
       <workItem from="1649920014257" duration="115000" />
-      <workItem from="1649920287479" duration="13201000" />
+      <workItem from="1649920287479" duration="14858000" />
+      <workItem from="1650011977951" duration="14427000" />
+      <workItem from="1650032890262" duration="1685000" />
     </task>
     <servers />
   </component>
