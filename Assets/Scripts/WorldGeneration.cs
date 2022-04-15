@@ -12,31 +12,39 @@ public class WorldGeneration : MonoBehaviour
 
     private float n, sid = 30f;
     private static  Vector2Int coord;
-   [SerializeField] private   Vector2Int coord2;
+    private float scale;
+
+    [SerializeField] private bool generation;
+    
+    [SerializeField] private   Vector2Int MapSize;
     void Start()
     {
-        coord = coord2;
+        coord = MapSize;
+        scale = coord.x / 20;
+        
         _ground = transform.GetChild(0).GetComponent<Tilemap>();
-        sid = Random.Range(0f, 10000000f);
-        
-        
-            
-        for (int i = -coord.x; i < coord.x; i++)
+        sid = Random.Range(0,99999);
+          if(generation){Generate();}
+    }
+
+    public void Generate()
+    {
+        for (int i = 0; i < coord.x; i++)
         {
-            for (int j = -coord.y; j < coord.y; j++)
+            for (int j = 0; j < coord.y; j++)
             {
-                n = Mathf.PerlinNoise(Convert.ToSingle(i ) + sid  , Convert.ToSingle(j) + sid );
+                n = Mathf.PerlinNoise(Convert.ToSingle(i + sid ) / MapSize.x * scale , Convert.ToSingle(j+ sid) / MapSize.y * scale   );
                 
-                Debug.Log(n);
-                if (n < 0.01)
+                
+                if (n < 0.125)
                 {
                     _ground.SetTile(new Vector3Int(i,j,0),tile[0]);
                 }
-                else if (n > 0.01 && n < 0.99)
+                else if (n > 0.125 && n < 0.875)
                 {
                     _ground.SetTile(new Vector3Int(i,j,0),tile[1]);
                 }
-                else if (n > 0.99)
+                else if (n > 0.875)
                 {
                     _ground.SetTile(new Vector3Int(i,j,0),tile[2]);
                 }
@@ -44,4 +52,5 @@ public class WorldGeneration : MonoBehaviour
         }
     }
 
+    
 }

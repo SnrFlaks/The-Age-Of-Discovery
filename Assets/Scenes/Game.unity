@@ -2177,7 +2177,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b2765c5023627274092541df315e040f, type: 2}
   - {fileID: 11400000, guid: 5c67e2b6ccef9b743afde87df942a95a, type: 2}
   - {fileID: 11400000, guid: b8423561ec5003242825a39fafcf2b10, type: 2}
-  coord2: {x: 1, y: 1}
+  generation: 0
+  MapSize: {x: 100, y: 100}
 --- !u!1 &907786311
 GameObject:
   m_ObjectHideFlags: 0
