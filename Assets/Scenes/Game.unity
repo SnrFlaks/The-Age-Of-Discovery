@@ -1276,7 +1276,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 14
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1421,6 +1421,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672242874}
   m_CullTransparentMesh: 1
+--- !u!1 &688718931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 688718933}
+  - component: {fileID: 688718932}
+  m_Layer: 0
+  m_Name: Item
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &688718932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688718931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b1aab09dcedc141873c775ee81ea90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingsIns: []
+  buildingsIconIns: []
+--- !u!4 &688718933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688718931}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.053701, y: 16.928368, z: 443.47092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &708326336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,10 +2186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60cf41da8e75b9f46a6ddcd791738923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapSizeIns: {x: 50, y: 50}
-  buildings:
-  - {fileID: 0}
-  - {fileID: 0}
+  _mapSize: {x: 500, y: 500}
 --- !u!114 &876926840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2158,8 +2200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingsInMap: {fileID: 2064323140}
-  buildings:
-  - {fileID: 0}
   buildMenu: {fileID: 286568434}
 --- !u!114 &876926841
 MonoBehaviour:
@@ -87834,26 +87874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c2f99b472046a4d82cfdf10566af88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotBarTile:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  hotBarSprite:
-  - {fileID: 254509965974115023, guid: 5b8fe52ec3d792848ad9bd5d0ed6df0f, type: 3}
-  - {fileID: 2868539044483428322, guid: a0242d439ac5cec4292042f37979ef69, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   emptySprite: {fileID: 21300000, guid: a59f8838ba9f97546bd84c4b29a2a975, type: 3}
 --- !u!1 &4204435293025274303
 GameObject:

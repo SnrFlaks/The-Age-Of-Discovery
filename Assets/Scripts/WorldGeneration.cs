@@ -25,7 +25,7 @@ public class WorldGeneration : MonoBehaviour
         sid = Random.Range(0,99999);
           if(generation){Generate();}
     }
-
+    
     private void Generate()
     {
         for (int i = 0; i < coord.x; i++)
