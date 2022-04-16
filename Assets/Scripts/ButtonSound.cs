@@ -11,12 +11,6 @@ public class ButtonSound : MonoBehaviour
         aS = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Sound()
     {
         
