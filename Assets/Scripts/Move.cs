@@ -7,11 +7,13 @@ public class Move : MonoBehaviour
 {
     private Rigidbody2D _rb;
     private float _speed;
+    
 
     private void Start()
     {
         _speed = 1500f;
         _rb = GetComponent<Rigidbody2D>();
+        transform.position = new Vector3(22.2f,11.6f,0f);
     }
 
 
