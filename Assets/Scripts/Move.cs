@@ -22,7 +22,7 @@ public class Move : MonoBehaviour
 
     private void Moving()
     {
-        _rb.velocity = new Vector2(Input.GetAxis("Horizontal") * _speed * Time.fixedDeltaTime * Zoom.cameraSize / 10f, 
-            Input.GetAxis("Vertical") * _speed * Time.fixedDeltaTime * Zoom.cameraSize /10f);
+        _rb.velocity = new Vector2(Input.GetAxis("Horizontal") * _speed * Time.fixedDeltaTime * Zoom.cameraSize / 7.5f, 
+            Input.GetAxis("Vertical") * _speed * Time.fixedDeltaTime * Zoom.cameraSize /7.5f);
     }
 }

@@ -36,15 +36,15 @@ public class WorldGeneration : MonoBehaviour
                 n = Mathf.PerlinNoise(Convert.ToSingle(i + sid ) / MapSize.x * scale , Convert.ToSingle(j+ sid) / MapSize.y * scale   );
                 
                 
-                if (n < 0.125)
+                if (n < 0.085)
                 {
                     _ground.SetTile(new Vector3Int(i,j,0),tile[0]);
                 }
-                else if (n > 0.125 && n < 0.875)
+                else if (n > 0.085 && n < 0.835)
                 {
                     _ground.SetTile(new Vector3Int(i,j,0),tile[1]);
                 }
-                else if (n > 0.875)
+                else if (n > 0.835)
                 {
                     _ground.SetTile(new Vector3Int(i,j,0),tile[2]);
                 }
