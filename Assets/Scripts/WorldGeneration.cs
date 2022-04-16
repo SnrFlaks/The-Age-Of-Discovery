@@ -11,23 +11,22 @@ public class WorldGeneration : MonoBehaviour
     [SerializeField] private TileBase[] tile;
 
     private float n, sid = 30f;
-    private static  Vector2Int coord;
+    private static Vector2Int coord;
     private float scale;
 
     [SerializeField] private bool generation;
     
-    [SerializeField] private   Vector2Int MapSize;
-    void Start()
+    [SerializeField] private Vector2Int MapSize;
+    private void Start()
     {
         coord = MapSize;
         scale = coord.x / 20;
-        
         _ground = transform.GetChild(0).GetComponent<Tilemap>();
         sid = Random.Range(0,99999);
           if(generation){Generate();}
     }
 
-    public void Generate()
+    private void Generate()
     {
         for (int i = 0; i < coord.x; i++)
         {
