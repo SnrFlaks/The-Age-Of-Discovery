@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: c83346d54927fe1449ec34b40b3c8bb2
+guid: 8435db34564e4ec4d85b11463c5773cf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4833243488255782315
-    second: statPanel_0
+      213: 8045682195970593874
+    second: itemCabel_0
   - first:
-      213: -3383443950110945107
-    second: statPanel_1
+      213: 1280288176310889698
+    second: itemCabel_1
   - first:
-      213: 8721441662872022527
-    second: statPanel_2
+      213: 4088423616083458295
+    second: itemCabel_2
   - first:
-      213: -7458333720753569211
-    second: statPanel_3
+      213: 3538075610242479190
+    second: itemCabel_3
   - first:
-      213: 2917244085618128536
-    second: statPanel_4
+      213: -3630200767048820151
+    second: itemCabel_4
   - first:
-      213: -3724081969560483010
-    second: statPanel_5
-  - first:
-      213: 8480402746081694136
-    second: statPanel_6
+      213: -7452880887433451067
+    second: itemCabel_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -62,12 +59,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,97 +109,97 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: statPanel_0
+      name: itemCabel_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 118
-        height: 190
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bada47e4851231340800000000000000
-      internalID: 4833243488255782315
+      spriteID: 2541382545108af60800000000000000
+      internalID: 8045682195970593874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statPanel_1
+      name: itemCabel_1
       rect:
         serializedVersion: 2
-        x: 119
+        x: 16
         y: 0
-        width: 118
-        height: 190
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da0513457a79b01d0800000000000000
-      internalID: -3383443950110945107
+      spriteID: 2eca427205f74c110800000000000000
+      internalID: 1280288176310889698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statPanel_2
+      name: itemCabel_2
       rect:
         serializedVersion: 2
-        x: 238
+        x: 32
         y: 0
-        width: 118
-        height: 190
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffd67c4fbf8c80970800000000000000
-      internalID: 8721441662872022527
+      spriteID: 7f8f8ff0e9ffcb830800000000000000
+      internalID: 4088423616083458295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statPanel_3
+      name: itemCabel_3
       rect:
         serializedVersion: 2
-        x: 357
+        x: 48
         y: 0
-        width: 118
-        height: 190
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5428a263ffcae7890800000000000000
-      internalID: -7458333720753569211
+      spriteID: 654f9f0a505c91130800000000000000
+      internalID: 3538075610242479190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statPanel_4
+      name: itemCabel_4
       rect:
         serializedVersion: 2
-        x: 476
+        x: 64
         y: 0
-        width: 118
-        height: 190
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 896b0662a022c7820800000000000000
-      internalID: 2917244085618128536
+      spriteID: 94a54b0d2afee9dc0800000000000000
+      internalID: -3630200767048820151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statPanel_5
+      name: itemCabel_5
       rect:
         serializedVersion: 2
-        x: 595
+        x: 80
         y: 0
-        width: 118
-        height: 190
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,29 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3b09e10e27615cc0800000000000000
-      internalID: -3724081969560483010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statPanel_6
-      rect:
-        serializedVersion: 2
-        x: 714
-        y: 0
-        width: 118
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b15270dd5170b570800000000000000
-      internalID: 8480402746081694136
+      spriteID: 5c92b37e15c029890800000000000000
+      internalID: -7452880887433451067
       vertices: []
       indices: 
       edges: []

@@ -2,17 +2,190 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StatPanelButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StatPanelButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/buildMenuButton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/buildMenuButton.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/statPanelButton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/statPanelButton.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldOre.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/goldOre.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ironOre.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ironOre.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/stone.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/stone.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_10.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_10.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_11.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_11.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_12.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_12.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_13.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_13.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_14.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_14.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_15.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_15.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_17.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_17.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_18.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_18.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_19.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_19.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_20.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_20.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_21.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_21.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_22.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_22.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_23.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_23.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_24.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_24.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_25.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_25.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_26.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_26.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_6.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_6.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_8.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_8.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_9.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldOre_9.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_10.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_10.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_11.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_11.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_12.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_12.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_13.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_13.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_14.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_14.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_15.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_15.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_17.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_17.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_18.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_18.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_19.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_19.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_20.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_20.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_21.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_21.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_22.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_22.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_23.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_23.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_24.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_24.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_25.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_25.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_26.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_26.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_6.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_6.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_8.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_8.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_9.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironOre_9.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_6.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_6.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_8.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stone_8.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_10.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_10.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_11.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_11.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_12.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_12.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_13.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_13.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_14.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_14.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_15.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_15.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_17.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_17.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_6.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_6.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_8.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_8.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_9.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wall_9.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buildMenu.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buildMenu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldRandomTile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldRandomTile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ironRandomTile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ironRandomTile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/statPanel.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/statPanel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/statPanel.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/statPanel.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/stoneRandomTile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/stoneRandomTile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +218,6 @@
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarVItems.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ConvSts.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/The-Age-Of-Discovery/Assets/Scripts/Buildings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarBut.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -57,6 +229,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StatPanelButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
     </changedPaths>
@@ -112,7 +286,9 @@
       <workItem from="1649920287479" duration="14858000" />
       <workItem from="1650011977951" duration="14427000" />
       <workItem from="1650032890262" duration="2874000" />
-      <workItem from="1650107301479" duration="9255000" />
+      <workItem from="1650107301479" duration="19087000" />
+      <workItem from="1650198390033" duration="1190000" />
+      <workItem from="1650199944565" duration="1190000" />
     </task>
     <servers />
   </component>

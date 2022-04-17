@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: c83346d54927fe1449ec34b40b3c8bb2
+guid: 73cee5cb057bb8c4983765605cc23259
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4833243488255782315
-    second: statPanel_0
+      213: -1414793542296433471
+    second: hub_0
   - first:
-      213: -3383443950110945107
-    second: statPanel_1
+      213: -860973507780716577
+    second: hub_1
   - first:
-      213: 8721441662872022527
-    second: statPanel_2
+      213: -5637529569844685813
+    second: hub_2
   - first:
-      213: -7458333720753569211
-    second: statPanel_3
-  - first:
-      213: 2917244085618128536
-    second: statPanel_4
-  - first:
-      213: -3724081969560483010
-    second: statPanel_5
-  - first:
-      213: 8480402746081694136
-    second: statPanel_6
+      213: 749175621696607451
+    second: hub_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -62,12 +53,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: statPanel_0
+      name: hub_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 118
-        height: 190
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bada47e4851231340800000000000000
-      internalID: 4833243488255782315
+      spriteID: 1cc87e8e4c4ad5ce0800000000000000
+      internalID: -1414793542296433471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statPanel_1
+      name: hub_1
       rect:
         serializedVersion: 2
-        x: 119
+        x: 17
         y: 0
-        width: 118
-        height: 190
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da0513457a79b01d0800000000000000
-      internalID: -3383443950110945107
+      spriteID: fd755b308253d04f0800000000000000
+      internalID: -860973507780716577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statPanel_2
+      name: hub_2
       rect:
         serializedVersion: 2
-        x: 238
+        x: 34
         y: 0
-        width: 118
-        height: 190
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffd67c4fbf8c80970800000000000000
-      internalID: 8721441662872022527
+      spriteID: b0495a2a9b873c1b0800000000000000
+      internalID: -5637529569844685813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statPanel_3
+      name: hub_3
       rect:
         serializedVersion: 2
-        x: 357
+        x: 51
         y: 0
-        width: 118
-        height: 190
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,71 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5428a263ffcae7890800000000000000
-      internalID: -7458333720753569211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statPanel_4
-      rect:
-        serializedVersion: 2
-        x: 476
-        y: 0
-        width: 118
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 896b0662a022c7820800000000000000
-      internalID: 2917244085618128536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statPanel_5
-      rect:
-        serializedVersion: 2
-        x: 595
-        y: 0
-        width: 118
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3b09e10e27615cc0800000000000000
-      internalID: -3724081969560483010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statPanel_6
-      rect:
-        serializedVersion: 2
-        x: 714
-        y: 0
-        width: 118
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b15270dd5170b570800000000000000
-      internalID: 8480402746081694136
+      spriteID: bd4db95324b956a00800000000000000
+      internalID: 749175621696607451
       vertices: []
       indices: 
       edges: []

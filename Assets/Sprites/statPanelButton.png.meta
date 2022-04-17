@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: c83346d54927fe1449ec34b40b3c8bb2
+guid: 5faa0a2761a0e8b4c931154c0de45fe6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4833243488255782315
-    second: statPanel_0
+      213: -732308359251601898
+    second: statPanelButton_0
   - first:
-      213: -3383443950110945107
-    second: statPanel_1
+      213: 2088156592268972970
+    second: statPanelButton_1
   - first:
-      213: 8721441662872022527
-    second: statPanel_2
+      213: 5824138104615287918
+    second: statPanelButton_2
   - first:
-      213: -7458333720753569211
-    second: statPanel_3
-  - first:
-      213: 2917244085618128536
-    second: statPanel_4
-  - first:
-      213: -3724081969560483010
-    second: statPanel_5
-  - first:
-      213: 8480402746081694136
-    second: statPanel_6
+      213: -2134423969925714981
+    second: statPanelButton_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -62,7 +53,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -86,7 +77,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -98,7 +89,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -112,13 +103,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: statPanel_0
+      name: statPanelButton_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61652cc5d6156d5f0800000000000000
+      internalID: -732308359251601898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statPanelButton_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 19
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3159d6b5f9afc10800000000000000
+      internalID: 2088156592268972970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statPanelButton_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 118
-        height: 190
+        width: 17
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bada47e4851231340800000000000000
-      internalID: 4833243488255782315
+      spriteID: e6c3960afbe73d050800000000000000
+      internalID: 5824138104615287918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: statPanel_1
+      name: statPanelButton_3
       rect:
         serializedVersion: 2
-        x: 119
+        x: 18
         y: 0
-        width: 118
-        height: 190
+        width: 17
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,113 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da0513457a79b01d0800000000000000
-      internalID: -3383443950110945107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statPanel_2
-      rect:
-        serializedVersion: 2
-        x: 238
-        y: 0
-        width: 118
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffd67c4fbf8c80970800000000000000
-      internalID: 8721441662872022527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statPanel_3
-      rect:
-        serializedVersion: 2
-        x: 357
-        y: 0
-        width: 118
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5428a263ffcae7890800000000000000
-      internalID: -7458333720753569211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statPanel_4
-      rect:
-        serializedVersion: 2
-        x: 476
-        y: 0
-        width: 118
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 896b0662a022c7820800000000000000
-      internalID: 2917244085618128536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statPanel_5
-      rect:
-        serializedVersion: 2
-        x: 595
-        y: 0
-        width: 118
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3b09e10e27615cc0800000000000000
-      internalID: -3724081969560483010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: statPanel_6
-      rect:
-        serializedVersion: 2
-        x: 714
-        y: 0
-        width: 118
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b15270dd5170b570800000000000000
-      internalID: 8480402746081694136
+      spriteID: bdbaf7045b00162e0800000000000000
+      internalID: -2134423969925714981
       vertices: []
       indices: 
       edges: []
