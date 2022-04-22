@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: drillCopperTile
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 5040775952017523463, guid: 3819c2f3bdadc3e44911dc57a7bb0294, type: 3}
+  - {fileID: 5843816927793482586, guid: 3819c2f3bdadc3e44911dc57a7bb0294, type: 3}
+  - {fileID: -2974039419715889845, guid: 3819c2f3bdadc3e44911dc57a7bb0294, type: 3}
+  - {fileID: -2230867088676923102, guid: 3819c2f3bdadc3e44911dc57a7bb0294, type: 3}
+  - {fileID: 8763519911860340957, guid: 3819c2f3bdadc3e44911dc57a7bb0294, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 0
+  m_TileColliderType: 0

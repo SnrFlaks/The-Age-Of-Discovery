@@ -1,40 +1,25 @@
 fileFormatVersion: 2
-guid: 2ca9a65157028134cb945fddd5f1a802
+guid: e25d3f5d579ec66498ad4a7423c493b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5069663276041046950
-    second: goldCable_0
+      213: -3307131868699864848
+    second: tinCable_0
   - first:
-      213: -6985006835630584322
-    second: goldCable_1
+      213: -6402172148503761370
+    second: tinCable_1
   - first:
-      213: -2329329626147241603
-    second: goldCable_2
+      213: -895048437526543086
+    second: tinCable_2
   - first:
-      213: 7594502980016467187
-    second: goldCable_3
+      213: -5106193954827247519
+    second: tinCable_3
   - first:
-      213: -5701185325800923190
-    second: goldCable_4
+      213: -4713013779261549706
+    second: tinCable_4
   - first:
-      213: -4288614042559301961
-    second: goldCable_5
-  - first:
-      213: 5070709061807124230
-    second: goldCable_7
-  - first:
-      213: -8093293719904137879
-    second: goldCable_8
-  - first:
-      213: -4144671868132970047
-    second: goldCable_9
-  - first:
-      213: -6469248056435900564
-    second: goldCable_10
-  - first:
-      213: 7565643735650053310
-    second: goldCable_11
+      213: 2862639260795958505
+    second: tinCable_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,91 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: goldCable_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ab054ba3ef0b5640800000000000000
-      internalID: 5069663276041046950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goldCable_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efd40988a45401f90800000000000000
-      internalID: -6985006835630584322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goldCable_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7143bcdb0f8cafd0800000000000000
-      internalID: -2329329626147241603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goldCable_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fce6811938156960800000000000000
-      internalID: 7594502980016467187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goldCable_4
+      name: tinCable_0
       rect:
         serializedVersion: 2
         x: 0
@@ -222,14 +123,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acf57f0072251e0b0800000000000000
-      internalID: -5701185325800923190
+      spriteID: 0f055cc5615ba12d0800000000000000
+      internalID: -3307131868699864848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goldCable_5
+      name: tinCable_1
       rect:
         serializedVersion: 2
         x: 16
@@ -243,56 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b630861048cb74c0800000000000000
-      internalID: -4288614042559301961
+      spriteID: 62ea881e95ae627a0800000000000000
+      internalID: -6402172148503761370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goldCable_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41813a4a13cdffd80800000000000000
-      internalID: -8214605089526835180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goldCable_7
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60f2e54a607ce5640800000000000000
-      internalID: 5070709061807124230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goldCable_8
+      name: tinCable_2
       rect:
         serializedVersion: 2
         x: 32
@@ -306,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96dc63aed38deaf80800000000000000
-      internalID: -8093293719904137879
+      spriteID: 215467030362493f0800000000000000
+      internalID: -895048437526543086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goldCable_9
+      name: tinCable_3
       rect:
         serializedVersion: 2
         x: 48
@@ -327,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c1316535ea2b76c0800000000000000
-      internalID: -4144671868132970047
+      spriteID: 1606640e6a72329b0800000000000000
+      internalID: -5106193954827247519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goldCable_10
+      name: tinCable_4
       rect:
         serializedVersion: 2
         x: 64
@@ -348,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6f70401b2d9836a0800000000000000
-      internalID: -6469248056435900564
+      spriteID: 673189930f2089eb0800000000000000
+      internalID: -4713013779261549706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goldCable_11
+      name: tinCable_5
       rect:
         serializedVersion: 2
         x: 80
@@ -369,8 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebca490a4e09ef860800000000000000
-      internalID: 7565643735650053310
+      spriteID: 9e474d3ad332ab720800000000000000
+      internalID: 2862639260795958505
       vertices: []
       indices: 
       edges: []
