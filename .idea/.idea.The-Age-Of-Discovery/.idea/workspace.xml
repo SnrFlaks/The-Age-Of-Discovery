@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperOre.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/copperOre.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drillIron.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/drillIron.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinOre.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/tinOre.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +110,7 @@
       <workItem from="1650199944565" duration="2411000" />
       <workItem from="1650388444928" duration="3175000" />
       <workItem from="1650643216925" duration="82000" />
-      <workItem from="1650643392378" duration="4625000" />
+      <workItem from="1650643392378" duration="5451000" />
     </task>
     <servers />
   </component>

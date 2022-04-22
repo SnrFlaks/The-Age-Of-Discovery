@@ -46,12 +46,20 @@ public class Buildings : MonoBehaviour
             if (HotBar.HotBarSelect[i])
             {
                 TileBase changedTile = ItemList.buildings[Array.IndexOf(ItemList.buildingsIcon, hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite)];
-                if (changedTile == _buildings[0] && _objectInGround.GetTile(cellPosition) == null && (_ground.GetTile(cellPosition).name == "ironRandomTile" || _ground.GetTile(cellPosition).name == "goldRandomTile"))
+                if (changedTile == _buildings[0] && _objectInGround.GetTile(cellPosition) == null)
                 {
-                    _objectInGround.SetTile(cellPosition, _buildings[0]);
-                    Debug.Log(cellPosition);
-                    _cellName[cellPosition.x][cellPosition.y] = _buildings[0].name;
-                    _drillCord[cellPosition.x][cellPosition.y] = new Vector2Int(cellPosition.x, cellPosition.y);
+                    if (_ground.GetTile(cellPosition).name == "ironRandomTile")
+                    {
+                        _objectInGround.SetTile(cellPosition, _buildings[0]);
+                        _cellName[cellPosition.x][cellPosition.y] = _buildings[0].name;
+                        _drillCord[cellPosition.x][cellPosition.y] = new Vector2Int(cellPosition.x, cellPosition.y);
+                    }
+                    else if (_ground.GetTile(cellPosition).name == "goldRandomTile")
+                    {
+                        _objectInGround.SetTile(cellPosition, _buildings[2]);
+                        _cellName[cellPosition.x][cellPosition.y] = _buildings[2].name;
+                        _drillCord[cellPosition.x][cellPosition.y] = new Vector2Int(cellPosition.x, cellPosition.y);
+                    }
                 }
                 if (changedTile == _buildings[1] && _objectInGround.GetTile(cellPosition) == null)
                 {
