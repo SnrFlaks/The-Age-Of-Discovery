@@ -17,6 +17,21 @@ TextureImporter:
   - first:
       213: 8968002865663794610
     second: drill_4
+  - first:
+      213: 4288379778787383691
+    second: drillIron_0
+  - first:
+      213: -3665337645955764392
+    second: drillIron_1
+  - first:
+      213: 1542520928009580086
+    second: drillIron_2
+  - first:
+      213: 6280827510253011700
+    second: drillIron_3
+  - first:
+      213: -2284509577499832423
+    second: drillIron_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: drill_0
+      name: drillIron_0
       rect:
         serializedVersion: 2
         x: 0
@@ -120,14 +135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc21fa13773388300800000000000000
-      internalID: 254509965974115023
+      spriteID: b89179020b2638b30800000000000000
+      internalID: 4288379778787383691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drill_1
+      name: drillIron_1
       rect:
         serializedVersion: 2
         x: 17
@@ -141,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3784e1b64746223a0800000000000000
-      internalID: -6691675645143005069
+      spriteID: 85fa0fea4da122dc0800000000000000
+      internalID: -3665337645955764392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drill_2
+      name: drillIron_2
       rect:
         serializedVersion: 2
         x: 34
@@ -162,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8aec088049916c7b0800000000000000
-      internalID: -5204444195791515992
+      spriteID: 63eed948c92286510800000000000000
+      internalID: 1542520928009580086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drill_3
+      name: drillIron_3
       rect:
         serializedVersion: 2
         x: 51
@@ -183,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8efef60622f01f6f0800000000000000
-      internalID: -652723830670757912
+      spriteID: 4f2c124e75bf92750800000000000000
+      internalID: 6280827510253011700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drill_4
+      name: drillIron_4
       rect:
         serializedVersion: 2
         x: 68
@@ -204,8 +219,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bd5390871fb47c70800000000000000
-      internalID: 8968002865663794610
+      spriteID: 99f0523a4aacb40e0800000000000000
+      internalID: -2284509577499832423
       vertices: []
       indices: 
       edges: []
