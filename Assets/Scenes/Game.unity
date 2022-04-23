@@ -929,7 +929,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -664.74, y: 381.53}
+  m_AnchoredPosition: {x: -664.7399, y: 381.53}
   m_SizeDelta: {x: -1550.51, y: -763.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286568436
@@ -2527,6 +2527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mapSize: {x: 500, y: 500}
   hotBar: {fileID: 4204435293025274303}
+  Ore: []
 --- !u!114 &876926840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2554,9 +2555,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile:
-  - {fileID: 11400000, guid: b2765c5023627274092541df315e040f, type: 2}
   - {fileID: 11400000, guid: 5c67e2b6ccef9b743afde87df942a95a, type: 2}
+  - {fileID: 11400000, guid: 3877719b860835d4babc374569f13a69, type: 2}
   - {fileID: 11400000, guid: b8423561ec5003242825a39fafcf2b10, type: 2}
+  - {fileID: 11400000, guid: 197d532f7af82074aa8aefc9d7107780, type: 2}
+  - {fileID: 11400000, guid: b2765c5023627274092541df315e040f, type: 2}
   generation: 1
   MapSize: {x: 500, y: 500}
 --- !u!1 &907786311

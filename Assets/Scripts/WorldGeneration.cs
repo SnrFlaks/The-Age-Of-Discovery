@@ -17,48 +17,48 @@ public class WorldGeneration : MonoBehaviour
     [SerializeField] private bool generation;
     [SerializeField] private Vector2Int MapSize;
     private float time;
-     
+
     private void Start()
     {
         coord = MapSize;
-        scale = coord.x / 20;
+        scale = 20f;
         _ground = transform.GetChild(0).GetComponent<Tilemap>();
-        sid = Random.Range(0,99999);
-        
-        if(generation){Generate();}
 
-        Debug.Log(time);
+
+        if (generation)
+        {
+            Generate(1,0.09f,2,0.88f,true);  
+            Generate(3,0.09f,4,0.88f,false);  
+        }
     }
-    
-    private void Generate()
+
+    private void Generate(int firstOre,float first,int secondOre,float second,bool stone)
     {
+        sid = Random.Range(0, 99999);
         for (int i = 0; i < coord.x; i++)
         {
             for (int j = 0; j < coord.y; j++)
             {
-                n = Mathf.PerlinNoise(Convert.ToSingle(i + sid ) / MapSize.x * scale , Convert.ToSingle(j+ sid) / MapSize.y * scale   );
-               
-                
-                if (n < 0.085)
+                n = Mathf.PerlinNoise(Convert.ToSingle(i + sid) / MapSize.x * scale,
+                    Convert.ToSingle(j + sid) / MapSize.y * scale);
+
+                if (n < first)
+                {
+                    _ground.SetTile(new Vector3Int(i,j,0),tile[firstOre]);
+                }
+                else if (n >first  && n < second && stone)
                 {
                     _ground.SetTile(new Vector3Int(i,j,0),tile[0]);
                 }
-                else if (n > 0.085 && n < 0.835)
+                else if (n > second)
                 {
-                    _ground.SetTile(new Vector3Int(i,j,0),tile[1]);
+                    _ground.SetTile(new Vector3Int(i,j,0),tile[secondOre]);
                 }
-                else if (n > 0.835)
-                {
-                    _ground.SetTile(new Vector3Int(i,j,0),tile[2]);
-                }
-                
+              
             }
-
-            
-            
         }
-     
     }
 
-    
+  
+   
 }
