@@ -377,7 +377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &98237291
 RectTransform:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -276.19995, y: 130.31}
+  m_AnchoredPosition: {x: -276.1999, y: 130.31}
   m_SizeDelta: {x: -773.43, y: -260.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &98237292
@@ -775,7 +775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -276.19995, y: 130.3125}
+  m_AnchoredPosition: {x: -276.1999, y: 130.3125}
   m_SizeDelta: {x: -773.42993, y: -260.625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206469232
@@ -1194,7 +1194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -664.74, y: 381.53}
+  m_AnchoredPosition: {x: -664.7399, y: 381.53}
   m_SizeDelta: {x: -1550.51, y: -763.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286568436
@@ -2617,7 +2617,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 721055490}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 98237290}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &721055490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4557,7 +4569,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1064183089}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 206469230}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1064183089
 MonoBehaviour:
   m_ObjectHideFlags: 0
