@@ -4,20 +4,7 @@
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Exit.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Exit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settingst.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Settingst.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Start.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Start.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillIronTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillIronTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/furnaceTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/furnaceTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buildMenuButton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/buildMenuButton.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/copperIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperOre.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/copperOre.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/goldIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldOre.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/goldOre.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/tinIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinOre.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/tinOre.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +38,7 @@
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarVItems.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ConvSts.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarBut.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -66,6 +54,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -129,7 +118,8 @@
       <workItem from="1650726726471" duration="1783000" />
       <workItem from="1650789702795" duration="1708000" />
       <workItem from="1650802821692" duration="2066000" />
-      <workItem from="1650807821842" duration="4267000" />
+      <workItem from="1650807821842" duration="9448000" />
+      <workItem from="1650894568345" duration="11824000" />
     </task>
     <servers />
   </component>
