@@ -16,10 +16,10 @@ public class Buildings : MonoBehaviour
     private float _tinDrillCount = 0;
     private float _copperDrillCount = 0;
     
-    private float _tin = 0;
-    private float _iron = 0;
-    private float _copper = 0;
-    private float _gold = 0;
+    public static float _tin = 0;
+    public static float _iron = 0;
+    public static float _copper = 0;
+    public static float _gold = 0;
     
     private int _tinFurnaceCount = 0;
     private int _ironFurnaceCount = 0;
@@ -97,38 +97,19 @@ public class Buildings : MonoBehaviour
     {
         while (true)
         {
-            _tin += 2 * _tinDrillCount;
-            Ore[0].text = "Олово: \n" + _tin;
+            _tin += 8* _tinDrillCount;
+            Ore[0].text = "Олово: \n" + Mathf.Round(_tin);
 
-            _iron += _ironDrillCount;
-            Ore[1].text = "Железо: \n" + _iron;
+            _iron += 4*_ironDrillCount;
+            Ore[1].text = "Железо: \n" + Mathf.Round(_iron);
 
-            _copper += 0.5f * _copperDrillCount;
-            Ore[2].text = "Медь: \n" + _copper;
+            _copper += 2f * _copperDrillCount;
+            Ore[2].text = "Медь: \n" + Mathf.Round(_copper);
 
-            _gold += 0.25f * _goldDrillCount;
-            Ore[3].text = "Золото: \n" + _gold;
+            _gold += 1f * _goldDrillCount;
+            Ore[3].text = "Золото: \n" + Mathf.Round(_gold);
 
-            if (_tin > _tinFurnaceCount && _tinFurnaceStatus) {
-                _tin -= _tinFurnaceCount;
-                _tinIngot += _tinFurnaceCount;
-                Ingot[0].text = "Оловяный слиток: \n" + _tinIngot;
-            }
-            else if (_iron > _ironFurnaceCount && _ironFurnaceStatus) {
-                _iron -= _ironFurnaceCount;
-                _ironIngot += _ironFurnaceCount;
-                Ingot[1].text = "Железный слиток: \n" + _ironIngot;
-            }
-            else if (_copper > _copperFurnaceCount && _copperFurnaceStatus) {
-                _copper -= _copperFurnaceCount;
-                _copperIngot += _copperFurnaceCount;
-                Ingot[2].text = "Медный слиток: \n" + _copperIngot;
-            }
-            else if (_gold > _goldFurnaceCount && _goldFurnaceStatus) {
-                _gold -= _goldFurnaceCount;
-                _goldIngot += _goldFurnaceCount;
-                Ingot[3].text = "Золотой слиток: \n" + _goldIngot;
-            }
+         
             yield return new WaitForSeconds(1);
         }
     }
