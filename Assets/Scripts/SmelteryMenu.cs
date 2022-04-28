@@ -14,10 +14,10 @@ public class SmelteryMenu : MonoBehaviour
     void Update() => finalNumber.text = "Remelting: \n" + Mathf.Round(_slider.value);
     public void NumberOfOre(int ore)
     {
-        if (ore == 0) _slider.maxValue = (Buildings._tinDrillCount >= Buildings._furnaceCount) ? Buildings._furnaceCount : Mathf.Round(Buildings._tinDrillCount) + 0.0000000001f;
-        else if (ore == 1) _slider.maxValue = (Buildings._ironDrillCount >= Buildings._furnaceCount) ? Buildings._furnaceCount : Mathf.Round(Buildings._ironDrillCount) + 0.0000000001f;
-        else if (ore == 2) _slider.maxValue = (Buildings._copperDrillCount >= Buildings._furnaceCount) ? Buildings._furnaceCount : Mathf.Round(Buildings._copperDrillCount) + 0.0000000001f;
-        else if (ore == 3) _slider.maxValue = (Buildings._goldDrillCount >= Buildings._furnaceCount) ? Buildings._furnaceCount : Mathf.Round(Buildings._goldDrillCount) + 0.0000000001f;
+        if (ore == 0) _slider.maxValue = Buildings._tinDrillCount >= Buildings._furnaceCount ? Buildings._furnaceCount  + 0.0000000001f : Mathf.Round(Buildings._tinDrillCount) + 0.0000000001f;
+        else if (ore == 1) _slider.maxValue = Buildings._ironDrillCount >= Buildings._furnaceCount ? Buildings._furnaceCount  + 0.0000000001f : Mathf.Round(Buildings._ironDrillCount) + 0.0000000001f;
+        else if (ore == 2) _slider.maxValue = Buildings._copperDrillCount >= Buildings._furnaceCount ? Buildings._furnaceCount  + 0.0000000001f : Mathf.Round(Buildings._copperDrillCount) + 0.0000000001f;
+        else if (ore == 3) _slider.maxValue = Buildings._goldDrillCount >= Buildings._furnaceCount ? Buildings._furnaceCount  + 0.0000000001f : Mathf.Round(Buildings._goldDrillCount) + 0.0000000001f;
     }
     public void Remelt(int ore)
     {
