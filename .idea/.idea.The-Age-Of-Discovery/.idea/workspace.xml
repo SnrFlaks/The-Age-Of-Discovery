@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/water2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/water2.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/waterTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/waterTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/enemy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/enemy.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/stone.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/stone.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/water.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/water.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +121,7 @@
       <workItem from="1650997247626" duration="101000" />
       <workItem from="1651006459176" duration="469000" />
       <workItem from="1651165860940" duration="438000" />
-      <workItem from="1651244729202" duration="3994000" />
+      <workItem from="1651244729202" duration="4447000" />
     </task>
     <servers />
   </component>
