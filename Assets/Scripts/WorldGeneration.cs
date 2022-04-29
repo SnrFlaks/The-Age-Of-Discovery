@@ -21,19 +21,20 @@ public class WorldGeneration : MonoBehaviour
     private void Start()
     {
         coord = MapSize;
-        scale = 20f;
         _ground = transform.GetChild(0).GetComponent<Tilemap>();
 
 
         if (generation)
         {
-            Generate(1,0.09f,2,0.88f,true);  
-            Generate(3,0.09f,4,0.88f,false);  
+            Generate(1,0.09f,2,0.88f,true,20);  
+            Generate(3,0.09f,4,0.88f,false,20);  
+            Generate(5,0.2f,5,2f,false,13);  
         }
     }
 
-    private void Generate(int firstOre,float first,int secondOre,float second,bool stone)
+    private void Generate(int firstOre,float first,int secondOre,float second,bool stone,float scale)
     {
+        
         sid = Random.Range(0, 99999);
         for (int i = 0; i < coord.x; i++)
         {
@@ -41,6 +42,7 @@ public class WorldGeneration : MonoBehaviour
             {
                 n = Mathf.PerlinNoise(Convert.ToSingle(i + sid) / MapSize.x * scale,
                     Convert.ToSingle(j + sid) / MapSize.y * scale);
+               
 
                 if (n < first)
                 {
