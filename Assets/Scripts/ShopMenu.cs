@@ -11,17 +11,19 @@ public class ShopMenu : MonoBehaviour
     private Slider _slider;
     private Text _text;
     private Text _btext;
-    public Text tokens;
-    public static int intTokens = 2000;
+    public  Text ttokens;
+    public static Text tokens;
+    
+    public static int intTokens = 99999;
 
     void Start()
     {
         _slider = transform.GetChild(0).GetComponent<Slider>();
         _text = transform.GetChild(1).GetComponent<Text>();
         _btext = transform.GetChild(2).GetChild(0).GetComponent<Text>();
+        tokens = ttokens;
+        
     }
-
-    private void Update() => tokens.text = intTokens.ToString();
 
     public void AmountOfOre(float ore)
     {

@@ -16,7 +16,6 @@ public class WorldGeneration : MonoBehaviour
 
     [SerializeField] private bool generation;
     [SerializeField] private Vector2Int MapSize;
-    private float time;
 
     private void Start()
     {
@@ -30,6 +29,7 @@ public class WorldGeneration : MonoBehaviour
             Generate(3,0.09f,4,0.88f,false,20);  
             Generate(5,0.2f,5,2f,false,13);  
         }
+        
     }
 
     private void Generate(int firstOre,float first,int secondOre,float second,bool stone,float scale)
@@ -60,6 +60,8 @@ public class WorldGeneration : MonoBehaviour
             }
         }
     }
+
+ 
 
   
    

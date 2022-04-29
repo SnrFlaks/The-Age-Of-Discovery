@@ -32,18 +32,23 @@ public class Buildings : MonoBehaviour
     private Tilemap _ground;
     private Tilemap _objectInGround;
     private TileBase[] _buildings;
-
+    
+    public  Text ttokens;
     private void Start()
     {
-        ShopMenu.intTokens = PlayerPrefs.GetInt("tokens");
+        //ShopMenu.intTokens = PlayerPrefs.GetInt("tokens");
         _buildings = ItemList.buildings;
         _ground = transform.GetChild(0).GetComponent<Tilemap>();
         _objectInGround = transform.GetChild(1).GetComponent<Tilemap>();
         StartCoroutine(OncePerSecond());
+        ShopMenu.tokens = ttokens;
+        ShopMenu.tokens.text ="Tokens: \n" + ShopMenu.intTokens;
     }
 
     private void Update()
     {
+        
+        
         var point = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
         var cellPosition = _ground.WorldToCell(point);
         Ore[0].text = "Tin: \n" + Mathf.Round(_tin);
@@ -54,7 +59,7 @@ public class Buildings : MonoBehaviour
         Ingot[1].text = "Iron ingot: \n" + _ironIngot;
         Ingot[2].text = "Copper ingot: \n" + _copperIngot;
         Ingot[3].text = "Gold ingot: \n" + _goldIngot;
-        if (Input.GetMouseButton(0) && HotBar.CreateLock == false && cellPosition.x >= 0 && cellPosition.y >= 0)
+        if (Input.GetMouseButton(0) && HotBar.CreateLock == false && Hub.createLockHub == false && cellPosition.x >= 0 && cellPosition.y >= 0)
         {
             for (var i = 0; i < HotBar.HotBarSelect.Length; i++)
             {
@@ -68,7 +73,7 @@ public class Buildings : MonoBehaviour
                             {
                                 _objectInGround.SetTile(cellPosition, _buildings[0]);
                                 ShopMenu.intTokens -= 2500;
-                                PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                //PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 _ironDrillCount++;
                             }
                             else Error("You don't have enough tokens");
@@ -79,7 +84,7 @@ public class Buildings : MonoBehaviour
                             {
                                 _objectInGround.SetTile(cellPosition, _buildings[2]);
                                 ShopMenu.intTokens -= 5000;
-                                PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                //PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 _goldDrillCount++;
                             }
                             else Error("You don't have enough tokens");
@@ -90,7 +95,7 @@ public class Buildings : MonoBehaviour
                             {
                                 _objectInGround.SetTile(cellPosition, _buildings[3]);
                                 ShopMenu.intTokens -= 1000;
-                                PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                //PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 _tinDrillCount++;
                             }
                             else Error("You don't have enough tokens");
@@ -101,7 +106,7 @@ public class Buildings : MonoBehaviour
                             {
                                 _objectInGround.SetTile(cellPosition, _buildings[4]);
                                 ShopMenu.intTokens -= 3500;
-                                PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                //PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 _copperDrillCount++;
                             }
                             else Error("You don't have enough tokens");
@@ -127,6 +132,11 @@ public class Buildings : MonoBehaviour
                     }
                 }
             }
+        }
+
+        if (Input.GetMouseButton(1))
+        {
+            _objectInGround.SetTile(cellPosition,null);
         }
     }
 
