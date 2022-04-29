@@ -12,9 +12,8 @@ public class ShopMenu : MonoBehaviour
     private Text _text;
     private Text _btext;
     public Text tokens;
-    private int intTokens;
-   
-   
+    public static int intTokens = 2000;
+
     void Start()
     {
         _slider = transform.GetChild(0).GetComponent<Slider>();
@@ -22,70 +21,65 @@ public class ShopMenu : MonoBehaviour
         _btext = transform.GetChild(2).GetChild(0).GetComponent<Text>();
     }
 
-    
+    private void Update() => tokens.text = intTokens.ToString();
 
-    public  void AmountOfOre(float ore)
+    public void AmountOfOre(float ore)
     {
-        if (ore == 0 )
+        if (ore == 0)
         {
-            _slider.maxValue = Buildings._tin+0.0001f;
+            _slider.maxValue = Buildings._tin + 0.0001f;
             _text.text = "" + Math.Round(_slider.value);
             _btext.text = "You will get: \n" + Mathf.Round(_slider.value) + " Tokens";
         }
-        else if(ore == 1){
-            _slider.maxValue = Buildings._iron+0.0001f;
+        else if (ore == 1)
+        {
+            _slider.maxValue = Buildings._iron + 0.0001f;
             _text.text = "" + Math.Round(_slider.value);
-            _btext.text = "You will get: \n" +  Mathf.Round(_slider.value*2)+ " Tokens";
+            _btext.text = "You will get: \n" + Mathf.Round(_slider.value * 2) + " Tokens";
         }
         else if (ore == 2)
         {
-            _slider.maxValue = Buildings._copper+0.0001f;
+            _slider.maxValue = Buildings._copper + 0.0001f;
             _text.text = "" + Math.Round(_slider.value);
-            _btext.text = "You will get: \n" +  Mathf.Round(_slider.value*4)+ " Tokens";
+            _btext.text = "You will get: \n" + Mathf.Round(_slider.value * 4) + " Tokens";
         }
         else if (ore == 3)
         {
-            _slider.maxValue = Buildings._gold+0.0001f;
+            _slider.maxValue = Buildings._gold + 0.0001f;
             _text.text = "" + Math.Round(_slider.value);
-            _btext.text = "You will get: \n" +  Mathf.Round(_slider.value*8)+ " Tokens";
+            _btext.text = "You will get: \n" + Mathf.Round(_slider.value * 8) + " Tokens";
         }
     }
 
     public void Sell(int ore)
     {
-        if (ore == 0 && _slider.value<Buildings._tin )
+        if (ore == 0 && _slider.value < Buildings._tin)
         {
             intTokens += Convert.ToInt32(Regex.Match(_btext.text, @"\d+").Value);
             tokens.text = "Tokens: \n" + intTokens;
-            Buildings._tin -=  _slider.value;
-            
+            Buildings._tin -= _slider.value;
+
         }
-        else if (ore == 1 && _slider.value<Buildings._iron)
+        else if (ore == 1 && _slider.value < Buildings._iron)
         {
             intTokens += Convert.ToInt32(Regex.Match(_btext.text, @"\d+").Value);
             tokens.text = "Tokens: \n" + intTokens;
             Buildings._iron -= _slider.value;
-          
+
         }
-        else if (ore == 2&& _slider.value<Buildings._copper)
+        else if (ore == 2 && _slider.value < Buildings._copper)
         {
             intTokens += Convert.ToInt32(Regex.Match(_btext.text, @"\d+").Value);
             tokens.text = "Tokens: \n" + intTokens;
             Buildings._copper -= _slider.value;
-            
+
         }
-        else if (ore == 3&& _slider.value<Buildings._gold)
+        else if (ore == 3 && _slider.value < Buildings._gold)
         {
             intTokens += Convert.ToInt32(Regex.Match(_btext.text, @"\d+").Value);
             tokens.text = "Tokens: \n" + intTokens;
             Buildings._gold -= _slider.value;
-           
+
         }
     }
-
-    
-
-    
-    
-    
 }

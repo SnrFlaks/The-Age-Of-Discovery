@@ -42,9 +42,9 @@ MonoBehaviour:
     - {x: 0, y: 1, z: 0}
     - {x: -1, y: 0, z: 0}
     - {x: -1, y: 1, z: 0}
-    - {x: -1, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
     - {x: 1, y: 1, z: 0}
+    - {x: -1, y: -1, z: 0}
     m_Sprites:
     - {fileID: -2764198908863901089, guid: 618f4c9fef25cf84bb15a64308a99bb1, type: 3}
     m_GameObject: {fileID: 0}

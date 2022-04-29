@@ -47,6 +47,9 @@ TextureImporter:
   - first:
       213: 6551229613785507840
     second: water2_14
+  - first:
+      213: -32286442368904904
+    second: water2_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -446,6 +449,27 @@ TextureImporter:
       bones: []
       spriteID: 00864b3bf94aaea50800000000000000
       internalID: 6551229613785507840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water2_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8315a87d6ab4d8ff0800000000000000
+      internalID: -32286442368904904
       vertices: []
       indices: 
       edges: []
