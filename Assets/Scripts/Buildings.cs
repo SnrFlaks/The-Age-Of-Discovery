@@ -112,20 +112,27 @@ public class Buildings : MonoBehaviour
                     }
                     else if (changedTile == _buildings[1] && _objectInGround.GetTile(cellPosition) == null)
                     {
-                        if (ShopMenu.intTokens >= 50) _objectInGround.SetTile(cellPosition, _buildings[1]);
+                        if (ShopMenu.intTokens >= 50) {
+						_objectInGround.SetTile(cellPosition, _buildings[1]);
+						ShopMenu.intTokens -= 50;
+						}
                         else Error("You don't have enough tokens");
                     }
                     else if (changedTile == _buildings[5] && _objectInGround.GetTile(cellPosition) == null)
                     {
                         if (ShopMenu.intTokens >= 1500) {
                             _objectInGround.SetTile(cellPosition, _buildings[5]);
+							ShopMenu.intTokens -= 1500;
                             _furnaceCount++;
                         }
                         else Error("You don't have enough tokens");
                     }
                     else if (changedTile == _buildings[6] && _objectInGround.GetTile(cellPosition) == null)
                     {   
-                        if (ShopMenu.intTokens >= 50) _objectInGround.SetTile(cellPosition, _buildings[6]);
+                        if (ShopMenu.intTokens >= 1500) {
+						_objectInGround.SetTile(cellPosition, _buildings[6])
+						ShopMenu.intTokens -= 1500;
+						};
                         else Error("You don't have enough tokens");
                     }
                 }
