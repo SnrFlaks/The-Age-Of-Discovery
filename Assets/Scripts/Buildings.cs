@@ -47,8 +47,6 @@ public class Buildings : MonoBehaviour
 
     private void Update()
     {
-        
-        
         var point = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
         var cellPosition = _ground.WorldToCell(point);
         Ore[0].text = "Tin: \n" + Mathf.Round(_tin);
