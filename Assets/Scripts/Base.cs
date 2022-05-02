@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,8 @@ using UnityEngine;
 public class Base : MonoBehaviour
 {
      public static bool createLockHub;
-     private int health;
-     private TextMesh hp;
+     public static int health;
+     public static TextMesh hp;
      private void OnMouseEnter() => createLockHub = true;
      private void OnMouseExit() => createLockHub = false;
     void Start()
