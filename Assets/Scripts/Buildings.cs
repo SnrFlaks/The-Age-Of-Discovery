@@ -32,23 +32,25 @@ public class Buildings : MonoBehaviour
     private Tilemap _ground;
     private Tilemap _objectInGround;
     private TileBase[] _buildings;
-    
-    public  Text ttokens;
+
+    public Text ttokens;
+
     private void Start()
     {
-        //ShopMenu.intTokens = PlayerPrefs.GetInt("tokens");
+        //ShopMenu.intTokens = PlayerPrefs.GetInt("tokens") == 0 ? 100000 : PlayerPrefs.GetInt("tokens");
         _buildings = ItemList.buildings;
         _ground = transform.GetChild(0).GetComponent<Tilemap>();
         _objectInGround = transform.GetChild(1).GetComponent<Tilemap>();
         StartCoroutine(OncePerSecond());
         ShopMenu.tokens = ttokens;
-        ShopMenu.tokens.text ="Tokens: \n" + ShopMenu.intTokens;
+        ShopMenu.tokens.text = "Tokens: \n" + ShopMenu.intTokens;
     }
 
     private void Update()
     {
         var point = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
         var cellPosition = _ground.WorldToCell(point);
+        ttokens.text = "Tokens: \n" + ShopMenu.intTokens;;
         Ore[0].text = "Tin: \n" + Mathf.Round(_tin);
         Ore[1].text = "Iron: \n" + Mathf.Round(_iron);
         Ore[2].text = "Copper: \n" + Mathf.Round(_copper);
@@ -57,7 +59,7 @@ public class Buildings : MonoBehaviour
         Ingot[1].text = "Iron ingot: \n" + _ironIngot;
         Ingot[2].text = "Copper ingot: \n" + _copperIngot;
         Ingot[3].text = "Gold ingot: \n" + _goldIngot;
-        if (Input.GetMouseButton(0) && HotBar.CreateLock == false && Hub.createLockHub == false && cellPosition.x >= 0 && cellPosition.y >= 0)
+        if (Input.GetMouseButton(0) && HotBar.CreateLock == false && Base.createLockHub == false && cellPosition.x >= 0 && cellPosition.y >= 0)
         {
             for (var i = 0; i < HotBar.HotBarSelect.Length; i++)
             {
@@ -66,34 +68,35 @@ public class Buildings : MonoBehaviour
                     TileBase changedTile = ItemList.buildings[Array.IndexOf(ItemList.buildingsIcon, hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
                     if (changedTile == _buildings[0] && _objectInGround.GetTile(cellPosition) == null)
                     {
-                        if (_ground.GetTile(cellPosition).name == "ironRandomTile") {
-                            if (ShopMenu.intTokens >= 2500) 
+                        if (_ground.GetTile(cellPosition).name == "ironRandomTile")
+                        {
+                            if (ShopMenu.intTokens >= 2500)
                             {
                                 _objectInGround.SetTile(cellPosition, _buildings[0]);
                                 ShopMenu.intTokens -= 2500;
-                                //PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 _ironDrillCount++;
                             }
                             else Error("You don't have enough tokens");
                         }
                         else if (_ground.GetTile(cellPosition).name == "goldRandomTile")
                         {
-                            if (ShopMenu.intTokens >= 5000) 
+                            if (ShopMenu.intTokens >= 5000)
                             {
                                 _objectInGround.SetTile(cellPosition, _buildings[2]);
                                 ShopMenu.intTokens -= 5000;
-                                //PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 _goldDrillCount++;
                             }
                             else Error("You don't have enough tokens");
                         }
                         else if (_ground.GetTile(cellPosition).name == "tinRandomTile")
                         {
-                            if (ShopMenu.intTokens >= 1000) 
+                            if (ShopMenu.intTokens >= 1000)
                             {
                                 _objectInGround.SetTile(cellPosition, _buildings[3]);
                                 ShopMenu.intTokens -= 1000;
-                                //PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 _tinDrillCount++;
                             }
                             else Error("You don't have enough tokens");
@@ -104,7 +107,7 @@ public class Buildings : MonoBehaviour
                             {
                                 _objectInGround.SetTile(cellPosition, _buildings[4]);
                                 ShopMenu.intTokens -= 3500;
-                                //PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 _copperDrillCount++;
                             }
                             else Error("You don't have enough tokens");
@@ -112,64 +115,76 @@ public class Buildings : MonoBehaviour
                     }
                     else if (changedTile == _buildings[1] && _objectInGround.GetTile(cellPosition) == null)
                     {
-                        if (ShopMenu.intTokens >= 50) {
-						_objectInGround.SetTile(cellPosition, _buildings[1]);
-						ShopMenu.intTokens -= 50;
-						}
+                        if (ShopMenu.intTokens >= 50)
+                        {
+                            _objectInGround.SetTile(cellPosition, _buildings[1]);
+                            ShopMenu.intTokens -= 50;
+                        }
                         else Error("You don't have enough tokens");
                     }
                     else if (changedTile == _buildings[5] && _objectInGround.GetTile(cellPosition) == null)
                     {
-                        if (ShopMenu.intTokens >= 1500) {
+                        if (ShopMenu.intTokens >= 1500)
+                        {
                             _objectInGround.SetTile(cellPosition, _buildings[5]);
-							ShopMenu.intTokens -= 1500;
+                            ShopMenu.intTokens -= 1500;
                             _furnaceCount++;
                         }
                         else Error("You don't have enough tokens");
                     }
                     else if (changedTile == _buildings[6] && _objectInGround.GetTile(cellPosition) == null)
-                    {   
+                    {
                         if (ShopMenu.intTokens >= 1500)
                         {
                             _objectInGround.SetTile(cellPosition, _buildings[6]);
-						ShopMenu.intTokens -= 1500;
-						}
-                        else Error("You don't have enough tokens");
+                            ShopMenu.intTokens -= 1500;
+                        }
+
+                        {
+                            if (ShopMenu.intTokens >= 1500)
+                            {
+                                _objectInGround.SetTile(cellPosition, _buildings[6]);
+                                ShopMenu.intTokens -= 1500;
+                            }
+                            else Error("You don't have enough tokens");
+                        }
                     }
                 }
             }
+
+            if (Input.GetMouseButton(1))
+            {
+                _objectInGround.SetTile(cellPosition, null);
+            }
         }
 
-        if (Input.GetMouseButton(1))
+        void Error(string error)
         {
-            _objectInGround.SetTile(cellPosition,null);
+            errorText.text = error;
+            StopCoroutine("showText");
+            StartCoroutine("showText");
         }
     }
 
-    private void Error(string error) {
-        errorText.text = error;
-        StopCoroutine("showText");
-        StartCoroutine("showText");
-    }
-    
     IEnumerator showText()
-    {
-        Color textColor = errorText.color;
-        textColor.a = 1;
-        errorText.color = textColor;
-        float hideTime = 2f;
-        float timer = hideTime;
-        while (timer > 0) {
-            timer -= Time.deltaTime;
-            textColor.a = 1f / hideTime * timer;
+        {
+            Color textColor = errorText.color;
+            textColor.a = 1;
             errorText.color = textColor;
-            yield return null;
+            float hideTime = 2f;
+            float timer = hideTime;
+            while (timer > 0)
+            {
+                timer -= Time.deltaTime;
+                textColor.a = 1f / hideTime * timer;
+                errorText.color = textColor;
+                yield return null;
+            }
         }
-    }
 
     IEnumerator OncePerSecond()
     {
-        while (true) 
+        while (true)
         {
             _tin += 8 * _tinDrillCount;
             _iron += 4 * _ironDrillCount;

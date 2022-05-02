@@ -14,7 +14,7 @@ public class ShopMenu : MonoBehaviour
     public  Text ttokens;
     public static Text tokens;
     
-    public static int intTokens = 99999;
+    public static int intTokens = 100000;
 
     void Start()
     {
@@ -22,9 +22,7 @@ public class ShopMenu : MonoBehaviour
         _text = transform.GetChild(1).GetComponent<Text>();
         _btext = transform.GetChild(2).GetChild(0).GetComponent<Text>();
         tokens = ttokens;
-        
     }
-
     public void AmountOfOre(float ore)
     {
         if (ore == 0)

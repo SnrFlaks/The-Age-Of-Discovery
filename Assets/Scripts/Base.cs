@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hub : MonoBehaviour
+public class Base : MonoBehaviour
 {
      public static bool createLockHub;
      private int health;
