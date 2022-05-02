@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/menuBG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/menuBG.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/menuButton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/menuButton.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hub.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hub.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BackGround.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BackGround.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/shopMenu.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/shopMenu.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/baseHp.png.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/baseHp.png.aseprite.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +67,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Base.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -148,7 +138,7 @@
       <workItem from="1651244729202" duration="4447000" />
       <workItem from="1651498982113" duration="239000" />
       <workItem from="1651499309652" duration="249000" />
-      <workItem from="1651501353885" duration="2428000" />
+      <workItem from="1651501353885" duration="4125000" />
     </task>
     <servers />
   </component>

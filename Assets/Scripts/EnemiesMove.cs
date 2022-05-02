@@ -16,11 +16,8 @@ public class EnemiesMove : MonoBehaviour
         {
             Base.health -= 200;
             Base.hp.text = Base.health.ToString();
-            if(Base.health ==0){Destroy(col.gameObject);}
+            if(Base.health <= 0){Destroy(col.gameObject);}
             Destroy(gameObject);
-           
         }
-       
-       
     }
 }

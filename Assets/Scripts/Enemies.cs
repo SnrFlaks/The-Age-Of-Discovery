@@ -22,7 +22,7 @@ public class Enemies : MonoBehaviour
             Instantiate(whiteCircle, new Vector3(500,r.Next(0,500)),Quaternion.identity).transform.parent = gameObject.transform;
             Instantiate(whiteCircle, new Vector3(r.Next(0,500),0,0),Quaternion.identity).transform.parent = gameObject.transform;
             
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(1);
         }
         
     }
