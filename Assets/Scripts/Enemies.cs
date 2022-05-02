@@ -1,9 +1,6 @@
+
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine;
-using System;
-using UnityEditor.U2D.Animation;
 using Random = System.Random;
 
 public class Enemies : MonoBehaviour
@@ -25,8 +22,9 @@ public class Enemies : MonoBehaviour
             Instantiate(whiteCircle, new Vector3(500,r.Next(0,500)),Quaternion.identity).transform.parent = gameObject.transform;
             Instantiate(whiteCircle, new Vector3(r.Next(0,500),0,0),Quaternion.identity).transform.parent = gameObject.transform;
             
-            yield return new WaitForSeconds(100);
+            yield return new WaitForSeconds(0.1f);
         }
         
     }
 }
+

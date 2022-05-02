@@ -57,7 +57,7 @@ public class Buildings : MonoBehaviour
         Ingot[1].text = "Iron ingot: \n" + _ironIngot;
         Ingot[2].text = "Copper ingot: \n" + _copperIngot;
         Ingot[3].text = "Gold ingot: \n" + _goldIngot;
-        if (Input.GetMouseButton(0) && HotBar.CreateLock == false && Hub.createLockHub == false && cellPosition.x >= 0 && cellPosition.y >= 0)
+        if (Input.GetMouseButton(0) && HotBar.CreateLock == false && Base.createLockHub == false && cellPosition.x >= 0 && cellPosition.y >= 0)
         {
             for (var i = 0; i < HotBar.HotBarSelect.Length; i++)
             {

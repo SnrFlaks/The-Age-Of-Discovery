@@ -12,7 +12,15 @@ public class EnemiesMove : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Destroy(gameObject);
+        if (col.tag == "Base")
+        {
+            Base.health -= 200;
+            Base.hp.text = Base.health.ToString();
+            if(Base.health ==0){Destroy(col.gameObject);}
+            Destroy(gameObject);
+           
+        }
+       
        
     }
 }
