@@ -2,31 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using System;
+using UnityEditor.U2D.Animation;
+using Random = System.Random;
 
 public class Enemies : MonoBehaviour
 {
-    public GameObject enemy;
+    [SerializeField] GameObject whiteCircle;
+    private Random r = new Random();
+    
     void Start()
     {
         StartCoroutine(Spawn());
-        
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     IEnumerator Spawn()
     {
         while (true)
         {
-            Instantiate(enemy, new Vector3(-250f,0f,0f),Quaternion.identity);
-            Instantiate(enemy, new Vector3(0f,250f,0f),Quaternion.identity);
-            Instantiate(enemy, new Vector3(250f,0f,0f),Quaternion.identity);
-            Instantiate(enemy, new Vector3(0f,-250f,0f),Quaternion.identity);
-            yield return new WaitForSeconds(1);
+            Instantiate(whiteCircle, new Vector3(0, r.Next(0, 500)), Quaternion.identity).transform.parent = gameObject.transform;
+            Instantiate(whiteCircle, new Vector3(r.Next(0,500),500,0f),Quaternion.identity).transform.parent = gameObject.transform;
+            Instantiate(whiteCircle, new Vector3(500,r.Next(0,500)),Quaternion.identity).transform.parent = gameObject.transform;
+            Instantiate(whiteCircle, new Vector3(r.Next(0,500),0,0),Quaternion.identity).transform.parent = gameObject.transform;
+            
+            yield return new WaitForSeconds(100);
         }
         
     }

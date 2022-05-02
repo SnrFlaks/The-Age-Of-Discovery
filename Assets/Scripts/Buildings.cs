@@ -129,10 +129,11 @@ public class Buildings : MonoBehaviour
                     }
                     else if (changedTile == _buildings[6] && _objectInGround.GetTile(cellPosition) == null)
                     {   
-                        if (ShopMenu.intTokens >= 1500) {
-						_objectInGround.SetTile(cellPosition, _buildings[6])
+                        if (ShopMenu.intTokens >= 1500)
+                        {
+                            _objectInGround.SetTile(cellPosition, _buildings[6]);
 						ShopMenu.intTokens -= 1500;
-						};
+						}
                         else Error("You don't have enough tokens");
                     }
                 }
