@@ -28,7 +28,7 @@ public class Enemies : MonoBehaviour
     private void Update()
     {
         time -= time < 0 ? -5 : Time.deltaTime;
-        timeUntilNewStage.text =  "Time Until New Stage: " + Mathf.Round(time).ToString();
+        timeUntilNewStage.text =  "New wave in: " + Mathf.Round(time).ToString();
     }
 
     IEnumerator Spawn()
@@ -52,7 +52,7 @@ public class Enemies : MonoBehaviour
                 
             }
             
-            stage.text = "Stage: " + intStage;
+            stage.text = "Wave: " + intStage;
             intStage++;
             
             yield return new WaitForSeconds(5);

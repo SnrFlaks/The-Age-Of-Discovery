@@ -22,7 +22,5 @@ public class EnemiesMove : MonoBehaviour
             if(Base.health <= 0){Destroy(col.gameObject);}
             Destroy(gameObject);
         }
-        Destroy(gameObject);
-        
     }
 }
