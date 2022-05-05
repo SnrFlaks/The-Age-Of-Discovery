@@ -30,7 +30,7 @@ public class Buildings : MonoBehaviour
     public static int _goldIngot = 0;
 
     private Tilemap _ground;
-    private Tilemap _objectInGround;
+    public static Tilemap _objectInGround;
     private TileBase[] _buildings;
 
     public Text ttokens;
