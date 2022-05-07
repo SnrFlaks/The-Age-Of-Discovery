@@ -13,9 +13,11 @@ public class EnemiesMove : MonoBehaviour
       transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,transform.position.y),new Vector2(250,250),50 * Time.deltaTime  );
       transform.Rotate(0,0,100 * Time.deltaTime);
     }
-    private void OnTriggerEnter2D(Collider2D col)
+   
+
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.tag == "Base")
+        if (col.gameObject.tag == "Base")
         {
             Base.health -= 200;
             Base.hp.text = Base.health.ToString();
@@ -23,12 +25,10 @@ public class EnemiesMove : MonoBehaviour
             Destroy(gameObject);
             
         }
-        else if(col.tag == "Build")
+        else if(col.gameObject.tag == "Build")
         {
-            Buildings._objectInGround.SetTile(Buildings._objectInGround.WorldToCell(Camera.main.ScreenToWorldPoint(gameObject.transform.position)),null);
+            Buildings._objectInGround.SetTile(Buildings._objectInGround.WorldToCell(col.GetContact(0).point),null);
             Destroy(gameObject);
         }
     }
-
-
 }
