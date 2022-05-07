@@ -27,6 +27,7 @@ public class EnemiesMove : MonoBehaviour
         }
         else if(col.gameObject.tag == "Build")
         {
+            Debug.Log("here");
             Buildings._objectInGround.SetTile(Buildings._objectInGround.WorldToCell(col.GetContact(0).point),null);
             Destroy(gameObject);
         }
