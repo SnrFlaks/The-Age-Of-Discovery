@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Cable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Cable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/hpPanel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/hpPanel.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/baseHp.png.aseprite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/baseHp.png.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/copperCanbleTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/copperCanbleTile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldCableTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldCableTile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperCable.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/copperCable.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldCable.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/goldCable.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/wave.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/wave.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,22 +42,15 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/Shadow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/The-Age-Of-Discovery/Assets/Scripts/Buildings.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/The-Age-Of-Discovery/Assets/Scripts/Buildings.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarBut.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/The-Age-Of-Discovery/Assets/Scripts/Buildings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/BottomButHotBar.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ButtonGroupRectStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/The-Age-Of-Discovery/Assets/Scripts/Buildings.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/The-Age-Of-Discovery/Assets/Scripts/Buildings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/Shadow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Dildomatic/Assets/Scripts/Moldavia.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarVItems.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ConvSts.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/The-Age-Of-Discovery/Assets/Scripts/Buildings.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Project/The-Age-Of-Discovery/Assets/Scripts/Buildings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarBut.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -65,9 +66,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Base.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Cable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Generator.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -139,6 +142,9 @@
       <workItem from="1651498982113" duration="239000" />
       <workItem from="1651499309652" duration="249000" />
       <workItem from="1651501353885" duration="4125000" />
+      <workItem from="1651693014367" duration="2803000" />
+      <workItem from="1651775203619" duration="8703000" />
+      <workItem from="1651939985579" duration="2847000" />
     </task>
     <servers />
   </component>

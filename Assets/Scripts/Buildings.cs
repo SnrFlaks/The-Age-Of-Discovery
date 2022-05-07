@@ -9,6 +9,7 @@ public class Buildings : MonoBehaviour
     [SerializeField] private Vector2Int _mapSize;
     [SerializeField] private GameObject hotBar;
     [SerializeField] private Text errorText;
+    [SerializeField] private GameObject generatorLo;
 
     [SerializeField] private Text[] Ore;
     [SerializeField] private Text[] Ingot;
@@ -50,7 +51,8 @@ public class Buildings : MonoBehaviour
     {
         var point = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
         var cellPosition = _ground.WorldToCell(point);
-        ttokens.text = "Tokens: \n" + ShopMenu.intTokens;;
+        ttokens.text = "Tokens: \n" + ShopMenu.intTokens;
+        ;
         Ore[0].text = "Tin: \n" + Mathf.Round(_tin);
         Ore[1].text = "Iron: \n" + Mathf.Round(_iron);
         Ore[2].text = "Copper: \n" + Mathf.Round(_copper);
@@ -137,17 +139,10 @@ public class Buildings : MonoBehaviour
                         if (ShopMenu.intTokens >= 1500)
                         {
                             _objectInGround.SetTile(cellPosition, _buildings[6]);
+                            Instantiate(generatorLo, new Vector2(cellPosition.x, cellPosition.y), Quaternion.identity, gameObject.transform.GetChild(2));
                             ShopMenu.intTokens -= 1500;
                         }
-
-                        {
-                            if (ShopMenu.intTokens >= 1500)
-                            {
-                                _objectInGround.SetTile(cellPosition, _buildings[6]);
-                                ShopMenu.intTokens -= 1500;
-                            }
-                            else Error("You don't have enough tokens");
-                        }
+                        else Error("You don't have enough tokens");
                     }
                 }
             }
@@ -157,30 +152,30 @@ public class Buildings : MonoBehaviour
                 _objectInGround.SetTile(cellPosition, null);
             }
         }
+    }
 
-        void Error(string error)
-        {
-            errorText.text = error;
-            StopCoroutine("showText");
-            StartCoroutine("showText");
-        }
+    void Error(string error)
+    {
+        errorText.text = error;
+        StopCoroutine("showText");
+        StartCoroutine("showText");
     }
 
     IEnumerator showText()
+    {
+        Color textColor = errorText.color;
+        textColor.a = 1;
+        errorText.color = textColor;
+        float hideTime = 2f;
+        float timer = hideTime;
+        while (timer > 0)
         {
-            Color textColor = errorText.color;
-            textColor.a = 1;
+            timer -= Time.deltaTime;
+            textColor.a = 1f / hideTime * timer;
             errorText.color = textColor;
-            float hideTime = 2f;
-            float timer = hideTime;
-            while (timer > 0)
-            {
-                timer -= Time.deltaTime;
-                textColor.a = 1f / hideTime * timer;
-                errorText.color = textColor;
-                yield return null;
-            }
+            yield return null;
         }
+    }
 
     IEnumerator OncePerSecond()
     {
