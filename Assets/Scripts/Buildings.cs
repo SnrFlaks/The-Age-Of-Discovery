@@ -139,7 +139,7 @@ public class Buildings : MonoBehaviour
                         if (ShopMenu.intTokens >= 1500)
                         {
                             _objectInGround.SetTile(cellPosition, _buildings[6]);
-                            Instantiate(generatorLo, new Vector2(cellPosition.x, cellPosition.y), Quaternion.identity, gameObject.transform.GetChild(2));
+                            Instantiate(generatorLo, new Vector2(cellPosition.x - 0.7f, cellPosition.y - 0.7f), Quaternion.identity, gameObject.transform.GetChild(2));
                             ShopMenu.intTokens -= 1500;
                         }
                         else Error("You don't have enough tokens");

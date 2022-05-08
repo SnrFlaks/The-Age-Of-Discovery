@@ -2,20 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Cable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Cable.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/hpPanel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/hpPanel.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/copperCanbleTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/copperCanbleTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldCableTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldCableTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperCable.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/copperCable.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldCable.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/goldCable.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/wave.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/wave.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemiesMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemiesMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +174,8 @@
       <workItem from="1651501353885" duration="4125000" />
       <workItem from="1651693014367" duration="2803000" />
       <workItem from="1651775203619" duration="8703000" />
-      <workItem from="1651939985579" duration="3210000" />
+      <workItem from="1651939985579" duration="6665000" />
+      <workItem from="1652018456707" duration="6027000" />
     </task>
     <servers />
   </component>
