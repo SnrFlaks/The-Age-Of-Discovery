@@ -8,6 +8,7 @@ public class EnemiesMove : MonoBehaviour
 {
     private Rigidbody2D rb;
     private int z =250;
+    [SerializeField] private int hp;
     void Update()
     {
       transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,transform.position.y),new Vector2(250,250),50 * Time.deltaTime  );

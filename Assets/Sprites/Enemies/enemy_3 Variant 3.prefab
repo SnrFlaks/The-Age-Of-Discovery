@@ -17,7 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991083501023484629, guid: 6f2fcd9b01faf1345ba718e9c03e066f, type: 3}
       propertyPath: m_Name
-      value: enemy_3
+      value: enemy_3 Variant 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524993255434945513, guid: 6f2fcd9b01faf1345ba718e9c03e066f, type: 3}
+      propertyPath: hp
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 5931199455185343543, guid: 6f2fcd9b01faf1345ba718e9c03e066f, type: 3}
       propertyPath: m_RootOrder

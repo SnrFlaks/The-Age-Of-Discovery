@@ -53,11 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1203956749473976650, guid: f0e78609f11bb45499c02d3cacbb7ee9, type: 3}
       propertyPath: m_Name
-      value: enemy_0
+      value: enemy_0 Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 1203956749473976651, guid: f0e78609f11bb45499c02d3cacbb7ee9, type: 3}
       propertyPath: m_Color.g
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3413591974286092381, guid: f0e78609f11bb45499c02d3cacbb7ee9, type: 3}
+      propertyPath: hp
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0e78609f11bb45499c02d3cacbb7ee9, type: 3}

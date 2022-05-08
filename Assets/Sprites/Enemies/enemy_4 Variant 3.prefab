@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4664690168390271325, guid: 824c1d3fdf6264a4fbcba8075894f7b9, type: 3}
       propertyPath: m_Name
-      value: enemy_4
+      value: enemy_4 Variant 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5428327709104304053, guid: 824c1d3fdf6264a4fbcba8075894f7b9, type: 3}
+      propertyPath: hp
+      value: 4500
       objectReference: {fileID: 0}
     - target: {fileID: 7810847095185848702, guid: 824c1d3fdf6264a4fbcba8075894f7b9, type: 3}
       propertyPath: m_Color.g

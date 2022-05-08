@@ -7,9 +7,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 526323328034531181, guid: 08c88f126b4229441b13f4e6f968b37a, type: 3}
+      propertyPath: hp
+      value: 3500
+      objectReference: {fileID: 0}
     - target: {fileID: 911105857008519557, guid: 08c88f126b4229441b13f4e6f968b37a, type: 3}
       propertyPath: m_Name
-      value: enemy_4
+      value: enemy_4 Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 2341061474259841446, guid: 08c88f126b4229441b13f4e6f968b37a, type: 3}
       propertyPath: m_Color.g

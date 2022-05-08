@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 238600061843389628, guid: a0fb188983c18bf47aaf40fc10e1c36c, type: 3}
       propertyPath: m_Name
-      value: enemy_4
+      value: enemy_4 Variant 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 623371183340196436, guid: a0fb188983c18bf47aaf40fc10e1c36c, type: 3}
+      propertyPath: hp
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 3429024438062335135, guid: a0fb188983c18bf47aaf40fc10e1c36c, type: 3}
       propertyPath: m_Color.b

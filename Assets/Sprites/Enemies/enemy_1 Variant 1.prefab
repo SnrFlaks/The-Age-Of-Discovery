@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1391617818005553390, guid: 68faf5ef133e51a41b7634eeba49f771, type: 3}
       propertyPath: m_Name
-      value: enemy_1
+      value: enemy_1 Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 7167588799413738381, guid: 68faf5ef133e51a41b7634eeba49f771, type: 3}
       propertyPath: m_Color.g
@@ -58,6 +58,10 @@ PrefabInstance:
     - target: {fileID: 7855302378670784138, guid: 68faf5ef133e51a41b7634eeba49f771, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939915462530529690, guid: 68faf5ef133e51a41b7634eeba49f771, type: 3}
+      propertyPath: hp
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68faf5ef133e51a41b7634eeba49f771, type: 3}
