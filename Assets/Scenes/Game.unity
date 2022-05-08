@@ -3513,7 +3513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.385, y: 0.714}
+  m_AnchoredPosition: {x: -0.385, y: 12.19}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!102 &586220281
@@ -10337,10 +10337,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 4622267297989256923, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
+  - {fileID: 1203956749473976650, guid: f0e78609f11bb45499c02d3cacbb7ee9, type: 3}
+  - {fileID: 5159846101784234356, guid: 5ba4d5c498d597d4785d2482bc48411c, type: 3}
+  - {fileID: 4172636461542157353, guid: 47e5eb02094b2794f8b64e89dcf588e5, type: 3}
+  - {fileID: 9210600422505434374, guid: ea20accd33979764188cc29a3dd6f906, type: 3}
   - {fileID: 4241843516104491225, guid: b82ce9d6072bfb448953ff648d63d18c, type: 3}
+  - {fileID: 1391617818005553390, guid: 68faf5ef133e51a41b7634eeba49f771, type: 3}
+  - {fileID: 9082854725824200068, guid: 18cdf076a6ec9e143a53d6ebe903a0a4, type: 3}
+  - {fileID: 6820713015407467475, guid: d587f5d7d23cf61479251c8c49a6e78c, type: 3}
+  - {fileID: 437046762074092693, guid: b220c93861619514581e222d3956afb9, type: 3}
   - {fileID: 3535610852977686129, guid: 6ac460964913e5e408b66cb239382bcf, type: 3}
+  - {fileID: 6992962220006338980, guid: ab837b24015f836498eaa148bca04c5d, type: 3}
+  - {fileID: 1437197375317381005, guid: 95c65d711132b274595e47f5180a0017, type: 3}
+  - {fileID: 8029743130100085787, guid: a85d796113814984eb3e52b47a44b49c, type: 3}
+  - {fileID: 8099972571730963587, guid: 417b865aa79db0f4194b5b700ef29072, type: 3}
   - {fileID: 2271341489276188309, guid: cb140f32732c2de47b9ad90ed57dcf91, type: 3}
+  - {fileID: 2821857794042140556, guid: 2c06cb6d397003f49b8ddca4766f3693, type: 3}
+  - {fileID: 774992966096997219, guid: 4521d24c7100c2e4bb3e8b1167e70a9c, type: 3}
+  - {fileID: 1991083501023484629, guid: 6f2fcd9b01faf1345ba718e9c03e066f, type: 3}
+  - {fileID: 5651967053388542147, guid: 7f4a046dad66c7448b31ca23991ad617, type: 3}
   - {fileID: 4924679402699271063, guid: 58173d1279fe36e4997b46899729fb60, type: 3}
+  - {fileID: 911105857008519557, guid: 08c88f126b4229441b13f4e6f968b37a, type: 3}
+  - {fileID: 238600061843389628, guid: a0fb188983c18bf47aaf40fc10e1c36c, type: 3}
+  - {fileID: 4664690168390271325, guid: 824c1d3fdf6264a4fbcba8075894f7b9, type: 3}
+  - {fileID: 2669280718494355878, guid: aee3d34162d6f4a478ff45a5310cf023, type: 3}
   timeUntilNewStage: {fileID: 35353642}
   stage: {fileID: 1212603334}
 --- !u!1 &1326829630
