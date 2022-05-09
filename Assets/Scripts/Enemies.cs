@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections;
 using UnityEngine;
@@ -28,7 +27,7 @@ public class Enemies : MonoBehaviour
     private void Update()
     {
         time -= time < 0 ? -5 : Time.deltaTime;
-        timeUntilNewStage.text = "New wave in: " + Mathf.Round(time).ToString();
+        timeUntilNewStage.text = "New wave in: " + Mathf.Round(time);
     }
 
     IEnumerator Spawn()
@@ -46,7 +45,7 @@ public class Enemies : MonoBehaviour
 
             if (intStage == 1)
             {
-                Instantiate(enemies[intStage / 2], new Vector3(0, y = r.Next(0, 500), 0f), Quaternion.identity, gameObject.transform).GetComponent<SpriteRenderer>().color = new Color32(100, 150, 100, 255);
+                Instantiate(enemies[intStage / 2], new Vector3(0, y = r.Next(0, 500), 0f), Quaternion.identity, gameObject.transform);
                 Instantiate(enemies[intStage / 2], new Vector3(y = r.Next(0, 500), 500, 0f), Quaternion.identity, gameObject.transform);
                 Instantiate(enemies[intStage / 2], new Vector3(y = 500, r.Next(0, 500)), Quaternion.identity, gameObject.transform);
                 Instantiate(enemies[intStage / 2], new Vector3(y = r.Next(0, 500), 0, 0), Quaternion.identity, gameObject.transform);

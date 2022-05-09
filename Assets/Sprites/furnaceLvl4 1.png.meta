@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: ce96d362e7874dc499c32b9c3be9ffcf
+guid: 852a94f5b21820046a81202bfeccda84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2890132333683629680
-    second: crusherLvl1_0
+      213: 5491167044201214766
+    second: furnaceLvl4_0
   - first:
-      213: -958058156788678362
-    second: crusherLvl1_1
+      213: -3509086883409334892
+    second: furnaceLvl4_1
   - first:
-      213: -4994117023639975799
-    second: crusherLvl1_2
+      213: 4461529227328510632
+    second: furnaceLvl4_2
   - first:
-      213: -8561329106762188202
-    second: crusherLvl1_3
+      213: 3328555314048323250
+    second: furnaceLvl4_3
+  - first:
+      213: 3798346003910410168
+    second: furnaceLvl4_4
+  - first:
+      213: -6781731368680545434
+    second: furnaceLvl4_5
+  - first:
+      213: -5748337907867347051
+    second: furnaceLvl4_6
+  - first:
+      213: -3455639249105267480
+    second: furnaceLvl4_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 15.9
+  spritePixelsToUnits: 15.85
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crusherLvl1_0
+      name: furnaceLvl4_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 091aae084ff24e7d0800000000000000
-      internalID: -2890132333683629680
+      spriteID: e23f1ff455b843c40800000000000000
+      internalID: 5491167044201214766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crusherLvl1_1
+      name: furnaceLvl4_1
       rect:
         serializedVersion: 2
         x: 17
@@ -138,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6210272be2b44b2f0800000000000000
-      internalID: -958058156788678362
+      spriteID: 49d676c42183d4fc0800000000000000
+      internalID: -3509086883409334892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crusherLvl1_2
+      name: furnaceLvl4_2
       rect:
         serializedVersion: 2
         x: 34
@@ -159,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9884537e60551bab0800000000000000
-      internalID: -4994117023639975799
+      spriteID: 8aa50fda1398aed30800000000000000
+      internalID: 4461529227328510632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crusherLvl1_3
+      name: furnaceLvl4_3
       rect:
         serializedVersion: 2
         x: 51
@@ -180,8 +192,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65a3a3a898c003980800000000000000
-      internalID: -8561329106762188202
+      spriteID: 2bec6153c67613e20800000000000000
+      internalID: 3328555314048323250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furnaceLvl4_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bfba19e09f66b430800000000000000
+      internalID: 3798346003910410168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furnaceLvl4_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6632ca7504372e1a0800000000000000
+      internalID: -6781731368680545434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furnaceLvl4_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59797a8f02dc930b0800000000000000
+      internalID: -5748337907867347051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furnaceLvl4_7
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4de25696a1b00d0800000000000000
+      internalID: -3455639249105267480
       vertices: []
       indices: 
       edges: []
