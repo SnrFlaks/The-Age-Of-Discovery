@@ -10,6 +10,8 @@ public class Buildings : MonoBehaviour
     [SerializeField] private GameObject hotBar;
     [SerializeField] private Text errorText;
     [SerializeField] private GameObject generatorLo;
+    [SerializeField] private GameObject cannon;
+    [SerializeField] private Sprite cannonHB;
 
     [SerializeField] private Text[] Ore;
     [SerializeField] private Text[] Ingot;
@@ -67,7 +69,7 @@ public class Buildings : MonoBehaviour
             {
                 if (HotBar.HotBarSelect[i])
                 {
-                    TileBase changedTile = ItemList.buildings[Array.IndexOf(ItemList.buildingsIcon, hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
+                    TileBase changedTile = (hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite == cannonHB) ? null : ItemList.buildings[Array.IndexOf(ItemList.buildingsIcon, hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
                     if (changedTile == _buildings[0] && _objectInGround.GetTile(cellPosition) == null)
                     {
                         if (_ground.GetTile(cellPosition).name == "ironRandomTile")
@@ -141,6 +143,15 @@ public class Buildings : MonoBehaviour
                             _objectInGround.SetTile(cellPosition, _buildings[6]);
                             Instantiate(generatorLo, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f), Quaternion.identity, gameObject.transform.GetChild(2));
                             ShopMenu.intTokens -= 1500;
+                        }
+                        else Error("You don't have enough tokens");
+                    }
+                    else if (hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite == cannonHB)
+                    {
+                        if (ShopMenu.intTokens >= 1000)
+                        {
+                            Instantiate(cannon, new Vector2(cellPosition.x + 1f, cellPosition.y + 1.5f), Quaternion.identity, gameObject.transform.GetChild(3));
+                            ShopMenu.intTokens -= 1000;
                         }
                         else Error("You don't have enough tokens");
                     }
