@@ -157,11 +157,10 @@ public class Buildings : MonoBehaviour
                     }
                 }
             }
-
-            if (Input.GetMouseButton(1))
-            {
-                _objectInGround.SetTile(cellPosition, null);
-            }
+        }
+        else if (Input.GetMouseButton(1))
+        {
+            _objectInGround.SetTile(cellPosition, null);
         }
     }
 
