@@ -4,15 +4,6 @@
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/canonPlatform.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/canonPlatform.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Prefabs/generatorLineRender.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Prefabs/generatorLineRender.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/canon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/canon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/water2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/water2.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +59,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Generator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -147,7 +138,7 @@
       <workItem from="1652018456707" duration="7508000" />
       <workItem from="1652038057522" duration="6208000" />
       <workItem from="1652124851364" duration="2760000" />
-      <workItem from="1652181195463" duration="12887000" />
+      <workItem from="1652181195463" duration="14803000" />
     </task>
     <servers />
   </component>
