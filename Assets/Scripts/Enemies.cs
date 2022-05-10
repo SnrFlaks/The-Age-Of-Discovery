@@ -15,12 +15,12 @@ public class Enemies : MonoBehaviour
     private int intStage = 0;
 
     private Random r = new Random();
-    private int y = 0;
+    [SerializeField] private bool ifSpawn = false;
 
 
     void Start()
     {
-        StartCoroutine(Spawn());
+        if (ifSpawn) {StartCoroutine(Spawn()); }
         time = 5;
     }
 
@@ -45,10 +45,10 @@ public class Enemies : MonoBehaviour
 
             if (intStage == 1)
             {
-                Instantiate(enemies[intStage / 2], new Vector3(0, y = r.Next(0, 500), 0f), Quaternion.identity, gameObject.transform);
-                Instantiate(enemies[intStage / 2], new Vector3(y = r.Next(0, 500), 500, 0f), Quaternion.identity, gameObject.transform);
-                Instantiate(enemies[intStage / 2], new Vector3(y = 500, r.Next(0, 500)), Quaternion.identity, gameObject.transform);
-                Instantiate(enemies[intStage / 2], new Vector3(y = r.Next(0, 500), 0, 0), Quaternion.identity, gameObject.transform);
+                Instantiate(enemies[intStage / 2], new Vector3(0, r.Next(0, 500), 0f), Quaternion.identity, gameObject.transform);
+                Instantiate(enemies[intStage / 2], new Vector3( r.Next(0, 500), 500, 0f), Quaternion.identity, gameObject.transform);
+                Instantiate(enemies[intStage / 2], new Vector3(  500, r.Next(0, 500)), Quaternion.identity, gameObject.transform);
+                Instantiate(enemies[intStage / 2], new Vector3(r.Next(0, 500), 0, 0), Quaternion.identity, gameObject.transform);
             }
 
             stage.text = "Wave: " + intStage;

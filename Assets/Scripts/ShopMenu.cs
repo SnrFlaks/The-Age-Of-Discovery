@@ -14,7 +14,7 @@ public class ShopMenu : MonoBehaviour
     public  Text ttokens;
     public static Text tokens;
     
-    public static int intTokens = 100000;
+    public static int intTokens = 10000000;
 
     void Start()
     {

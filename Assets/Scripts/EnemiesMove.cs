@@ -6,8 +6,6 @@ using UnityEngine.Tilemaps;
 
 public class EnemiesMove : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private int z =250;
     [SerializeField] private int hp;
     void Update()
     {
