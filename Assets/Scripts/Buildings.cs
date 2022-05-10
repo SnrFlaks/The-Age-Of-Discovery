@@ -54,7 +54,6 @@ public class Buildings : MonoBehaviour
         var point = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
         var cellPosition = _ground.WorldToCell(point);
         ttokens.text = "Tokens: \n" + ShopMenu.intTokens;
-        ;
         Ore[0].text = "Tin: \n" + Mathf.Round(_tin);
         Ore[1].text = "Iron: \n" + Mathf.Round(_iron);
         Ore[2].text = "Copper: \n" + Mathf.Round(_copper);
@@ -63,7 +62,7 @@ public class Buildings : MonoBehaviour
         Ingot[1].text = "Iron ingot: \n" + _ironIngot;
         Ingot[2].text = "Copper ingot: \n" + _copperIngot;
         Ingot[3].text = "Gold ingot: \n" + _goldIngot;
-        if (Input.GetMouseButton(0) && HotBar.CreateLock == false && Base.createLockHub == false && cellPosition.x >= 0 && cellPosition.y >= 0)
+        if (Input.GetMouseButton(0) && HotBar.CreateLock == false && Base.createLockHub == false && CannonShoot.createLockCannon == false &&  cellPosition.x >= 0 && cellPosition.y >= 0)
         {
             for (var i = 0; i < HotBar.HotBarSelect.Length; i++)
             {
@@ -150,7 +149,7 @@ public class Buildings : MonoBehaviour
                     {
                         if (ShopMenu.intTokens >= 1000)
                         {
-                            Instantiate(cannon, new Vector2(cellPosition.x + 1f, cellPosition.y + 1.5f), Quaternion.identity, gameObject.transform.GetChild(3));
+                            Instantiate(cannon, new Vector2(cellPosition.x + 1f, cellPosition.y + 1f), Quaternion.identity, gameObject.transform.GetChild(3));
                             ShopMenu.intTokens -= 1000;
                         }
                         else Error("You don't have enough tokens");
@@ -161,6 +160,7 @@ public class Buildings : MonoBehaviour
         else if (Input.GetMouseButton(1))
         {
             _objectInGround.SetTile(cellPosition, null);
+
         }
     }
 
