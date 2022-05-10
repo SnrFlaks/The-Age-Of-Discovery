@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5856164682774362851}
   - component: {fileID: 5856164682774362848}
-  - component: {fileID: 237054062251915171}
+  - component: {fileID: 3565704254328335472}
   m_Layer: 0
   m_Name: canonPlatform
   m_TagString: Untagged
@@ -128,8 +128,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5856164682774362849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 241, y: 252.5, z: 0}
-  m_LocalScale: {x: 6.249964, y: 6.249983, z: 1}
+  m_LocalPosition: {x: -0.5, y: -0.5, z: 0}
+  m_LocalScale: {x: 3.125, y: 3.125, z: 1}
   m_Children:
   - {fileID: 5856164680968223681}
   m_Father: {fileID: 0}
@@ -186,7 +186,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &237054062251915171
+--- !u!61 &3565704254328335472
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
