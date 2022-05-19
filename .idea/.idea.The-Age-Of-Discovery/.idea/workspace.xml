@@ -6,13 +6,14 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Line.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Line.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Anim/canon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Anim/canon.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/canonPlatform.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/canonPlatform.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Prefabs/generatorLineRender.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Prefabs/generatorLineRender.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/canon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/canon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/water2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/water2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/bullet.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/bullet.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Prefabs/line.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Prefabs/line.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,15 +41,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/BottomButHotBar.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/Shadow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ButtonGroupRectStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/Shadow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Dildomatic/Assets/Scripts/Moldavia.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarVItems.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ConvSts.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Line.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarBut.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ConvSts.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Line.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -60,16 +61,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/StatPanelButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Base.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Cable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GeneratorsGroup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Generator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -147,7 +149,19 @@
       <workItem from="1652018456707" duration="7508000" />
       <workItem from="1652038057522" duration="6208000" />
       <workItem from="1652124851364" duration="2760000" />
-      <workItem from="1652181195463" duration="12887000" />
+      <workItem from="1652181195463" duration="14803000" />
+      <workItem from="1652288612735" duration="8613000" />
+      <workItem from="1652298457372" duration="6638000" />
+      <workItem from="1652357503125" duration="76000" />
+      <workItem from="1652357716132" duration="642000" />
+      <workItem from="1652373883796" duration="4647000" />
+      <workItem from="1652528797094" duration="133000" />
+      <workItem from="1652528989465" duration="14496000" />
+      <workItem from="1652554246158" duration="60000" />
+      <workItem from="1652554389709" duration="6256000" />
+      <workItem from="1652627919648" duration="14298000" />
+      <workItem from="1652724556358" duration="5116000" />
+      <workItem from="1652897892965" duration="2460000" />
     </task>
     <servers />
   </component>
