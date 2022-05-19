@@ -29,11 +29,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622267297989256997, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.063
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4622267297989256997, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4622267297989256997, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -71,5 +71,32 @@ PrefabInstance:
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
+--- !u!1 &1203956749473976650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4622267297989256923, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
+  m_PrefabInstance: {fileID: 5805359644987193233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &-9023260407182156983
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203956749473976650}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

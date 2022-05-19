@@ -71,5 +71,32 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 58173d1279fe36e4997b46899729fb60, type: 3}
+--- !u!1 &911105857008519557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4924679402699271063, guid: 58173d1279fe36e4997b46899729fb60, type: 3}
+  m_PrefabInstance: {fileID: 5256576113858568722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &-2636575791265911206
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911105857008519557}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

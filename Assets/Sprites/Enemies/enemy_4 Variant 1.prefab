@@ -67,5 +67,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 08c88f126b4229441b13f4e6f968b37a, type: 3}
+--- !u!1 &238600061843389628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 911105857008519557, guid: 08c88f126b4229441b13f4e6f968b37a, type: 3}
+  m_PrefabInstance: {fileID: 1147090308682151225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &5040877908245525986
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238600061843389628}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

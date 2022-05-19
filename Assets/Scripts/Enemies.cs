@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
@@ -16,6 +18,8 @@ public class Enemies : MonoBehaviour
 
     private Random r = new Random();
     [SerializeField] private bool ifSpawn = false;
+    public static List<GameObject> _allEnemies = new List<GameObject>(25);
+    
 
 
     void Start()
@@ -37,18 +41,18 @@ public class Enemies : MonoBehaviour
 
             for (int i = 0; i < intStage / 2; i++)
             {
-                Instantiate(enemies[intStage / 2], new Vector3(0, r.Next(0, 500)), Quaternion.identity, gameObject.transform);
-                Instantiate(enemies[intStage / 2], new Vector3(r.Next(0, 500), 500, 0f), Quaternion.identity, gameObject.transform);
-                Instantiate(enemies[intStage / 2], new Vector3(500, r.Next(0, 500)), Quaternion.identity, gameObject.transform);
-                Instantiate(enemies[intStage / 2], new Vector3(r.Next(0, 500), 0, 0), Quaternion.identity, gameObject.transform);
+                _allEnemies.Add(Instantiate(enemies[intStage / 2], new Vector3(0, r.Next(0, 500), 0f), Quaternion.identity, gameObject.transform));
+                _allEnemies.Add(Instantiate(enemies[intStage / 2], new Vector3( r.Next(0, 500), 500, 0f), Quaternion.identity, gameObject.transform));
+                _allEnemies.Add(Instantiate(enemies[intStage / 2], new Vector3(  500, r.Next(0, 500)), Quaternion.identity, gameObject.transform));
+                _allEnemies.Add(Instantiate(enemies[intStage / 2], new Vector3(r.Next(0, 500), 0, 0), Quaternion.identity, gameObject.transform));
             }
 
             if (intStage == 1)
             {
-                Instantiate(enemies[intStage / 2], new Vector3(0, r.Next(0, 500), 0f), Quaternion.identity, gameObject.transform);
-                Instantiate(enemies[intStage / 2], new Vector3( r.Next(0, 500), 500, 0f), Quaternion.identity, gameObject.transform);
-                Instantiate(enemies[intStage / 2], new Vector3(  500, r.Next(0, 500)), Quaternion.identity, gameObject.transform);
-                Instantiate(enemies[intStage / 2], new Vector3(r.Next(0, 500), 0, 0), Quaternion.identity, gameObject.transform);
+                _allEnemies.Add(Instantiate(enemies[intStage / 2], new Vector3(0, r.Next(0, 500), 0f), Quaternion.identity, gameObject.transform));
+                 _allEnemies.Add(Instantiate(enemies[intStage / 2], new Vector3( r.Next(0, 500), 500, 0f), Quaternion.identity, gameObject.transform));
+                 _allEnemies.Add(Instantiate(enemies[intStage / 2], new Vector3(  500, r.Next(0, 500)), Quaternion.identity, gameObject.transform));
+                 _allEnemies.Add(Instantiate(enemies[intStage / 2], new Vector3(r.Next(0, 500), 0, 0), Quaternion.identity, gameObject.transform));
             }
 
             stage.text = "Wave: " + intStage;
@@ -57,6 +61,22 @@ public class Enemies : MonoBehaviour
             yield return new WaitForSeconds(5);
         }
 
+    }
+    private GameObject Closest()
+    {
+        float distanceToClosestEnemy = Mathf.Infinity;
+        GameObject closestEnemy = null;
+        foreach (GameObject gm in Enemies._allEnemies)
+        {
+            float distanceToEnemy = (gm.transform.position - transform.position).sqrMagnitude;
+            if (distanceToEnemy < distanceToClosestEnemy)
+            {
+                distanceToClosestEnemy = distanceToEnemy;
+                closestEnemy = gm;
+            }
+        }
+
+        return closestEnemy;
     }
 }
 

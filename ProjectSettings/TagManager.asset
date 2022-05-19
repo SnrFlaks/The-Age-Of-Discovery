@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Base
   - Build
+  - Enemy
+  - Bullet
+  - Cannon
   layers:
   - Default
   - TransparentFX

@@ -160,7 +160,6 @@ public class Buildings : MonoBehaviour
         else if (Input.GetMouseButton(1))
         {
             _objectInGround.SetTile(cellPosition, null);
-
         }
     }
 

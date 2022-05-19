@@ -67,5 +67,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemy_1 Variant 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d587f5d7d23cf61479251c8c49a6e78c, type: 3}
+--- !u!1 &437046762074092693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6820713015407467475, guid: d587f5d7d23cf61479251c8c49a6e78c, type: 3}
+  m_PrefabInstance: {fileID: 6393064108905197382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &895736372515204654
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437046762074092693}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

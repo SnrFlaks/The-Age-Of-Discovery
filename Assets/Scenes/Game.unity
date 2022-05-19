@@ -5600,6 +5600,7 @@ MonoBehaviour:
   errorText: {fileID: 1706522902}
   generatorLo: {fileID: 838264637505431387, guid: f2c6b74ddb279714f99ae560eb9e40db, type: 3}
   cannon: {fileID: 5856164682774362849, guid: 8351083fa1f0cd64dbef13a9c4e28028, type: 3}
+  cannonRange: {fileID: 0}
   cannonHB: {fileID: 21300000, guid: 6b6a28da88a4165419eef203c7b232a3, type: 3}
   Ore:
   - {fileID: 1599133890}
@@ -5645,7 +5646,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 197d532f7af82074aa8aefc9d7107780, type: 2}
   - {fileID: 11400000, guid: b2765c5023627274092541df315e040f, type: 2}
   - {fileID: 11400000, guid: e1c72ca6faf3a4a4c8904f4b8714abf9, type: 2}
-  generation: 1
+  generation: 0
   MapSize: {x: 500, y: 500}
 --- !u!114 &876926842
 MonoBehaviour:
@@ -10469,7 +10470,7 @@ MonoBehaviour:
   - {fileID: 2669280718494355878, guid: aee3d34162d6f4a478ff45a5310cf023, type: 3}
   timeUntilNewStage: {fileID: 35353642}
   stage: {fileID: 1212603334}
-  ifSpawn: 0
+  ifSpawn: 1
 --- !u!1 &1326829630
 GameObject:
   m_ObjectHideFlags: 0
@@ -22288,7 +22289,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -22357,7 +22358,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 797.6167, y: 423.47266}
