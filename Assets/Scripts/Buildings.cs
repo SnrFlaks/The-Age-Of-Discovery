@@ -234,7 +234,6 @@ public class Buildings : MonoBehaviour
         for (int i = 0; i < gameObject.transform.GetChild(2).childCount; i++) {
             if (_objectInGround.GetTile(Vector3Int.FloorToInt(gameObject.transform.GetChild(2).GetChild(i).transform.position)) == _buildings[build] && gameObject.transform.GetChild(2).GetChild(i).GetComponent<Line>()._isPowered) connectedBuildCount++;
         }
-        Debug.Log(connectedBuildCount);
         return connectedBuildCount;
     }
 
