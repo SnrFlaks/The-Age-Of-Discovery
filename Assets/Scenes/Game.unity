@@ -5544,6 +5544,7 @@ GameObject:
   - component: {fileID: 876926840}
   - component: {fileID: 876926841}
   - component: {fileID: 876926843}
+  - component: {fileID: 876926844}
   - component: {fileID: 876926842}
   m_Layer: 0
   m_Name: Grid
@@ -5599,7 +5600,6 @@ MonoBehaviour:
   hotBar: {fileID: 4204435293025274303}
   errorText: {fileID: 1706522902}
   cannon: {fileID: 5856164682774362849, guid: 8351083fa1f0cd64dbef13a9c4e28028, type: 3}
-  cannonRange: {fileID: 0}
   cannonHB: {fileID: 21300000, guid: 6b6a28da88a4165419eef203c7b232a3, type: 3}
   linePrefab: {fileID: 4553881882130532204, guid: 1ede3348cc844c046adce52c055dd9e1, type: 3}
   Ore:
@@ -5718,6 +5718,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   k_TintMapSize: 256
+--- !u!114 &876926844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876926836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975022e3768b23d49a513b5516cd1116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannon: {fileID: 5856164682774362849, guid: 8351083fa1f0cd64dbef13a9c4e28028, type: 3}
 --- !u!1 &907710825
 GameObject:
   m_ObjectHideFlags: 0

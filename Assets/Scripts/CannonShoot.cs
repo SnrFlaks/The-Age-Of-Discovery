@@ -42,12 +42,12 @@ public class CannonShoot : MonoBehaviour
         color = transform.GetChild(1).GetComponent<SpriteRenderer>().color = color.a == 0.2f ? new Color(1,1,1,0f): new Color(1,1,1,0.2f);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Cannon")
-        {
-            Debug.Log("here");
-            Destroy(other.gameObject);
-        }
-    }
+    // private void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     if (other.gameObject.tag == "Cannon")
+    //     {
+    //         Debug.Log("here");
+    //         Destroy(other.gameObject);
+    //     }
+    // }
 }

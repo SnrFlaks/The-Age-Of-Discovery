@@ -62,21 +62,6 @@ public class Enemies : MonoBehaviour
         }
 
     }
-    private GameObject Closest()
-    {
-        float distanceToClosestEnemy = Mathf.Infinity;
-        GameObject closestEnemy = null;
-        foreach (GameObject gm in Enemies._allEnemies)
-        {
-            float distanceToEnemy = (gm.transform.position - transform.position).sqrMagnitude;
-            if (distanceToEnemy < distanceToClosestEnemy)
-            {
-                distanceToClosestEnemy = distanceToEnemy;
-                closestEnemy = gm;
-            }
-        }
-
-        return closestEnemy;
-    }
+ 
 }
 

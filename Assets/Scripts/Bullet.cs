@@ -3,43 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.WebSockets;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Bullet : MonoBehaviour
 {
-    private int damage = 500;
+    public int damage = 500;
     private static GameObject nearest;
-    
-    
+    private Vector3 position1;
+    private Vector3 position2;
+    private float time;
 
     void Update()
     {
         if(CannonShoot.enemy != null) {Move();}
     }
     
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag =="Enemy")
-        {
-            other.gameObject.GetComponent<EnemiesMove>().hp -= damage;
-          
-            if (other.gameObject.GetComponent<EnemiesMove>().hp <= 0)
-            {
-                Enemies._allEnemies.Remove(other.gameObject);
-                Destroy(other.gameObject);
-                Destroy(gameObject);
-            }
-        }
-    }
-
     
-
     private void Move()
-    { 
+    {
+        time += Time.deltaTime;
+        if(time > 1.5){Destroy(gameObject);}
+        
         nearest = CannonShoot.enemy;
-
-        var position1 = transform.position;
-        var position2 =  nearest.transform.position;
+        position1 = transform.position;
+        position2 =  nearest.transform.position;
         transform.position = Vector2.MoveTowards(new Vector2(position1.x,position1.y),new Vector2(position2.x,position2.y),15 * Time.deltaTime);
     }
     

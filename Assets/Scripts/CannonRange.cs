@@ -31,15 +31,6 @@ public class CannonRange : MonoBehaviour
          entered = false;
      }
 
-
-     private void OnTriggerExit2D(Collider2D other)
-     {
-         
-         if (other.gameObject.tag == "Bullet" && transform.parent.childCount>2 && other.gameObject == transform.parent.GetChild(2).gameObject )
-         {
-             Destroy(other.gameObject);
-         }
-     }
-
-    
+     
+     
 }

@@ -1,17 +1,25 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class EnemiesMove : MonoBehaviour
 {
     public  int hp;
-    
+    private int damage;
+
+
+    private void Start()
+    {
+        hp = GetComponent<EnemiesMove>().hp;
+    }
 
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,transform.position.y),new Vector2(250,250),50 * Time.deltaTime  );
+        transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,transform.position.y),new Vector2(250,250),10 * Time.deltaTime  );
         transform.Rotate(0,0,100 * Time.deltaTime);
     }
 
@@ -29,6 +37,27 @@ public class EnemiesMove : MonoBehaviour
         {
             Buildings._objectInGround.SetTile(Buildings._objectInGround.WorldToCell(col.GetContact(0).point),null);
             Enemies._allEnemies.Remove(gameObject);
+        }
+        else if (col.gameObject.tag == "Cannon")
+        {
+            Enemies._allEnemies.Remove(gameObject);
+            Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Bullet")
+        {
+            damage = other.GetComponent<Bullet>().damage;
+            hp -= damage;
+            if (hp <= 0)
+            {
+                Enemies._allEnemies.Remove(gameObject);
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -69,7 +69,6 @@ public class Buildings : MonoBehaviour
         Ingot[3].text = "Gold ingot: \n" + _goldIngot;
         if (Input.GetMouseButton(0) && HotBar.CreateLock == false && Base.createLockHub == false && CannonShoot.createLockCannon == false && cellPosition.x >= 0 && cellPosition.y >= 0)
         {
-            Debug.Log(_connectedFurnace);
             for (var i = 0; i < HotBar.HotBarSelect.Length; i++)
             {
                 if (HotBar.HotBarSelect[i])
