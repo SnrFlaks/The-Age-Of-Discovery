@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5856164680968223681}
   - component: {fileID: 5856164680968223680}
-  - component: {fileID: 5856164680968223683}
+  - component: {fileID: 1430875357920891783}
   m_Layer: 0
   m_Name: canon
   m_TagString: Untagged
@@ -83,25 +83,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5856164680968223683
-Animator:
-  serializedVersion: 3
+--- !u!111 &1430875357920891783
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5856164680968223694}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25fe83eceabc2e54baf1cdd92e2b907f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 96becf078734e4f4586133add8234ad7, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5856164682774362849
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +240,14 @@ PrefabInstance:
     - target: {fileID: 6964583182895016896, guid: 4180830de25e5234685876329d490a7c, type: 3}
       propertyPath: m_Name
       value: cannonRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 6964583182895016898, guid: 4180830de25e5234685876329d490a7c, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6964583182895016898, guid: 4180830de25e5234685876329d490a7c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6964583182895016899, guid: 4180830de25e5234685876329d490a7c, type: 3}
       propertyPath: m_RootOrder
