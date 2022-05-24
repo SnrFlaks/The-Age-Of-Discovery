@@ -10,6 +10,7 @@ public class EnemiesMove : MonoBehaviour
 {
     public  int hp;
     private int damage;
+    public int enemySpeed;
 
 
     private void Start()
@@ -19,7 +20,7 @@ public class EnemiesMove : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,transform.position.y),new Vector2(250,250),10 * Time.deltaTime  );
+        transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,transform.position.y),new Vector2(250,250),enemySpeed * Time.deltaTime  );
         transform.Rotate(0,0,100 * Time.deltaTime);
     }
 

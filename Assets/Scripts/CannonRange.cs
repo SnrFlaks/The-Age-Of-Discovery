@@ -7,30 +7,38 @@ using UnityEngine.UIElements;
 
 public class CannonRange : MonoBehaviour
 {
-    [SerializeField] private int time;
-     [SerializeField] private GameObject bullet;
-     private bool entered = false;
-    
-    
-     private void OnTriggerEnter2D(Collider2D other)
+    [SerializeField] private int speedOfShoot;
+    [SerializeField] private GameObject bullet;
+    public static bool entered = false;
+    private GameObject cannon;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Enemy" && !entered)
         {
             entered = true;
+            Cannon._animator.Play("shoot",-1,0);
             StartCoroutine("Spawn");
         }
-       
+
     }
-     
 
-     IEnumerator Spawn()
-     {
-         var pos = transform.position;
-         Instantiate(bullet, new Vector3(pos.x, pos.y, pos.z),Quaternion.identity,gameObject.transform.parent);
-         yield return new WaitForSeconds(3);
-         entered = false;
-     }
+  
+    IEnumerator Spawn()
+    {
+        var pos = transform.position;
+        
+        cannon = transform.parent.GetChild(0).gameObject;
+        cannon.transform.up = CannonShoot.enemy.transform.position - cannon.transform.position;
+        
+        Instantiate(bullet, new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, gameObject.transform.parent);
+        if(Bullet.nearest != null)
+        
+        yield return new WaitForSeconds(speedOfShoot);
+        entered = false;
+        
+    }
 
-     
-     
+
+
 }
