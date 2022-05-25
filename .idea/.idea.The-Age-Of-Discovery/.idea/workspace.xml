@@ -3,17 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Line.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Line.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Anim/canon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Anim/canon.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/bullet.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/bullet.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Prefabs/line.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Prefabs/line.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CannonShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CannonShoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemiesMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemiesMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Cannon/canonPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Cannon/canonPlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/bullet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/bullet.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +65,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Generator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CannonShoot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnemiesMove.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -162,6 +158,11 @@
       <workItem from="1652627919648" duration="14298000" />
       <workItem from="1652724556358" duration="5116000" />
       <workItem from="1652897892965" duration="2460000" />
+      <workItem from="1653236788043" duration="5496000" />
+      <workItem from="1653330357556" duration="590000" />
+      <workItem from="1653406073201" duration="1952000" />
+      <workItem from="1653505509525" duration="1297000" />
+      <workItem from="1653507139665" duration="1087000" />
     </task>
     <servers />
   </component>

@@ -6,9 +6,6 @@ using UnityEngine;
 
 public class CannonShoot : MonoBehaviour
 {
-    public static bool createLockCannon;
-    private void OnMouseEnter() => createLockCannon = true;
-    private void OnMouseExit() => createLockCannon = false;
     public  static GameObject enemy;
     private Color color;
 

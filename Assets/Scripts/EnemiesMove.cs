@@ -42,6 +42,7 @@ public class EnemiesMove : MonoBehaviour
         else if (col.gameObject.tag == "Cannon")
         {
             Enemies._allEnemies.Remove(gameObject);
+            Buildings.cannonBoolArr[(int) col.transform.position.x][(int) col.transform.position.y] = false;
             Destroy(col.gameObject);
             Destroy(gameObject);
         }
