@@ -31,6 +31,4 @@ public class Bullet : MonoBehaviour
         
         transform.position = Vector2.MoveTowards(new Vector2(position1.x,position1.y),new Vector2(position2.x,position2.y),bulletSpeed * Time.deltaTime);
     }
-    
-    
 }
