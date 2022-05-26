@@ -8,6 +8,7 @@ public class CannonShoot : MonoBehaviour
 {
     public  static GameObject enemy;
     private Color color;
+    private string g;
 
     private void Update()
     {
@@ -36,7 +37,12 @@ public class CannonShoot : MonoBehaviour
     
     private void OnMouseDown()
     {
-        color = transform.GetChild(1).GetComponent<SpriteRenderer>().color = color.a == 0.2f ? new Color(1,1,1,0f): new Color(1,1,1,0.2f);
+       transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.2f);
+    }
+
+    private void OnMouseExit()
+    { 
+        transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
     }
 
     // private void OnCollisionEnter2D(Collision2D other)
