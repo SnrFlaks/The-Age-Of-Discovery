@@ -21,7 +21,6 @@ public class EnemiesMove : MonoBehaviour
     private void Update()
     {
         transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,transform.position.y),new Vector2(250,250),enemySpeed * Time.deltaTime  );
-        transform.Rotate(0,0,100 * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D col)

@@ -17,7 +17,6 @@ public class CannonRange : MonoBehaviour
         if (other.gameObject.tag == "Enemy" && !entered)
         {
             entered = true;
-            if(Cannon._animator != null){Cannon._animator.Play("shoot",-1,0);}
             StartCoroutine("Spawn");
         }
 
