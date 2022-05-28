@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +8,7 @@ public class ShopMenu : MonoBehaviour
     private Slider _slider;
     private Text _text;
     private Text _btext;
-    public  Text ttokens;
+    public  Text tokensText;
     public static Text tokens;
     
     public static int intTokens = 10000000;
@@ -21,7 +18,7 @@ public class ShopMenu : MonoBehaviour
         _slider = transform.GetChild(0).GetComponent<Slider>();
         _text = transform.GetChild(1).GetComponent<Text>();
         _btext = transform.GetChild(2).GetChild(0).GetComponent<Text>();
-        tokens = ttokens;
+        tokens = tokensText;
     }
     public void AmountOfOre(float ore)
     {

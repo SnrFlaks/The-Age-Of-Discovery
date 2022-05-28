@@ -18,10 +18,10 @@ public class SmelteryMenu : MonoBehaviour
 
     public void NumberOfOre(int ore)
     {
-        if (ore == 0) _slider.maxValue = Buildings._tinDrillCount >= Buildings._connectedFurnace ? Buildings._connectedFurnace + 0.0000000001f : Mathf.Round(Buildings._tinDrillCount) + 0.0000000001f;
-        else if (ore == 1) _slider.maxValue = Buildings._ironDrillCount >= Buildings._connectedFurnace ? Buildings._connectedFurnace + 0.0000000001f : Mathf.Round(Buildings._ironDrillCount) + 0.0000000001f;
-        else if (ore == 2) _slider.maxValue = Buildings._copperDrillCount >= Buildings._connectedFurnace ? Buildings._connectedFurnace + 0.0000000001f : Mathf.Round(Buildings._copperDrillCount) + 0.0000000001f;
-        else if (ore == 3) _slider.maxValue = Buildings._goldDrillCount >= Buildings._connectedFurnace ? Buildings._connectedFurnace + 0.0000000001f : Mathf.Round(Buildings._goldDrillCount) + 0.0000000001f;
+        if (ore == 0) _slider.maxValue = Buildings.ConnectedTinDrillCount >= Buildings.ConnectedFurnaceCount ? Buildings.ConnectedFurnaceCount + 0.0000000001f : Mathf.Round(Buildings.ConnectedTinDrillCount) + 0.0000000001f;
+        else if (ore == 1) _slider.maxValue = Buildings.ConnectedIronDrillCount >= Buildings.ConnectedFurnaceCount ? Buildings.ConnectedFurnaceCount + 0.0000000001f : Mathf.Round(Buildings.ConnectedIronDrillCount) + 0.0000000001f;
+        else if (ore == 2) _slider.maxValue = Buildings.ConnectedCopperDrillCount >= Buildings.ConnectedFurnaceCount ? Buildings.ConnectedFurnaceCount + 0.0000000001f : Mathf.Round(Buildings.ConnectedCopperDrillCount) + 0.0000000001f;
+        else if (ore == 3) _slider.maxValue = Buildings.ConnectedGoldDrillCount >= Buildings.ConnectedFurnaceCount ? Buildings.ConnectedFurnaceCount + 0.0000000001f : Mathf.Round(Buildings.ConnectedGoldDrillCount) + 0.0000000001f;
     }
 
     public void Remelt(int ore)

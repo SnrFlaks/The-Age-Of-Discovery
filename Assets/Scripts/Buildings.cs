@@ -1,37 +1,32 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 
 public class Buildings : MonoBehaviour
 {
-    [SerializeField] private Vector2Int _mapSize;
     [SerializeField] private GameObject hotBar;
     [SerializeField] private Text errorText;
     [SerializeField] private GameObject cannon;
-    [SerializeField] private Sprite cannonHB;
+    [SerializeField] private Sprite cannonHb;
     [SerializeField] private GameObject linePrefab;
+    [SerializeField] private TileBase waterTile;
 
-    [SerializeField] private Text[] Ore;
-    [SerializeField] private Text[] Ingot;
-    public static float _ironDrillCount;
-    private int _connectedIronDrillCount;
-    public static float _goldDrillCount;
-    private int _connectedGoldDrillCount;
-    public static float _tinDrillCount;
-    private int _connectedTinDrillCount;
-    public static float _copperDrillCount;
-    private int _connectedCopperDrillCount;
+    [SerializeField] private Text[] ore;
+    [SerializeField] private Text[] ingot;
+    public static int ConnectedIronDrillCount;
+    public static int ConnectedGoldDrillCount;
+    public static int ConnectedTinDrillCount;
+    public static int ConnectedCopperDrillCount; 
+    public static int ConnectedFurnaceCount;
 
     public static float _tin;
     public static float _iron;
     public static float _copper;
     public static float _gold;
-
-    private int _furnaceCount;
-    public static int _connectedFurnace;
-
+    
     public static int _tinIngot;
     public static int _ironIngot;
     public static int _copperIngot;
@@ -41,10 +36,13 @@ public class Buildings : MonoBehaviour
     public static Tilemap _objectInGround;
     private TileBase[] _buildings;
 
-    public static bool[][] cannonBoolArr = new bool[500][];
-    public Text ttokens;
+    public static readonly bool[][] cannonBoolArr = new bool[500][];
+    public Text tokensText;
     private Vector3 point;
     private Vector3Int cellPosition;
+
+    private Transform _grid;
+    private Transform _lineGroup;
 
     private void Start()
     {
@@ -52,9 +50,11 @@ public class Buildings : MonoBehaviour
         _buildings = ItemList.buildings;
         _ground = transform.GetChild(0).GetComponent<Tilemap>();
         _objectInGround = transform.GetChild(1).GetComponent<Tilemap>();
+        _grid = transform;
+        _lineGroup = _grid.GetChild(2);
         StartCoroutine(OncePerSecond());
         for (int i = 0; i < cannonBoolArr.Length; i++) cannonBoolArr[i] = new bool[500];
-        ShopMenu.tokens = ttokens;
+        ShopMenu.tokens = tokensText;
         ShopMenu.tokens.text = "Tokens: \n" + ShopMenu.intTokens;
     }
 
@@ -62,23 +62,23 @@ public class Buildings : MonoBehaviour
     {
         point = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
         cellPosition = _ground.WorldToCell(point);
-        ttokens.text = "Tokens: \n" + ShopMenu.intTokens;
-        Ore[0].text = "Tin: \n" + Mathf.Round(_tin);
-        Ore[1].text = "Iron: \n" + Mathf.Round(_iron);
-        Ore[2].text = "Copper: \n" + Mathf.Round(_copper);
-        Ore[3].text = "Gold: \n" + Mathf.Round(_gold);
-        Ingot[0].text = "Tin ingot: \n" + _tinIngot;
-        Ingot[1].text = "Iron ingot: \n" + _ironIngot;
-        Ingot[2].text = "Copper ingot: \n" + _copperIngot;
-        Ingot[3].text = "Gold ingot: \n" + _goldIngot;
-        if (Input.GetMouseButton(0) && HotBar.CreateLock == false && Base.createLockHub == false && cellPosition.x >= 0 && cellPosition.y >= 0 && cannonBoolArr[cellPosition.x][cellPosition.y] != true)
+        tokensText.text = "Tokens: \n" + ShopMenu.intTokens;
+        ore[0].text = "Tin: \n" + Mathf.Round(_tin);
+        ore[1].text = "Iron: \n" + Mathf.Round(_iron);
+        ore[2].text = "Copper: \n" + Mathf.Round(_copper);
+        ore[3].text = "Gold: \n" + Mathf.Round(_gold);
+        ingot[0].text = "Tin ingot: \n" + _tinIngot;
+        ingot[1].text = "Iron ingot: \n" + _ironIngot;
+        ingot[2].text = "Copper ingot: \n" + _copperIngot;
+        ingot[3].text = "Gold ingot: \n" + _goldIngot;
+        if (Input.GetMouseButton(0) && HotBar.CreateLock == false && Base.createLockHub == false && cellPosition.x >= 0 && cellPosition.y >= 0 && cannonBoolArr[cellPosition.x][cellPosition.y] != true && _objectInGround.GetTile(cellPosition) == null && _ground.GetTile(cellPosition) != waterTile)
         {
             for (var i = 0; i < HotBar.HotBarSelect.Length; i++)
             {
                 if (HotBar.HotBarSelect[i])
                 {
-                    TileBase changedTile = hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite == cannonHB ? null : ItemList.buildings[Array.IndexOf(ItemList.buildingsIcon, hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
-                    if (changedTile == _buildings[0] && _objectInGround.GetTile(cellPosition) == null)
+                    TileBase changedTile = hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite == cannonHb ? null : ItemList.buildings[Array.IndexOf(ItemList.buildingsIcon, hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
+                    if (changedTile == _buildings[0])
                     {
                         if (_ground.GetTile(cellPosition).name == "ironRandomTile")
                         {
@@ -87,7 +87,6 @@ public class Buildings : MonoBehaviour
                                 _objectInGround.SetTile(cellPosition, _buildings[0]);
                                 ShopMenu.intTokens -= 2500;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
-                                _ironDrillCount++;
                                 LineCreate();
                             }
                             else Error("You don't have enough tokens");
@@ -99,7 +98,6 @@ public class Buildings : MonoBehaviour
                                 _objectInGround.SetTile(cellPosition, _buildings[1]);
                                 ShopMenu.intTokens -= 5000;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
-                                _goldDrillCount++;
                                 LineCreate();
                             }
                             else Error("You don't have enough tokens");
@@ -111,7 +109,6 @@ public class Buildings : MonoBehaviour
                                 _objectInGround.SetTile(cellPosition, _buildings[2]);
                                 ShopMenu.intTokens -= 1000;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
-                                _tinDrillCount++;
                                 LineCreate();
                             }
                             else Error("You don't have enough tokens");
@@ -123,13 +120,12 @@ public class Buildings : MonoBehaviour
                                 _objectInGround.SetTile(cellPosition, _buildings[3]);
                                 ShopMenu.intTokens -= 3500;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
-                                _copperDrillCount++;
                                 LineCreate();
                             }
                             else Error("You don't have enough tokens");
                         }
                     }
-                    else if (changedTile == _buildings[4] && _objectInGround.GetTile(cellPosition) == null)
+                    else if (changedTile == _buildings[4])
                     {
                         if (ShopMenu.intTokens >= 50)
                         {
@@ -138,18 +134,17 @@ public class Buildings : MonoBehaviour
                         }
                         else Error("You don't have enough tokens");
                     }
-                    else if (changedTile == _buildings[5] && _objectInGround.GetTile(cellPosition) == null)
+                    else if (changedTile == _buildings[5])
                     {
                         if (ShopMenu.intTokens >= 1500)
                         {
                             _objectInGround.SetTile(cellPosition, _buildings[5]);
                             ShopMenu.intTokens -= 1500;
-                            _furnaceCount++;
                             LineCreate();
                         }
                         else Error("You don't have enough tokens");
                     }
-                    else if (changedTile == _buildings[6] && _objectInGround.GetTile(cellPosition) == null)
+                    else if (changedTile == _buildings[6])
                     {
                         if (ShopMenu.intTokens >= 1500)
                         {
@@ -159,12 +154,12 @@ public class Buildings : MonoBehaviour
                         }
                         else Error("You don't have enough tokens");
                     }
-                    else if (hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite == cannonHB)
+                    else if (hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite == cannonHb)
                     {
                         if (ShopMenu.intTokens >= 1000)
                         {
                             cannonBoolArr[cellPosition.x][cellPosition.y] = true;
-                            var can = Instantiate(cannon, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f), Quaternion.identity, gameObject.transform.GetChild(3));
+                            var can = Instantiate(cannon, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f), Quaternion.identity, _grid.GetChild(3));
                             can.name = cellPosition.ToString();
                             ShopMenu.intTokens -= 1000;
                         }
@@ -180,28 +175,28 @@ public class Buildings : MonoBehaviour
                 return;
             }
             _objectInGround.SetTile(cellPosition, null);
-            Transform cannonForDelete = gameObject.transform.GetChild(3).Find($"{cellPosition}");
+            Transform cannonForDelete = _grid.GetChild(3).Find($"{cellPosition}");
             if (cannonForDelete != null) {
                 Destroy(cannonForDelete.gameObject);
                 cannonBoolArr[cellPosition.x][cellPosition.y] = false;
             }
-            Transform gameObjWithLine = gameObject.transform.GetChild(2).Find($"{cellPosition}");
+            Transform gameObjWithLine = _lineGroup.Find($"{cellPosition}");
             if (gameObjWithLine != null) gameObjWithLine.GetComponent<Line>().LineDelete();
-            _connectedIronDrillCount = ConnectedBuildingsCount(0);
-            _connectedGoldDrillCount = ConnectedBuildingsCount(1);
-            _connectedTinDrillCount = ConnectedBuildingsCount(2);
-            _connectedCopperDrillCount = ConnectedBuildingsCount(3);
-            _connectedFurnace = ConnectedBuildingsCount(5);
+            ConnectedIronDrillCount = ConnectedBuildingsCount(0);
+            ConnectedGoldDrillCount = ConnectedBuildingsCount(1);
+            ConnectedTinDrillCount = ConnectedBuildingsCount(2);
+            ConnectedCopperDrillCount = ConnectedBuildingsCount(3);
+            ConnectedFurnaceCount = ConnectedBuildingsCount(5);
         }
     }
 
-    bool IsConnected(bool generatorCleanLock)
+    private bool IsConnected(bool generatorCleanLock)
     {
         for (int x = cellPosition.x - 4; x < cellPosition.x + 5; x++)
         {
             for (int y = cellPosition.y - 4; y < cellPosition.y + 5; y++)
             {
-                Transform gm = gameObject.transform.GetChild(2).Find($"{new Vector3Int(x, y, 0)}");
+                Transform gm = _lineGroup.Find($"{new Vector3Int(x, y, 0)}");
                 if (gm == null) continue;
                 if (Vector3Int.FloorToInt(gm.GetComponent<LineRenderer>().GetPosition(1)) == cellPosition) generatorCleanLock = true;
             }
@@ -209,51 +204,52 @@ public class Buildings : MonoBehaviour
         return generatorCleanLock;
     }
 
-    void LineCreate()
+    private void LineCreate()
     {
-        var lp = Instantiate(linePrefab, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f), Quaternion.identity, gameObject.transform.GetChild(2));
+        var lp = Instantiate(linePrefab, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f), Quaternion.identity, _lineGroup);
         lp.name = cellPosition.ToString();
         lp.GetComponent<LineRenderer>().SetPosition(1, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f));
         lp.GetComponent<Line>().LineFilling();
         LineCheck();
     }
 
-    void LineCheck()
+    private void LineCheck()
     {
         for (int x = cellPosition.x - 4; x < cellPosition.x + 5; x++)
         {
             for (int y = cellPosition.y - 4; y < cellPosition.y + 5; y++)
             {
-                Transform gm = gameObject.transform.GetChild(2).Find($"{new Vector3Int(x, y, 0)}");
+                Transform gm = _lineGroup.Find($"{new Vector3Int(x, y, 0)}");
                 if (_objectInGround.GetTile(new Vector3Int(x, y, 0)) == null || _objectInGround.GetTile(new Vector3Int(x, y, 0)) == _buildings[6]) continue;
                 gm.GetComponent<Line>().LineSet();
-                // gm.GetComponent<Line>()._isPowered = _objectInGround.GetTile(new Vector3Int(x, y, 0)) == _buildings[6];
-                _connectedIronDrillCount = ConnectedBuildingsCount(0);
-                _connectedGoldDrillCount = ConnectedBuildingsCount(1);
-                _connectedTinDrillCount = ConnectedBuildingsCount(2);
-                _connectedCopperDrillCount = ConnectedBuildingsCount(3);
-                _connectedFurnace = ConnectedBuildingsCount(5);
+                ConnectedIronDrillCount = ConnectedBuildingsCount(0);
+                ConnectedGoldDrillCount = ConnectedBuildingsCount(1);
+                ConnectedTinDrillCount = ConnectedBuildingsCount(2);
+                ConnectedCopperDrillCount = ConnectedBuildingsCount(3);
+                ConnectedFurnaceCount = ConnectedBuildingsCount(5);
             }
         }
     }
-    
-    int ConnectedBuildingsCount(int build)
+
+    private int ConnectedBuildingsCount(int build)
     {
         int connectedBuildCount = 0;
-        for (int i = 0; i < gameObject.transform.GetChild(2).childCount; i++) {
-            if (_objectInGround.GetTile(Vector3Int.FloorToInt(gameObject.transform.GetChild(2).GetChild(i).transform.position)) == _buildings[build] && gameObject.transform.GetChild(2).GetChild(i).GetComponent<Line>()._isPowered) connectedBuildCount++;
+        for (int i = 0; i < _lineGroup.childCount; i++)
+        {
+            if (_objectInGround.GetTile(Vector3Int.FloorToInt(_lineGroup.GetChild(i).transform.position)) != _buildings[build] || !_lineGroup.GetChild(i).GetComponent<Line>()._isPowered) continue;
+            connectedBuildCount++;
         }
         return connectedBuildCount;
     }
 
-    void Error(string error)
+    private void Error(string error)
     {
         errorText.text = error;
-        StopCoroutine("showText");
-        StartCoroutine("showText");
+        StopCoroutine("ShowText");
+        StartCoroutine("ShowText");
     }
 
-    IEnumerator showText()
+    private IEnumerator ShowText()
     {
         Color textColor = errorText.color;
         textColor.a = 1;
@@ -269,14 +265,14 @@ public class Buildings : MonoBehaviour
         }
     }
 
-    IEnumerator OncePerSecond()
+    private static IEnumerator OncePerSecond()
     {
         while (true)
         {
-            _tin += 8 * _connectedTinDrillCount;
-            _iron += 4 * _connectedIronDrillCount;
-            _copper += 2 * _connectedCopperDrillCount;
-            _gold += 1 * _connectedGoldDrillCount;
+            _tin += 8 * ConnectedTinDrillCount;
+            _iron += 4 * ConnectedIronDrillCount;
+            _copper += 2 * ConnectedCopperDrillCount;
+            _gold += 1 * ConnectedGoldDrillCount;
             yield return new WaitForSeconds(1);
         }
     }

@@ -23,7 +23,7 @@ MonoBehaviour:
     - {x: -1, y: 0, z: 0}
     - {x: 1, y: 0, z: 0}
     m_Sprites:
-    - {fileID: 2868539044483428322, guid: a0242d439ac5cec4292042f37979ef69, type: 3}
+    - {fileID: 6943877414362044987, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
     m_GameObject: {fileID: 0}
     m_AnimationSpeed: 1
     m_PerlinScale: 0.5
@@ -38,7 +38,7 @@ MonoBehaviour:
     - {x: 0, y: 1, z: 0}
     - {x: 1, y: 0, z: 0}
     m_Sprites:
-    - {fileID: -5571866524637575377, guid: a0242d439ac5cec4292042f37979ef69, type: 3}
+    - {fileID: 714640018910243106, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
     m_GameObject: {fileID: 0}
     m_AnimationSpeed: 1
     m_PerlinScale: 0.5
@@ -53,7 +53,7 @@ MonoBehaviour:
     - {x: -1, y: 0, z: 0}
     - {x: 0, y: -1, z: 0}
     m_Sprites:
-    - {fileID: -8255771079334560590, guid: a0242d439ac5cec4292042f37979ef69, type: 3}
+    - {fileID: 2211340758025852569, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
     m_GameObject: {fileID: 0}
     m_AnimationSpeed: 1
     m_PerlinScale: 0.5
@@ -68,7 +68,7 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 0, y: 1, z: 0}
     m_Sprites:
-    - {fileID: 6356908062157346430, guid: a0242d439ac5cec4292042f37979ef69, type: 3}
+    - {fileID: -7593061824141356989, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
     m_GameObject: {fileID: 0}
     m_AnimationSpeed: 1
     m_PerlinScale: 0.5
@@ -83,7 +83,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0, y: -1, z: 0}
     m_Sprites:
-    - {fileID: 6451264694632907309, guid: a0242d439ac5cec4292042f37979ef69, type: 3}
+    - {fileID: 7982250540209261053, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
     m_GameObject: {fileID: 0}
     m_AnimationSpeed: 1
     m_PerlinScale: 0.5
@@ -98,7 +98,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0, y: -1, z: 0}
     m_Sprites:
-    - {fileID: -282635231382982036, guid: a0242d439ac5cec4292042f37979ef69, type: 3}
+    - {fileID: -1940711659595061046, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
     m_GameObject: {fileID: 0}
     m_AnimationSpeed: 1
     m_PerlinScale: 0.5
