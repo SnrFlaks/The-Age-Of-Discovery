@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -44,9 +45,12 @@ public class Buildings : MonoBehaviour
     private Transform _grid;
     private Transform _lineGroup;
 
+    private Camera mainCam;
+
     private void Start()
     {
         //ShopMenu.intTokens = PlayerPrefs.GetInt("tokens") == 0 ? 100000 : PlayerPrefs.GetInt("tokens");
+        mainCam = Camera.main;
         _buildings = ItemList.buildings;
         _ground = transform.GetChild(0).GetComponent<Tilemap>();
         _objectInGround = transform.GetChild(1).GetComponent<Tilemap>();
@@ -60,7 +64,7 @@ public class Buildings : MonoBehaviour
 
     private void Update()
     {
-        point = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
+        point = mainCam.ScreenToWorldPoint(Input.mousePosition);
         cellPosition = _ground.WorldToCell(point);
         tokensText.text = "Tokens: \n" + ShopMenu.intTokens;
         ore[0].text = "Tin: \n" + Mathf.Round(_tin);
@@ -174,19 +178,17 @@ public class Buildings : MonoBehaviour
                 Error("You cannot remove a generator while it is connected");
                 return;
             }
-            _objectInGround.SetTile(cellPosition, null);
             Transform cannonForDelete = _grid.GetChild(3).Find($"{cellPosition}");
             if (cannonForDelete != null) {
                 Destroy(cannonForDelete.gameObject);
                 cannonBoolArr[cellPosition.x][cellPosition.y] = false;
             }
             Transform gameObjWithLine = _lineGroup.Find($"{cellPosition}");
-            if (gameObjWithLine != null) gameObjWithLine.GetComponent<Line>().LineDelete();
-            ConnectedIronDrillCount = ConnectedBuildingsCount(0);
-            ConnectedGoldDrillCount = ConnectedBuildingsCount(1);
-            ConnectedTinDrillCount = ConnectedBuildingsCount(2);
-            ConnectedCopperDrillCount = ConnectedBuildingsCount(3);
-            ConnectedFurnaceCount = ConnectedBuildingsCount(5);
+            if (gameObjWithLine != null) {
+                gameObjWithLine.gameObject.SetActive(false);
+                gameObjWithLine.GetComponent<Line>().LineDelete();
+            }
+            _objectInGround.SetTile(cellPosition, null);
         }
     }
 
@@ -215,31 +217,17 @@ public class Buildings : MonoBehaviour
 
     private void LineCheck()
     {
-        for (int x = cellPosition.x - 4; x < cellPosition.x + 5; x++)
+        for (int x = cellPosition.x - 3; x < cellPosition.x + 4; x++)
         {
-            for (int y = cellPosition.y - 4; y < cellPosition.y + 5; y++)
+            for (int y = cellPosition.y - 3; y < cellPosition.y + 4; y++)
             {
-                Transform gm = _lineGroup.Find($"{new Vector3Int(x, y, 0)}");
-                if (_objectInGround.GetTile(new Vector3Int(x, y, 0)) == null || _objectInGround.GetTile(new Vector3Int(x, y, 0)) == _buildings[6]) continue;
+                Vector3Int coord = new Vector3Int(x, y, 0);
+                Transform gm = _lineGroup.Find($"{coord}");
+                TileBase tile = _objectInGround.GetTile(coord);
+                if (tile == null || tile == _buildings[6]) continue;
                 gm.GetComponent<Line>().LineSet();
-                ConnectedIronDrillCount = ConnectedBuildingsCount(0);
-                ConnectedGoldDrillCount = ConnectedBuildingsCount(1);
-                ConnectedTinDrillCount = ConnectedBuildingsCount(2);
-                ConnectedCopperDrillCount = ConnectedBuildingsCount(3);
-                ConnectedFurnaceCount = ConnectedBuildingsCount(5);
             }
         }
-    }
-
-    private int ConnectedBuildingsCount(int build)
-    {
-        int connectedBuildCount = 0;
-        for (int i = 0; i < _lineGroup.childCount; i++)
-        {
-            if (_objectInGround.GetTile(Vector3Int.FloorToInt(_lineGroup.GetChild(i).transform.position)) != _buildings[build] || !_lineGroup.GetChild(i).GetComponent<Line>()._isPowered) continue;
-            connectedBuildCount++;
-        }
-        return connectedBuildCount;
     }
 
     private void Error(string error)

@@ -2,150 +2,100 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/cannon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/copperCable.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/copperOre.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/crusherLvl1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/crusherLvl2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/crusherLvl3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/crusherLvl4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/drillCoper.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/drillGold.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/drillIron.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/drillTin.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/furnace.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/goldOre.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/ironOre.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/itemCabel.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/stone.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/tinCable.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/tinOre.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/wall.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/water2.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Line.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Line.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BackGround.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/BackGround.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BackGround.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/BackGround.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Cannon/bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Cannon/bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Cannon/cannonRange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Cannon/cannonRange.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Cannon/canonPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Cannon/canonPlatform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Exit.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/Exit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Exit.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/Exit.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/Exit.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Materials/Exit.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/Menu.aseprite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/Menu.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Rectangle.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/Rectangle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Rectangle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/Rectangle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settingst.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/Settingst.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Settingst.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/Settingst.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Start.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/Start.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Start.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/Start.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/copperCanbleTile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/copperCanbleTile.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/copperRandomTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/copperRandomTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillCopperTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillCopperTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillGoldTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillGoldTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillIronTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillIronTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillTinTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillTinTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/furnaceTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/furnaceTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/generatorTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/generatorTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldCableTile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldCableTile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldRandomTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/goldRandomTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/hubTile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/hubTile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironRandomTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/ironRandomTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/itemCabelTile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/itemCabelTile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stoneRandomTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/stoneRandomTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/tinCableTile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/tinCableTile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/tinRandomTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/tinRandomTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wallTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/wallTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/waterTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/waterTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buildMenu.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/buildMenu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buildMenu.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/buildMenu.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buildMenuButton.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/buildMenuButton.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buildMenuButton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/buildMenuButton.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Empty.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Empty.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Prefabs/generatorLineRender.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Prefabs/generatorLineRender.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Prefabs/line.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Prefabs/line.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillCopperTile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillCopperTile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillGoldTile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillGoldTile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillIronTile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillIronTile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillTinTile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/drillTinTile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/White.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/White.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/arrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/auto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/auto.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/base.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/base.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/baseHp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/baseHp.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/bullet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/bullet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cannon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/cannon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cannon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/canon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonCell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/buttonCell.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cannonHB.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/cannonHB.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/canon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperCable.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/copperCable.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperCable.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperOre.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/copperOre.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperOre.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crusherLvl1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/crusherLvl1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crusherLvl1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crusherLvl2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/crusherLvl2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crusherLvl2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crusherLvl3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/crusherLvl3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crusherLvl3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crusherLvl4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/crusherLvl4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/crusherLvl4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drillCoper.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/drillCoper.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drillCoper.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drillGold.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/drillGold.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drillGold.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drillIron.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/drillIron.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drillIron.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drillTin.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/drillTin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/drillTin.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/furnace.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/furnace.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/furnace.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/furnaceLvl1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/furnaceLvl1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/furnaceLvl2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/furnaceLvl2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/furnaceLvl3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/furnaceLvl3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/furnaceLvl4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/furnaceLvl4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/generator.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/generator.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/generator.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/generator.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldCable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldCable.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldOre.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/goldOre.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldOre.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/hub.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/hub.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/hub.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/hub.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/inputField.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/inputField.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/inputField.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/inputField.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ironOre.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/ironOre.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ironOre.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/itemCabel.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/itemCabel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/itemCabel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menuMB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menuMB.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menuPanel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menuPanel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/stone.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/stone.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/stone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinCable.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/tinCable.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinCable.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinOre.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/tinOre.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinOre.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/wall.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/wall.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/wall.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/water2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UnusedSprites/water2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/water2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/canonPlatform.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canonPlatform.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/checkmark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/checkmark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/coin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/coin.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperIngot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/copperIngot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/enemy_0.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/enemy_0.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldIngot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/goldIngot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/hotBarCell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/hotBarCell.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/hpPanel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/hpPanel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ironIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ironIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ironIngot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ironIngot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menuButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menuButton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menuExitButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menuExitButton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/panelMenu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/panelMenu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/redBar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/redBar.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/remeltingButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/remeltingButton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/shopMenu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/shopMenu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/smelteryMenu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/smelteryMenu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/statPanel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/statPanel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/statPanelButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/statPanelButton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinIngot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tinIngot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/unknownIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/unknownIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/wave.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/wave.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +128,7 @@
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ButtonGroupRectStatus.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Dildomatic/Assets/Scripts/Moldavia.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarVItems.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/HotBarBut.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Fabrikk/Assets/Scripts/ConvSts.cs" root0="SKIP_HIGHLIGHTING" />
@@ -188,8 +139,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Menu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WallCreate.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FPSView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StatPanelButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" />
@@ -200,12 +149,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GeneratorsGroup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Generator.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CannonShoot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemiesMove.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CannonShoot.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -303,7 +256,18 @@
       <workItem from="1653507139665" duration="1314000" />
       <workItem from="1653670163716" duration="2822000" />
       <workItem from="1653679434149" duration="4031000" />
-      <workItem from="1653729044633" duration="10008000" />
+      <workItem from="1653729044633" duration="15037000" />
+      <workItem from="1653749485135" duration="11291000" />
+      <workItem from="1653769970511" duration="1253000" />
+      <workItem from="1653771576305" duration="909000" />
+      <workItem from="1653822198977" duration="6326000" />
+      <workItem from="1653839329324" duration="4544000" />
+      <workItem from="1653898017803" duration="6163000" />
+      <workItem from="1653920213544" duration="4766000" />
+      <workItem from="1654163841540" duration="10311000" />
+      <workItem from="1654201332993" duration="555000" />
+      <workItem from="1654251666668" duration="674000" />
+      <workItem from="1654704681368" duration="2839000" />
     </task>
     <servers />
   </component>

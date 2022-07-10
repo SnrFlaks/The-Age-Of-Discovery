@@ -10,7 +10,7 @@ public class SmelteryMenu : MonoBehaviour
 
     void Start()
     {
-        _toggle = transform.GetChild(6).GetComponent<Toggle>();
+        _toggle = transform.GetChild(5).GetComponent<Toggle>();
         _slider = transform.GetChild(3).GetComponent<Slider>();
     }
 

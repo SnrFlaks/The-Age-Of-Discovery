@@ -9,6 +9,11 @@ TagManager:
   - Enemy
   - Bullet
   - Cannon
+  - Line0
+  - Line1
+  - Line2
+  - Line3
+  - Line5
   layers:
   - Default
   - TransparentFX
