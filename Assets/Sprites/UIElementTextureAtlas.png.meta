@@ -102,6 +102,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -745,6 +746,34 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      UIElementTextureAtlas_9: -4513333285825029254
+      UIElementTextureAtlas_13: -5382882249987494714
+      UIElementTextureAtlas_5: 1869506029863128489
+      UIElementTextureAtlas_24: -5648313436878973500
+      UIElementTextureAtlas_14: -3085787595943817430
+      UIElementTextureAtlas_2: -4804192429541154245
+      UIElementTextureAtlas_20: -7386293646128381877
+      UIElementTextureAtlas_6: -1198000810523893979
+      UIElementTextureAtlas_4: 349994427469461285
+      UIElementTextureAtlas_12: 2309800475864943382
+      UIElementTextureAtlas_10: -2773064834077736015
+      UIElementTextureAtlas_18: -4285800234782750441
+      UIElementTextureAtlas_8: 6427620795106450355
+      UIElementTextureAtlas_19: 336437614205241086
+      UIElementTextureAtlas_23: -874236426277086725
+      UIElementTextureAtlas_16: 4525848935476455992
+      UIElementTextureAtlas_11: -8852929430646971475
+      UIElementTextureAtlas_1: -7017281764407890277
+      UIElementTextureAtlas_3: -4108979301592481102
+      UIElementTextureAtlas_0: 313493009468441985
+      UIElementTextureAtlas_26: 544132272391673002
+      UIElementTextureAtlas_7: 4041190664598927816
+      UIElementTextureAtlas_22: -7825041106946879873
+      UIElementTextureAtlas_17: 5255229256167452078
+      UIElementTextureAtlas_25: 6376261273389142214
+      UIElementTextureAtlas_21: -7519452206318820801
+      UIElementTextureAtlas_15: -21348173893137084
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

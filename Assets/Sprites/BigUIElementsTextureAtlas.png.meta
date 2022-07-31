@@ -36,6 +36,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -196,6 +197,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      BigUIElementsTextureAtlas_1: 818852521906685539
+      BigUIElementsTextureAtlas_0: 831230984016162329
+      BigUIElementsTextureAtlas_2: 512901769401819763
+      BigUIElementsTextureAtlas_3: -7343577214999127773
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
