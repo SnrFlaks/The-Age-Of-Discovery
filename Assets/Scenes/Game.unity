@@ -1973,7 +1973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -467.41992, y: 320.85}
+  m_AnchoredPosition: {x: -467.4199, y: 320.85}
   m_SizeDelta: {x: -1550.51, y: -763.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286568436
@@ -12368,7 +12368,7 @@ MonoBehaviour:
   - {fileID: 2669280718494355878, guid: aee3d34162d6f4a478ff45a5310cf023, type: 3}
   timeUntilNewStage: {fileID: 35353642}
   stage: {fileID: 1212603334}
-  ifSpawn: 0
+  ifSpawn: 1
 --- !u!1 &1326829630
 GameObject:
   m_ObjectHideFlags: 0
@@ -13948,7 +13948,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7785888, y: 1}
+    m_SensorSize: {x: 1.7775701, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

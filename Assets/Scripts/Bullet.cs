@@ -23,7 +23,11 @@ public class Bullet : MonoBehaviour
     private void Move()
     {
         time += Time.deltaTime;
-        if(time > 3){Destroy(gameObject);}
+        if (time > 3)
+        {
+            Destroy(gameObject);
+            time = 0;
+        }
         
         nearest = CannonShoot.enemy;
         position1 = transform.position;
