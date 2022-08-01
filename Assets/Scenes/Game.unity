@@ -12350,7 +12350,7 @@ MonoBehaviour:
   - {fileID: 2669280718494355878, guid: aee3d34162d6f4a478ff45a5310cf023, type: 3}
   timeUntilNewStage: {fileID: 35353642}
   stage: {fileID: 1212603334}
-  ifSpawn: 0
+  ifSpawn: 1
 --- !u!1 &1326829630
 GameObject:
   m_ObjectHideFlags: 0
