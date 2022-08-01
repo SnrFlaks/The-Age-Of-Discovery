@@ -20,10 +20,12 @@ public class Enemies : MonoBehaviour
     [SerializeField] private bool ifSpawn = false;
     public static List<GameObject> _allEnemies = new List<GameObject>(25);
     
+    
 
 
     void Start()
     {
+        
         if (ifSpawn) {StartCoroutine(Spawn()); }
         time = 5;
     }

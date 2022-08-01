@@ -9,30 +9,35 @@ public class Bullet : MonoBehaviour
 {
     public int damage;
     public int bulletSpeed;
-    public static GameObject nearest;
-    private Vector3 position1;
-    private Vector3 position2;
-    private float time;
+    private Vector3 pos1;
+    private Vector3 pos2;
+    private int hp;
+    private GameObject nearest;
+    
+
+    private void Start()
+    {
+        nearest = CannonRange.nearest;
+        if (nearest.GetComponent<EnemiesMove>().hp - damage <= 0)
+        {
+             Enemies._allEnemies.Remove(nearest);
+        }
+    }
 
     void Update()
     {
-        if(CannonShoot.enemy != null) {Move();}
+        if (nearest != null)
+        {
+            Move();
+        }
     }
     
     
     private void Move()
     {
-        time += Time.deltaTime;
-        if (time > 3)
-        {
-            Destroy(gameObject);
-            time = 0;
-        }
+        pos1 = transform.position;
+        pos2 = nearest.transform.position;
         
-        nearest = CannonShoot.enemy;
-        position1 = transform.position;
-        position2 =  nearest.transform.position;
-        
-        transform.position = Vector2.MoveTowards(new Vector2(position1.x,position1.y),new Vector2(position2.x,position2.y),bulletSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(new Vector2(pos1.x,pos1.y),new Vector2(pos2.x,pos2.y),bulletSpeed * Time.deltaTime);
     }
 }

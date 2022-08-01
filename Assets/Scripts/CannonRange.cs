@@ -11,9 +11,14 @@ public class CannonRange : MonoBehaviour
     [SerializeField] private GameObject bullet;
     public static bool entered = false;
     private GameObject cannon;
+    
+    public static GameObject nearest;
+    public static Vector3 position1;
+    public static Vector3 position2;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.gameObject.tag == "Enemy" && !entered)
         {
             entered = true;
@@ -25,13 +30,13 @@ public class CannonRange : MonoBehaviour
   
     IEnumerator Spawn()
     {
-        var pos = transform.position;
+        position1 = transform.position;
+        nearest = CannonShoot.Closest(position1);
         
         cannon = transform.parent.GetChild(0).gameObject;
-        cannon.transform.up = CannonShoot.enemy.transform.position - cannon.transform.position;
+         cannon.transform.up = nearest.transform.position - cannon.transform.position;
         
-        Instantiate(bullet, new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, gameObject.transform.parent);
-        if(Bullet.nearest != null)
+        Instantiate(bullet, new Vector3(position1.x, position1.y,position1.z), Quaternion.identity, gameObject.transform.parent);
         
         yield return new WaitForSeconds(speedOfShoot);
         entered = false;

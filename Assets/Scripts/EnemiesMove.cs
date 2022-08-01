@@ -8,15 +8,17 @@ using UnityEngine.Tilemaps;
 
 public class EnemiesMove : MonoBehaviour
 {
-    public  int hp;
+    public int hp;
     private int damage;
     public int enemySpeed;
 
 
-    private void Start()
+    private   void Start()
     {
         hp = GetComponent<EnemiesMove>().hp;
     }
+
+ 
 
     private void Update()
     {
@@ -37,11 +39,13 @@ public class EnemiesMove : MonoBehaviour
         {
             Buildings._objectInGround.SetTile(Buildings._objectInGround.WorldToCell(col.GetContact(0).point),null);
             Enemies._allEnemies.Remove(gameObject);
+     
         }
         else if (col.gameObject.tag == "Cannon")
         {
-            Enemies._allEnemies.Remove(gameObject);
             Buildings.cannonBoolArr[(int) col.transform.position.x][(int) col.transform.position.y] = false;
+            Enemies._allEnemies.Remove(gameObject);
+            CannonRange.entered = false;
             Destroy(col.gameObject);
             Destroy(gameObject);
         }
@@ -55,7 +59,6 @@ public class EnemiesMove : MonoBehaviour
             hp -= damage;
             if (hp <= 0)
             {
-                Enemies._allEnemies.Remove(gameObject);
                 Destroy(other.gameObject);
                 Destroy(gameObject);
             }

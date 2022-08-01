@@ -6,26 +6,13 @@ using UnityEngine;
 
 public class CannonShoot : MonoBehaviour
 {
-    public  static GameObject enemy;
-    private Color color;
-    private string g;
-
-    private void Update()
-    {
-        if (Enemies._allEnemies != null)
-        {
-            enemy = Closest();
-        }
-       
-    }
-    
-    private  GameObject Closest()
+    public static  GameObject Closest(Vector3 pos)
     {
         float distanceToClosestEnemy = Mathf.Infinity;
         GameObject closestEnemy = null;
         foreach (GameObject gm in Enemies._allEnemies)
         {
-            float distanceToEnemy = (gm.transform.position - transform.position).sqrMagnitude;
+            float distanceToEnemy = (gm.transform.position - pos).sqrMagnitude;
             if (distanceToEnemy < distanceToClosestEnemy)
             {
                 distanceToClosestEnemy = distanceToEnemy;
@@ -34,23 +21,5 @@ public class CannonShoot : MonoBehaviour
         }
         return closestEnemy;
     }
-    
-    private void OnMouseDown()
-    {
-       transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.2f);
-    }
 
-    private void OnMouseExit()
-    { 
-        transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
-    }
-
-    // private void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     if (other.gameObject.tag == "Cannon")
-    //     {
-    //         Debug.Log("here");
-    //         Destroy(other.gameObject);
-    //     }
-    // }
 }
