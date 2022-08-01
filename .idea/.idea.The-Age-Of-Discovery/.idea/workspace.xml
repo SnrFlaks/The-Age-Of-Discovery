@@ -3,10 +3,53 @@
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Line.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Line.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BigUIElementsTextureAtlas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BigUIElementsTextureAtlas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Cannon/cannonRange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Cannon/cannonRange.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Empty.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Empty.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0 Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1 Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2 Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3 Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4 Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/enemy_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextureAtlasMini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextureAtlasMini.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cannonHB.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/cannonHB.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cannonHB.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/cannonHB.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/canon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/canon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/canonPlatform.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canonPlatform.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/canonPlatform.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/canonPlatform.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/enemy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/enemy.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +76,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/Shadow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Line.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/Shadow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -46,24 +89,24 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/StatPanelButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsOpen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Base.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Cable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GeneratorsGroup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Generator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemiesMove.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CannonShoot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Base.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -78,7 +121,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="ReSharper" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -174,6 +217,9 @@
       <workItem from="1654251666668" duration="674000" />
       <workItem from="1654704681368" duration="2839000" />
       <workItem from="1659263103845" duration="3939000" />
+      <workItem from="1659280321070" duration="10783000" />
+      <workItem from="1659344792301" duration="7662000" />
+      <workItem from="1659354209807" duration="9388000" />
     </task>
     <servers />
   </component>

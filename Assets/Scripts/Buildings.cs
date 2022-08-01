@@ -35,7 +35,9 @@ public class Buildings : MonoBehaviour
 
     private Tilemap _ground;
     public static Tilemap _objectInGround;
-    private TileBase[] _buildings;
+    private TileBase[] _buildings; 
+    private string[] _buildingsName;
+    public Tile emptyTile;
 
     public static readonly bool[][] cannonBoolArr = new bool[500][];
     public Text tokensText;
@@ -47,11 +49,12 @@ public class Buildings : MonoBehaviour
 
     private Camera mainCam;
 
-    private void Start()
+    private void Awake()
     {
         //ShopMenu.intTokens = PlayerPrefs.GetInt("tokens") == 0 ? 100000 : PlayerPrefs.GetInt("tokens");
         mainCam = Camera.main;
         _buildings = ItemList.buildings;
+        _buildingsName = ItemList.buildingsName;
         _ground = transform.GetChild(0).GetComponent<Tilemap>();
         _objectInGround = transform.GetChild(1).GetComponent<Tilemap>();
         _grid = transform;
@@ -88,7 +91,7 @@ public class Buildings : MonoBehaviour
                         {
                             if (ShopMenu.intTokens >= 2500)
                             {
-                                _objectInGround.SetTile(cellPosition, _buildings[0]);
+                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[1] == 1 ? _buildings[0] : _buildings[Array.IndexOf(_buildingsName, $"drillIronTile{BuildingsLevelUpMenu.LevelNow[1]}")]);
                                 ShopMenu.intTokens -= 2500;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 LineCreate();
@@ -99,7 +102,7 @@ public class Buildings : MonoBehaviour
                         {
                             if (ShopMenu.intTokens >= 5000)
                             {
-                                _objectInGround.SetTile(cellPosition, _buildings[1]);
+                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[3] == 1 ? _buildings[1] : _buildings[Array.IndexOf(_buildingsName, $"drillIronTile{BuildingsLevelUpMenu.LevelNow[3]}")]);
                                 ShopMenu.intTokens -= 5000;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 LineCreate();
@@ -110,7 +113,7 @@ public class Buildings : MonoBehaviour
                         {
                             if (ShopMenu.intTokens >= 1000)
                             {
-                                _objectInGround.SetTile(cellPosition, _buildings[2]);
+                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[0] == 1 ? _buildings[2] : _buildings[Array.IndexOf(_buildingsName, $"drillIronTile{BuildingsLevelUpMenu.LevelNow[0]}")]);
                                 ShopMenu.intTokens -= 1000;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 LineCreate();
@@ -121,7 +124,7 @@ public class Buildings : MonoBehaviour
                         {
                             if (ShopMenu.intTokens >= 3500)
                             {
-                                _objectInGround.SetTile(cellPosition, _buildings[3]);
+                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[2] == 1 ? _buildings[3] : _buildings[Array.IndexOf(_buildingsName, $"drillIronTile{BuildingsLevelUpMenu.LevelNow[2]}")]);
                                 ShopMenu.intTokens -= 3500;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 LineCreate();
@@ -185,18 +188,18 @@ public class Buildings : MonoBehaviour
             }
             Transform gameObjWithLine = _lineGroup.Find($"{cellPosition}");
             if (gameObjWithLine != null) {
-                gameObjWithLine.gameObject.SetActive(false);
+                //gameObjWithLine.gameObject.SetActive(false);
                 gameObjWithLine.GetComponent<Line>().LineDelete();
             }
-            _objectInGround.SetTile(cellPosition, null);
+            if (_objectInGround.GetTile(cellPosition) != emptyTile) _objectInGround.SetTile(cellPosition, null);
         }
     }
 
     private bool IsConnected(bool generatorCleanLock)
     {
-        for (int x = cellPosition.x - 4; x < cellPosition.x + 5; x++)
+        for (int x = cellPosition.x - 3; x < cellPosition.x + 4; x++)
         {
-            for (int y = cellPosition.y - 4; y < cellPosition.y + 5; y++)
+            for (int y = cellPosition.y - 3; y < cellPosition.y + 4; y++)
             {
                 Transform gm = _lineGroup.Find($"{new Vector3Int(x, y, 0)}");
                 if (gm == null) continue;

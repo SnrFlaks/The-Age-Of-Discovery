@@ -48,7 +48,7 @@ public class Line : MonoBehaviour
             for (int y = _cellPosition.y - 3; y < _cellPosition.y + 4; y++)
             {
                 _getTile = _buildOig.GetTile(new Vector3Int(x, y , (int) transform.position.z));
-                if (_getTile == _tile)
+                if (_getTile == _tile && _isPowered != true)
                 {
                     _line.SetPosition(1, new Vector2(x + 0.5f, y + 0.5f));
                     _isPowered = true;
