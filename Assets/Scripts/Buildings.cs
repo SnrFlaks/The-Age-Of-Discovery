@@ -104,7 +104,7 @@ public class Buildings : MonoBehaviour
                         {
                             if (ShopMenu.intTokens >= 5000)
                             {
-                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[3] == 1 ? _buildings[1] : _buildings[Array.IndexOf(_buildingsName, $"drillIronTile{BuildingsLevelUpMenu.LevelNow[3]}")]);
+                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[3] == 1 ? _buildings[1] : _buildings[Array.IndexOf(_buildingsName, $"drillGoldTile{BuildingsLevelUpMenu.LevelNow[3]}")]);
                                 ShopMenu.intTokens -= 5000;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 LineCreate();
@@ -115,7 +115,7 @@ public class Buildings : MonoBehaviour
                         {
                             if (ShopMenu.intTokens >= 1000)
                             {
-                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[0] == 1 ? _buildings[2] : _buildings[Array.IndexOf(_buildingsName, $"drillIronTile{BuildingsLevelUpMenu.LevelNow[0]}")]);
+                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[0] == 1 ? _buildings[2] : _buildings[Array.IndexOf(_buildingsName, $"drillTinTile{BuildingsLevelUpMenu.LevelNow[0]}")]);
                                 ShopMenu.intTokens -= 1000;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 LineCreate();
@@ -126,7 +126,7 @@ public class Buildings : MonoBehaviour
                         {
                             if (ShopMenu.intTokens >= 3500)
                             {
-                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[2] == 1 ? _buildings[3] : _buildings[Array.IndexOf(_buildingsName, $"drillIronTile{BuildingsLevelUpMenu.LevelNow[2]}")]);
+                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[2] == 1 ? _buildings[3] : _buildings[Array.IndexOf(_buildingsName, $"drillCopperTile{BuildingsLevelUpMenu.LevelNow[2]}")]);
                                 ShopMenu.intTokens -= 3500;
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
                                 LineCreate();

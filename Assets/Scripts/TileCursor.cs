@@ -32,24 +32,21 @@ public class TileCursor : MonoBehaviour
             {
                 if (_ground.GetTile(cellPosition).name == "ironRandomTile")
                 {
-                    transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = BuildingsLevelUpMenu.LevelNow[1] == 1 ? ItemList.buildingsIcon[0] :
-                        ItemList.upgradeCostStat[1].levelSprite[BuildingsLevelUpMenu.LevelNow[1] - 2];
+                    transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = BuildingsLevelUpMenu.LevelNow[1] == 1 ? ItemList.buildingsIcon[0] : ItemList.upgradeCostStat[1].levelSprite[BuildingsLevelUpMenu.LevelNow[1] - 2];
                 }
                 else if (_ground.GetTile(cellPosition).name == "goldRandomTile")
                 {
-                    transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = BuildingsLevelUpMenu.LevelNow[3] == 1 ? ItemList.buildingsIcon[1] :
-                        ItemList.upgradeCostStat[3].levelSprite[BuildingsLevelUpMenu.LevelNow[3] - 2];
+                    transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = BuildingsLevelUpMenu.LevelNow[3] == 1 ? ItemList.buildingsIcon[1] : ItemList.upgradeCostStat[3].levelSprite[BuildingsLevelUpMenu.LevelNow[3] - 2];
                 }
                 else if (_ground.GetTile(cellPosition).name == "tinRandomTile")
                 {
-                    transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = BuildingsLevelUpMenu.LevelNow[0] == 1 ? ItemList.buildingsIcon[2] :
-                        ItemList.upgradeCostStat[0].levelSprite[BuildingsLevelUpMenu.LevelNow[0] - 2];
+                    transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = BuildingsLevelUpMenu.LevelNow[0] == 1 ? ItemList.buildingsIcon[2] : ItemList.upgradeCostStat[0].levelSprite[BuildingsLevelUpMenu.LevelNow[0] - 2];
                 }
                 else if (_ground.GetTile(cellPosition).name == "copperRandomTile")
                 {
-                    transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = BuildingsLevelUpMenu.LevelNow[2] == 1 ? ItemList.buildingsIcon[3] :
-                        ItemList.upgradeCostStat[2].levelSprite[BuildingsLevelUpMenu.LevelNow[2] - 2];
+                    transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = BuildingsLevelUpMenu.LevelNow[2] == 1 ? ItemList.buildingsIcon[3] : ItemList.upgradeCostStat[2].levelSprite[BuildingsLevelUpMenu.LevelNow[2] - 2];
                 }
+                else transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = hotBar.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite;
             }
             else transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = hotBar.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite;
             transform.GetChild(1).GetComponent<SpriteRenderer>().color = HotBar.spriteNN[i] == cannonHb ? new Color(1,1,1,0.2f) : new Color(1f, 1f, 1f, 0f);
