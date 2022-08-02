@@ -12,6 +12,7 @@ public class Buildings : MonoBehaviour
     [SerializeField] private Text errorText;
     [SerializeField] private GameObject cannon;
     [SerializeField] private Sprite cannonHb;
+    [SerializeField] private Sprite empty;
     [SerializeField] private GameObject linePrefab;
     [SerializeField] private TileBase waterTile;
 
@@ -84,7 +85,8 @@ public class Buildings : MonoBehaviour
             {
                 if (HotBar.HotBarSelect[i])
                 {
-                    TileBase changedTile = hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite == cannonHb ? null : ItemList.buildings[Array.IndexOf(ItemList.buildingsIcon, hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
+                    Sprite hBSprite = hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite;
+                    TileBase changedTile = hBSprite == cannonHb ? null : hBSprite == empty ? null : ItemList.buildings[Array.IndexOf(ItemList.buildingsIcon, hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
                     if (changedTile == _buildings[0])
                     {
                         if (_ground.GetTile(cellPosition).name == "ironRandomTile")

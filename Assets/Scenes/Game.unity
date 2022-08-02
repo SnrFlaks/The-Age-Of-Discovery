@@ -1983,7 +1983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -467.4199, y: 320.85}
+  m_AnchoredPosition: {x: -467.41995, y: 320.85}
   m_SizeDelta: {x: -1550.51, y: -763.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286568436
@@ -6559,6 +6559,7 @@ MonoBehaviour:
   errorText: {fileID: 1706522902}
   cannon: {fileID: 5856164682774362849, guid: 8351083fa1f0cd64dbef13a9c4e28028, type: 3}
   cannonHb: {fileID: 21300000, guid: 6b6a28da88a4165419eef203c7b232a3, type: 3}
+  empty: {fileID: 21300000, guid: a59f8838ba9f97546bd84c4b29a2a975, type: 3}
   linePrefab: {fileID: 4553881882130532204, guid: 1ede3348cc844c046adce52c055dd9e1, type: 3}
   waterTile: {fileID: 11400000, guid: e1c72ca6faf3a4a4c8904f4b8714abf9, type: 2}
   ore:
@@ -8766,7 +8767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hotBar: {fileID: 4204435293025274303}
-  cannon1: {fileID: 21300000, guid: 6b6a28da88a4165419eef203c7b232a3, type: 3}
+  cannonHb: {fileID: 21300000, guid: 6b6a28da88a4165419eef203c7b232a3, type: 3}
   empty: {fileID: 21300000, guid: a59f8838ba9f97546bd84c4b29a2a975, type: 3}
 --- !u!212 &1066860004
 SpriteRenderer:
@@ -13872,7 +13873,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7785888, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
