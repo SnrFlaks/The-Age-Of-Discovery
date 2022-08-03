@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: waterTile
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 4906880845820131785, guid: 618f4c9fef25cf84bb15a64308a99bb1, type: 3}
+  m_DefaultSprite: {fileID: -1143589853856009831, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
