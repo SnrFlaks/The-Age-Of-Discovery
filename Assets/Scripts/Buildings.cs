@@ -18,17 +18,17 @@ public class Buildings : MonoBehaviour
 
     [SerializeField] private Text[] ore;
     [SerializeField] private Text[] ingot;
-    public static int ConnectedIronDrillCount;
-    public static int ConnectedGoldDrillCount;
-    public static int ConnectedTinDrillCount;
-    public static int ConnectedCopperDrillCount; 
+    public static int[] ConnectedIronDrillCount = new int[7];
+    public static int[] ConnectedGoldDrillCount = new int[7];
+    public static int[] ConnectedTinDrillCount = new int[7];
+    public static int[] ConnectedCopperDrillCount = new int[7];
     public static int ConnectedFurnaceCount;
 
     public static float _tin;
     public static float _iron;
     public static float _copper;
     public static float _gold;
-    
+
     public static int _tinIngot;
     public static int _ironIngot;
     public static int _copperIngot;
@@ -36,7 +36,7 @@ public class Buildings : MonoBehaviour
 
     private Tilemap _ground;
     public static Tilemap _objectInGround;
-    private TileBase[] _buildings; 
+    private TileBase[] _buildings;
     private string[] _buildingsName;
     public Tile emptyTile;
 
@@ -179,20 +179,26 @@ public class Buildings : MonoBehaviour
         }
         else if (Input.GetMouseButton(1))
         {
-            if (_objectInGround.GetTile(cellPosition) == _buildings[6] && IsConnected(false)) {
+            if (_objectInGround.GetTile(cellPosition) == _buildings[6] && IsConnected(false))
+            {
                 Error("You cannot remove a generator while it is connected");
                 return;
             }
+
             Transform cannonForDelete = _grid.GetChild(3).Find($"{cellPosition}");
-            if (cannonForDelete != null) {
+            if (cannonForDelete != null)
+            {
                 Destroy(cannonForDelete.gameObject);
                 cannonBoolArr[cellPosition.x][cellPosition.y] = false;
             }
+
             Transform gameObjWithLine = _lineGroup.Find($"{cellPosition}");
-            if (gameObjWithLine != null) {
+            if (gameObjWithLine != null)
+            {
                 //gameObjWithLine.gameObject.SetActive(false);
                 gameObjWithLine.GetComponent<Line>().LineDelete();
             }
+
             if (_objectInGround.GetTile(cellPosition) != emptyTile) _objectInGround.SetTile(cellPosition, null);
         }
     }
@@ -208,6 +214,7 @@ public class Buildings : MonoBehaviour
                 if (Vector3Int.FloorToInt(gm.GetComponent<LineRenderer>().GetPosition(1)) == cellPosition) generatorCleanLock = true;
             }
         }
+
         return generatorCleanLock;
     }
 
@@ -262,10 +269,12 @@ public class Buildings : MonoBehaviour
     {
         while (true)
         {
-            _tin += 8 * ConnectedTinDrillCount;
-            _iron += 4 * ConnectedIronDrillCount;
-            _copper += 2 * ConnectedCopperDrillCount;
-            _gold += 1 * ConnectedGoldDrillCount;
+            for (int i = 0; i < ConnectedTinDrillCount.Length; i++) {
+                _tin += (8 * i + 1) * ConnectedTinDrillCount[i];
+                _iron += (4 * i + 1) * ConnectedIronDrillCount[i];
+                _copper += (2 * i + 1) * ConnectedCopperDrillCount[i];
+                _gold += (1 * i + 1) * ConnectedGoldDrillCount[i];
+            }
             yield return new WaitForSeconds(1);
         }
     }

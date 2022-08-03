@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class BuildingsLevelUpMenu : MonoBehaviour
@@ -7,8 +9,9 @@ public class BuildingsLevelUpMenu : MonoBehaviour
     public static readonly int[] LevelNow = {1,1,1,1};
     private readonly Sprite[][] _sprites = new Sprite[6][];
     private int _selectBuild = -1;
-    public Text[] costText = new Text[9];
-    public Text upgradeButtonText;
+    [SerializeField] private Text[] costText = new Text[9];
+    [SerializeField] private Text upgradeButtonText;
+    [FormerlySerializedAs("_ground")] [SerializeField] private Tilemap _objInGround;
 
     private void Start()
     {
@@ -89,6 +92,22 @@ public class BuildingsLevelUpMenu : MonoBehaviour
             transform.GetChild(3).GetChild(0).GetComponent<Image>().sprite = _sprites[3][LevelNow[3] - 2];
             transform.GetChild(3).GetChild(2).GetComponent<Image>().sprite = LevelNow[3] < 7 ? _sprites[3][LevelNow[3] - 1] : _sprites[3][LevelNow[3] - 2];
             upgradeButtonText.text = LevelNow[3] != 7 ? $"Upgrade to level: \n {LevelNow[3] + 1}" : "Max level!";
+        }
+        UpdateBuildings();
+    }
+
+    private void UpdateBuildings()
+    {
+        for (var x = 0; x < WorldGeneration.coord.x; x++)
+        {
+            for (var y = 0; y < WorldGeneration.coord.y; y++)
+            {
+                if (_selectBuild == 0 && _objInGround.GetTile(new Vector3Int(x, y, 0)) != null && _objInGround.GetTile(new Vector3Int(x, y, 0)))
+                {
+                    
+                    _objInGround.GetTile(new Vector3Int(x, y, 0));
+                }
+            }
         }
     }
 

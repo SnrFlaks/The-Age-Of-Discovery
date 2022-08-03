@@ -11,7 +11,7 @@ public class WorldGeneration : MonoBehaviour
     [SerializeField] private TileBase[] tile;
 
     private float n, sid = 30f;
-    private static Vector2Int coord;
+    public static Vector2Int coord;
     private float scale;
 
     [SerializeField] private bool generation;

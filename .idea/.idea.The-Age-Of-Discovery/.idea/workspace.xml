@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Line.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Line.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/waterTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/waterTile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,21 +53,21 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Cable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GeneratorsGroup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Generator.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Base.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -73,10 +78,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34991798" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -176,7 +184,11 @@
       <workItem from="1659280321070" duration="10783000" />
       <workItem from="1659344792301" duration="7662000" />
       <workItem from="1659354209807" duration="9388000" />
-      <workItem from="1659433902235" duration="3676000" />
+      <workItem from="1659433902235" duration="4270000" />
+      <workItem from="1659449700031" duration="7771000" />
+      <workItem from="1659527521830" duration="7265000" />
+      <workItem from="1659537702471" duration="488000" />
+      <workItem from="1659538276228" duration="2351000" />
     </task>
     <servers />
   </component>

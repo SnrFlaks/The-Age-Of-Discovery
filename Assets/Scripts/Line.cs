@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 
 public class Line : MonoBehaviour
@@ -12,6 +11,8 @@ public class Line : MonoBehaviour
     private TileBase _getTile;
     public bool _isPowered;
     private Vector3Int _cellPosition;
+    private TileBase[] _buildings;
+    private string[] _buildingsName;
     [SerializeField] private Transform _visibleGroup;
     [SerializeField] private Transform _invisibleGroup;
 
@@ -19,11 +20,16 @@ public class Line : MonoBehaviour
     {
         if (_isPowered)
         {
-            if (_buildOig.GetTile(_cellPosition) == ItemList.buildings[0]) Buildings.ConnectedIronDrillCount--;
-            else if (_buildOig.GetTile(_cellPosition) == ItemList.buildings[1]) Buildings.ConnectedGoldDrillCount--;
-            else if (_buildOig.GetTile(_cellPosition) == ItemList.buildings[2]) Buildings.ConnectedTinDrillCount--;
-            else if (_buildOig.GetTile(_cellPosition) == ItemList.buildings[3]) Buildings.ConnectedCopperDrillCount--;
-            else if (_buildOig.GetTile(_cellPosition) == ItemList.buildings[5]) Buildings.ConnectedFurnaceCount--;
+            TileBase buOig = _buildOig.GetTile(_cellPosition);
+            if (buOig == _buildings[0]) Buildings.ConnectedIronDrillCount[0]--;
+            else if (buOig.name == $"drillIronTile{buOig.name[^1]}") Buildings.ConnectedIronDrillCount[(int)char.GetNumericValue((char) (buOig.name[^1]- 1))]--;
+            if (buOig == _buildings[1]) Buildings.ConnectedGoldDrillCount[0]--;
+            else if (buOig.name == $"drillGoldTile{buOig.name[^1]}") Buildings.ConnectedGoldDrillCount[(int)char.GetNumericValue((char) (buOig.name[^1]- 1))]--;
+            if (buOig == _buildings[2]) Buildings.ConnectedTinDrillCount[0]--;
+            else if (buOig.name == $"drillTinTile{buOig.name[^1]}") Buildings.ConnectedTinDrillCount[(int)char.GetNumericValue((char) (buOig.name[^1]- 1))]--;
+            if (buOig == _buildings[3]) Buildings.ConnectedCopperDrillCount[0]--;
+            else if (buOig.name == $"drillCopperTile{buOig.name[^1]}") Buildings.ConnectedCopperDrillCount[(int)char.GetNumericValue((char) (buOig.name[^1]- 1))]--;
+            else if (buOig == ItemList.buildings[5]) Buildings.ConnectedFurnaceCount--;
         }
         gameObject.SetActive(false);
         Destroy(gameObject);
@@ -35,6 +41,8 @@ public class Line : MonoBehaviour
         _position = gameObject.transform.position;
         _cellPosition = _buildOig.WorldToCell(_position);
         _tile = ItemList.buildings[6];
+        _buildings = ItemList.buildings;
+        _buildingsName = ItemList.buildingsName;
         var parent = transform.parent;
         _visibleGroup = parent;
         _invisibleGroup = parent.GetChild(0);
@@ -52,11 +60,16 @@ public class Line : MonoBehaviour
                 {
                     _line.SetPosition(1, new Vector2(x + 0.5f, y + 0.5f));
                     _isPowered = true;
-                    if (_buildOig.GetTile(_cellPosition) == ItemList.buildings[0]) Buildings.ConnectedIronDrillCount++;
-                    else if (_buildOig.GetTile(_cellPosition) == ItemList.buildings[1]) Buildings.ConnectedGoldDrillCount++;
-                    else if (_buildOig.GetTile(_cellPosition) == ItemList.buildings[2]) Buildings.ConnectedTinDrillCount++;
-                    else if (_buildOig.GetTile(_cellPosition) == ItemList.buildings[3]) Buildings.ConnectedCopperDrillCount++;
-                    else if (_buildOig.GetTile(_cellPosition) == ItemList.buildings[5]) Buildings.ConnectedFurnaceCount++;
+                    TileBase buOig = _buildOig.GetTile(_cellPosition);
+                    if (buOig == _buildings[0]) Buildings.ConnectedIronDrillCount[0]++;
+                    else if (buOig.name == $"drillIronTile{buOig.name[^1]}") Buildings.ConnectedIronDrillCount[(int)char.GetNumericValue((char) (buOig.name[^1]- 1))]++;
+                    if (buOig == _buildings[1]) Buildings.ConnectedGoldDrillCount[0]++;
+                    else if (buOig.name == $"drillGoldTile{buOig.name[^1]}") Buildings.ConnectedGoldDrillCount[(int)char.GetNumericValue((char) (buOig.name[^1]- 1))]++;
+                    if (buOig == _buildings[2]) Buildings.ConnectedTinDrillCount[0]++;
+                    else if (buOig.name == $"drillTinTile{buOig.name[^1]}") Buildings.ConnectedTinDrillCount[(int)char.GetNumericValue((char) (buOig.name[^1]- 1))]++;
+                    if (buOig == _buildings[3]) Buildings.ConnectedCopperDrillCount[0]++;
+                    else if (buOig.name == $"drillCopperTile{buOig.name[^1]}") Buildings.ConnectedCopperDrillCount[(int)char.GetNumericValue((char) (buOig.name[^1]- 1))]++;
+                    else if (buOig == ItemList.buildings[5]) Buildings.ConnectedFurnaceCount++;
                 }
                 else if (_getTile != _tile && _isPowered != true) {
                     _line.SetPosition(1, _position);
