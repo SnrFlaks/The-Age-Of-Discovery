@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -18,17 +19,22 @@ public class Buildings : MonoBehaviour
 
     [SerializeField] private Text[] ore;
     [SerializeField] private Text[] ingot;
-    public static int[] ConnectedIronDrillCount = new int[7];
-    public static int[] ConnectedGoldDrillCount = new int[7];
-    public static int[] ConnectedTinDrillCount = new int[7];
-    public static int[] ConnectedCopperDrillCount = new int[7];
+    public static readonly int[] ConnectedIronDrillCount = new int[7];
+    public static readonly int[] ConnectedGoldDrillCount = new int[7];
+    public static readonly int[] ConnectedTinDrillCount = new int[7];
+    public static readonly int[] ConnectedCopperDrillCount = new int[7];
     public static int ConnectedFurnaceCount;
+    private int _coalDrillCount;
+    private int _ironDrillCount;
+    private int _goldDrillCount;
+    private int _tinDrillCount;
+    private int _copperDrillCount;
 
     public static float _tin;
     public static float _iron;
     public static float _copper;
     public static float _gold;
-
+    
     public static int _tinIngot;
     public static int _ironIngot;
     public static int _copperIngot;
@@ -91,44 +97,60 @@ public class Buildings : MonoBehaviour
                     {
                         if (_ground.GetTile(cellPosition).name == "ironRandomTile")
                         {
-                            if (ShopMenu.intTokens >= 2500)
+                            if (ShopMenu.intTokens >= (_ironDrillCount == 0 ? 1920 : GetCostForDrill(8, _ironDrillCount <= 3 ? 4 : _ironDrillCount, BuildingsLevelUpMenu.LevelNow[1])))
                             {
                                 _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[1] == 1 ? _buildings[0] : _buildings[Array.IndexOf(_buildingsName, $"drillIronTile{BuildingsLevelUpMenu.LevelNow[1]}")]);
-                                ShopMenu.intTokens -= 2500;
+                                ShopMenu.intTokens -= _ironDrillCount == 0 ? 1920 : GetCostForDrill(8, _ironDrillCount <= 3 ? 4 : _ironDrillCount, BuildingsLevelUpMenu.LevelNow[1]);
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                _ironDrillCount++;
                                 LineCreate();
                             }
                             else Error("You don't have enough tokens");
                         }
                         else if (_ground.GetTile(cellPosition).name == "goldRandomTile")
                         {
-                            if (ShopMenu.intTokens >= 5000)
+                            if (ShopMenu.intTokens >= (_goldDrillCount == 0 ? 5880 : GetCostForDrill(14, _goldDrillCount <= 3 ? 4 : _goldDrillCount, BuildingsLevelUpMenu.LevelNow[3])))
                             {
                                 _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[3] == 1 ? _buildings[1] : _buildings[Array.IndexOf(_buildingsName, $"drillGoldTile{BuildingsLevelUpMenu.LevelNow[3]}")]);
-                                ShopMenu.intTokens -= 5000;
+                                ShopMenu.intTokens -= GetCostForDrill(14, _goldDrillCount <= 3 ? 4 : _goldDrillCount, BuildingsLevelUpMenu.LevelNow[3]);
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                _goldDrillCount++;
                                 LineCreate();
                             }
                             else Error("You don't have enough tokens");
                         }
                         else if (_ground.GetTile(cellPosition).name == "tinRandomTile")
                         {
-                            if (ShopMenu.intTokens >= 1000)
+                            if (ShopMenu.intTokens >= (_tinDrillCount == 0 ? 1080 : GetCostForDrill(6, _tinDrillCount <= 3 ? 4 : _tinDrillCount, BuildingsLevelUpMenu.LevelNow[0])))
                             {
                                 _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[0] == 1 ? _buildings[2] : _buildings[Array.IndexOf(_buildingsName, $"drillTinTile{BuildingsLevelUpMenu.LevelNow[0]}")]);
-                                ShopMenu.intTokens -= 1000;
+                                ShopMenu.intTokens -= GetCostForDrill(6, _tinDrillCount <= 3 ? 4 : _tinDrillCount, BuildingsLevelUpMenu.LevelNow[0]);
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                _tinDrillCount++;
                                 LineCreate();
                             }
                             else Error("You don't have enough tokens");
                         }
                         else if (_ground.GetTile(cellPosition).name == "copperRandomTile")
                         {
-                            if (ShopMenu.intTokens >= 3500)
+                            if (ShopMenu.intTokens >= (_copperDrillCount == 0 ? 4320 : GetCostForDrill(12, _copperDrillCount <= 3 ? 4 : _copperDrillCount, BuildingsLevelUpMenu.LevelNow[2])))
                             {
                                 _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[2] == 1 ? _buildings[3] : _buildings[Array.IndexOf(_buildingsName, $"drillCopperTile{BuildingsLevelUpMenu.LevelNow[2]}")]);
-                                ShopMenu.intTokens -= 3500;
+                                ShopMenu.intTokens -= GetCostForDrill(12, _copperDrillCount <= 3 ? 4 : _copperDrillCount, BuildingsLevelUpMenu.LevelNow[2]);
                                 PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                _copperDrillCount++;
+                                LineCreate();
+                            }
+                            else Error("You don't have enough tokens");
+                        }
+                        else if (_ground.GetTile(cellPosition).name == "coalRandomTile")
+                        {
+                            if (ShopMenu.intTokens >= (_coalDrillCount == 0 ? 480 : GetCostForDrill(4, _coalDrillCount <= 3 ? 4 : _coalDrillCount, BuildingsLevelUpMenu.LevelNow[2])))
+                            {
+                                _objectInGround.SetTile(cellPosition, BuildingsLevelUpMenu.LevelNow[4] == 1 ? _buildings[7] : _buildings[Array.IndexOf(_buildingsName, $"drillCoalTile{BuildingsLevelUpMenu.LevelNow[4]}")]);
+                                ShopMenu.intTokens -= GetCostForDrill(4, _coalDrillCount <= 3 ? 4 : _coalDrillCount, BuildingsLevelUpMenu.LevelNow[4]);
+                                PlayerPrefs.SetInt("tokens", ShopMenu.intTokens);
+                                _coalDrillCount++;
                                 LineCreate();
                             }
                             else Error("You don't have enough tokens");
@@ -179,28 +201,35 @@ public class Buildings : MonoBehaviour
         }
         else if (Input.GetMouseButton(1))
         {
-            if (_objectInGround.GetTile(cellPosition) == _buildings[6] && IsConnected(false))
-            {
+            if (_objectInGround.GetTile(cellPosition) == null) return;
+            if (_objectInGround.GetTile(cellPosition) == _buildings[6] && IsConnected(false)) {
                 Error("You cannot remove a generator while it is connected");
                 return;
             }
-
+            TileBase buOig = _objectInGround.GetTile(cellPosition);
+            if (buOig == _buildings[0]) _ironDrillCount--;
+            else if (buOig.name == $"drillIronTile{buOig.name[^1]}") _ironDrillCount--;
+            else if (buOig == _buildings[1]) _goldDrillCount--;
+            else if (buOig.name == $"drillGoldTile{buOig.name[^1]}") _goldDrillCount--;
+            else if (buOig == _buildings[2]) _tinDrillCount--;
+            else if (buOig.name == $"drillTinTile{buOig.name[^1]}") _tinDrillCount--;
+            else if (buOig == _buildings[3]) _copperDrillCount--;
+            else if (buOig.name == $"drillCopperTile{buOig.name[^1]}") _copperDrillCount--;
             Transform cannonForDelete = _grid.GetChild(3).Find($"{cellPosition}");
-            if (cannonForDelete != null)
-            {
+            if (cannonForDelete != null) {
                 Destroy(cannonForDelete.gameObject);
                 cannonBoolArr[cellPosition.x][cellPosition.y] = false;
             }
-
             Transform gameObjWithLine = _lineGroup.Find($"{cellPosition}");
-            if (gameObjWithLine != null)
-            {
-                //gameObjWithLine.gameObject.SetActive(false);
-                gameObjWithLine.GetComponent<Line>().LineDelete();
-            }
-
+            if (gameObjWithLine != null) gameObjWithLine.GetComponent<Line>().LineDelete();
             if (_objectInGround.GetTile(cellPosition) != emptyTile) _objectInGround.SetTile(cellPosition, null);
         }
+    }
+
+    private static int GetCostForDrill(int mining, int drillCount, int drillLevel)
+    {
+        if (drillLevel == 1) return 60 * mining * mining * (drillCount / 8 < 1 ? 1 : drillCount / 8) / 2;
+        return 60 * mining * mining * (drillCount / 8 < 1 ? 1 : drillCount / 8) * drillLevel / 2;
     }
 
     private bool IsConnected(bool generatorCleanLock)
@@ -245,8 +274,8 @@ public class Buildings : MonoBehaviour
     private void Error(string error)
     {
         errorText.text = error;
-        StopCoroutine("ShowText");
-        StartCoroutine("ShowText");
+        StopCoroutine(nameof(ShowText));
+        StartCoroutine(nameof(ShowText));
     }
 
     private IEnumerator ShowText()
@@ -270,10 +299,10 @@ public class Buildings : MonoBehaviour
         while (true)
         {
             for (int i = 0; i < ConnectedTinDrillCount.Length; i++) {
-                _tin += (8 * i + 1) * ConnectedTinDrillCount[i];
-                _iron += (4 * i + 1) * ConnectedIronDrillCount[i];
-                _copper += (2 * i + 1) * ConnectedCopperDrillCount[i];
-                _gold += (1 * i + 1) * ConnectedGoldDrillCount[i];
+                _tin += 6 * (i + 1) * ConnectedTinDrillCount[i];
+                _iron += 4 * (i + 1) * ConnectedIronDrillCount[i];
+                _copper += 2 * (i + 1) * ConnectedCopperDrillCount[i];
+                _gold += 1 * (i + 1) * ConnectedGoldDrillCount[i];
             }
             yield return new WaitForSeconds(1);
         }

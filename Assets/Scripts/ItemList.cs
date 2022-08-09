@@ -22,7 +22,6 @@ public class ItemList : MonoBehaviour
         public int[] level6Costs = new int[9];
         public int[] level7Costs = new int[9];
         public Sprite[] levelSprite = new Sprite[6];
-
     }
     private void Awake() {
         buildings = buildingsIns;

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -79,7 +78,8 @@ public class Line : MonoBehaviour
         }
     }
     private void OnBecameVisible() => transform.SetParent(_visibleGroup, true);
-    private void OnBecameInvisible() {
+    private void OnBecameInvisible() => Invoke (nameof(ReAttach),.1f);
+    private void ReAttach() {
         if (gameObject.activeSelf) transform.SetParent(_invisibleGroup, true);
     }
 }

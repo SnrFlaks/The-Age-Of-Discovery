@@ -1,27 +1,26 @@
 using System;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 
 public class TileCursor : MonoBehaviour
 {
-    private Camera mainCam;
+    private Camera _mainCam;
     private Tilemap _ground;
     [SerializeField] private GameObject hotBar;
     [SerializeField] private Sprite cannonHb;
     [SerializeField] private Sprite empty;
+    [SerializeField] private Sprite generator;
 
     private void Start()
     {
-        mainCam = Camera.main;
+        _mainCam = Camera.main;
         _ground = transform.parent.GetChild(0).GetComponent<Tilemap>();
     }
 
     private void Update()
     {
-        var cellPosition = _ground.WorldToCell(mainCam.ScreenToWorldPoint(Input.mousePosition));
+        var cellPosition = _ground.WorldToCell(_mainCam.ScreenToWorldPoint(Input.mousePosition));
         gameObject.transform.position = new Vector3(cellPosition.x + 0.5f, cellPosition.y + 0.5f, 0);
         for (var i = 0; i < 9; i++)
         {
@@ -48,10 +47,15 @@ public class TileCursor : MonoBehaviour
                     {
                         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = BuildingsLevelUpMenu.LevelNow[2] == 1 ? ItemList.buildingsIcon[3] : ItemList.upgradeCostStat[2].levelSprite[BuildingsLevelUpMenu.LevelNow[2] - 2];
                     }
+                    else if (_ground.GetTile(cellPosition).name == "coalRandomTile")
+                    {
+                        transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = BuildingsLevelUpMenu.LevelNow[4] == 1 ? ItemList.buildingsIcon[7] : ItemList.upgradeCostStat[4].levelSprite[BuildingsLevelUpMenu.LevelNow[4] - 2];
+                    }
                     else transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = hotBar.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite;
                 }
                 else transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = hotBar.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite;
                 transform.GetChild(1).GetComponent<SpriteRenderer>().color = HotBar.spriteNN[i] == cannonHb ? new Color(1, 1, 1, 0.2f) : new Color(1f, 1f, 1f, 0f);
+                transform.GetChild(2).GetComponent<SpriteRenderer>().color = HotBar.spriteNN[i] == generator ? new Color(1, 1, 1, 0.2f) : new Color(1f, 1f, 1f, 0f);
             }
         }
     }

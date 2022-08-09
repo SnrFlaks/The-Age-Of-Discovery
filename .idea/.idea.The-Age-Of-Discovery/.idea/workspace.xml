@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/waterTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/waterTile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Line.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Line.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/Drill/drillCopperTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/Drill/drillCopperTile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/Drill/drillCopperTile.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/Drill/drillCopperTile.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UIElementTextureAtlas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UIElementTextureAtlas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UIElementTextureAtlas.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UIElementTextureAtlas.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +43,16 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Line.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HotBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/Shadow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -46,21 +65,21 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Cable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GeneratorsGroup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Generator.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HotBar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Base.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SmelteryMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WorldGeneration.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HotBarButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ShopMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -79,7 +98,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -182,7 +201,13 @@
       <workItem from="1659449700031" duration="7771000" />
       <workItem from="1659527521830" duration="7265000" />
       <workItem from="1659537702471" duration="488000" />
-      <workItem from="1659538276228" duration="3195000" />
+      <workItem from="1659538276228" duration="3261000" />
+      <workItem from="1659607317186" duration="2283000" />
+      <workItem from="1659630578042" duration="1393000" />
+      <workItem from="1659632349655" duration="1689000" />
+      <workItem from="1659867964706" duration="6102000" />
+      <workItem from="1659963206265" duration="8494000" />
+      <workItem from="1660042503964" duration="3569000" />
     </task>
     <servers />
   </component>
@@ -204,6 +229,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.idea" />
+    </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
