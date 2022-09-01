@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: hp
       value: 1750
       objectReference: {fileID: 0}
+    - target: {fileID: 2417208876418929247, guid: 4521d24c7100c2e4bb3e8b1167e70a9c, type: 3}
+      propertyPath: TheoreticalHp
+      value: 1750
+      objectReference: {fileID: 0}
     - target: {fileID: 4841147913769190785, guid: 4521d24c7100c2e4bb3e8b1167e70a9c, type: 3}
       propertyPath: m_RootOrder
       value: 0

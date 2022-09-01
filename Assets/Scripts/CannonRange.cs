@@ -1,48 +1,48 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.VFX;
 
 public class CannonRange : MonoBehaviour
 {
     [SerializeField] private int speedOfShoot;
     [SerializeField] private GameObject bullet;
-    public static bool entered = false;
-    private GameObject cannon;
     
-    public static GameObject nearest;
-    public static Vector3 position1;
-    public static Vector3 position2;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private static Vector3 position1;
+    private object myLock = new object();
+    public static GameObject enemy;
+    private void OnTriggerStay2D(Collider2D other)
     {
-        
-        if (other.gameObject.tag == "Enemy" && !entered)
+        if (other.gameObject.tag == "Enemy" && !Monitor.IsEntered(myLock))
         {
-            entered = true;
-            StartCoroutine("Spawn");
+             enemy = other.gameObject;
+             other.GetComponent<EnemiesMove>().TheoreticalHp -= bullet.GetComponent<Bullet>().damage;
+            if (other.GetComponent<EnemiesMove>().TheoreticalHp <= 0)
+            {
+                other.tag = "Untagged";
+            }
+            StartCoroutine(Spawn());
         }
-
     }
-
-  
+    
     IEnumerator Spawn()
     {
+        Monitor.TryEnter(myLock);
         position1 = transform.position;
-        nearest = CannonShoot.Closest(position1);
-        
-        cannon = transform.parent.GetChild(0).gameObject;
-         cannon.transform.up = nearest.transform.position - cannon.transform.position;
-        
-        Instantiate(bullet, new Vector3(position1.x, position1.y,position1.z), Quaternion.identity, gameObject.transform.parent);
+        Instantiate(bullet, new Vector3(position1.x, position1.y, position1.z), Quaternion.identity, gameObject.transform.parent);
         
         yield return new WaitForSeconds(speedOfShoot);
-        entered = false;
-        
+        Monitor.Exit(myLock);
     }
-
-
-
 }
+
+
+
+
+
+

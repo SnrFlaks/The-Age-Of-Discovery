@@ -79,6 +79,10 @@ PrefabInstance:
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 9209654556691734476, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
+      propertyPath: TheoreticalHp
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}

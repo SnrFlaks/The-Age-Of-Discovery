@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2500
-  enemySpeed: 5
+  TheoreticalHp: 2500
+  enemySpeed: 10
 --- !u!61 &9100359059942410232
 BoxCollider2D:
   m_ObjectHideFlags: 0

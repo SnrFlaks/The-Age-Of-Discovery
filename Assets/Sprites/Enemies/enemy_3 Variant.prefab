@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: hp
       value: 1250
       objectReference: {fileID: 0}
+    - target: {fileID: -5417944316761493591, guid: cb140f32732c2de47b9ad90ed57dcf91, type: 3}
+      propertyPath: TheoreticalHp
+      value: 1250
+      objectReference: {fileID: 0}
     - target: {fileID: 379813463514434870, guid: cb140f32732c2de47b9ad90ed57dcf91, type: 3}
       propertyPath: m_Color.b
       value: 0

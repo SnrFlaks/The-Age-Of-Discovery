@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.WebSockets;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,17 +12,16 @@ public class Bullet : MonoBehaviour
     public int bulletSpeed;
     private Vector3 pos1;
     private Vector3 pos2;
-    private int hp;
-    private GameObject nearest;
-    
 
+    private GameObject nearest;
+    private GameObject cannon;
+    
     private void Start()
     {
-        nearest = CannonRange.nearest;
-        if (nearest.GetComponent<EnemiesMove>().hp - damage <= 0)
-        {
-             Enemies._allEnemies.Remove(nearest);
-        }
+        nearest = CannonRange.enemy;
+        
+        cannon = transform.parent.GetChild(0).gameObject;
+        cannon.transform.up = nearest.transform.position - cannon.transform.position;
     }
 
     void Update()
@@ -30,8 +30,12 @@ public class Bullet : MonoBehaviour
         {
             Move();
         }
+        else
+        {
+            Destroy(gameObject);
+        }
+       
     }
-    
     
     private void Move()
     {
