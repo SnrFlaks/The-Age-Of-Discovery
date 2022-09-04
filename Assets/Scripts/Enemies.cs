@@ -18,8 +18,7 @@ public class Enemies : MonoBehaviour
 
     private Random r = new Random();
     [SerializeField] private bool ifSpawn = false;
-    //public static List<GameObject> _allEnemies = new List<GameObject>(25);
-
+    
     void Start()
     {
 

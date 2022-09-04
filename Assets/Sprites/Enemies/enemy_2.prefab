@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 400
   TheoreticalHp: 400
-  enemySpeed: 10
+  enemySpeed: 5
 --- !u!61 &5893049308108508045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.05}
+  m_Size: {x: 0.44, y: 0.44}
   m_EdgeRadius: 0
 --- !u!50 &6645975748155189096
 Rigidbody2D:

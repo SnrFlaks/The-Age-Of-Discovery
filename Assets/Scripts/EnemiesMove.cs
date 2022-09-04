@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Cinemachine;
 using TMPro;
 using UnityEngine;
@@ -8,12 +9,12 @@ using UnityEngine.Tilemaps;
 
 public class EnemiesMove : MonoBehaviour
 {
-    public int hp;
+    [SerializeField] private int hp;
     public int TheoreticalHp;
+    [SerializeField] private int enemySpeed;
+    
     private int damage;
-    public int enemySpeed;
-
-
+    
     private void Start()
     {
         hp = GetComponent<EnemiesMove>().hp;
@@ -41,28 +42,28 @@ public class EnemiesMove : MonoBehaviour
         else if (col.gameObject.tag == "Build")
         {
             Buildings._objectInGround.SetTile(Buildings._objectInGround.WorldToCell(col.GetContact(0).point), null);
-            // Enemies._allEnemies.Remove(gameObject);
         }
-        // else if (col.gameObject.tag == "Cannon")
-        // {
-        //     Buildings.cannonBoolArr[(int) col.transform.position.x][(int) col.transform.position.y] = false;
-        //     Enemies._allEnemies.Remove(gameObject);
-        //     CannonRange.entered = false;
-        //     Destroy(col.gameObject);
-        //     Destroy(gameObject);
-        // }
+        else if (col.gameObject.tag == "Cannon")
+        {
+            Buildings.cannonBoolArr[(int) col.transform.position.x][(int) col.transform.position.y] = false;
+            Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Bullet")
         {
-            damage = other.GetComponent<Bullet>().damage;
-            hp -= damage;
-            
-            Destroy(other.gameObject);
-            if (hp <= 0)
+            if (other.gameObject.GetComponent<Bullet>().nearest == gameObject)
             {
-                Destroy(gameObject);
+                damage = other.GetComponent<Bullet>().damage;
+                hp -= damage;
+            
+                Destroy(other.gameObject);
+                if (hp <= 0)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
