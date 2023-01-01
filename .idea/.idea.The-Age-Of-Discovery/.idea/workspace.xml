@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cab44a23-6640-4ecd-b5b7-af4168cfb59f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The-Age-Of-Discovery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palette/palettee.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Line.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Line.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextureAtlas.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/Drill/drillCopperTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/Drill/drillCopperTile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/Drill/drillCopperTile.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TilePaletteAsset/Drill/drillCopperTile.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BigUIElementsTextureAtlas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BigUIElementsTextureAtlas.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/UIElementTextureAtlas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UIElementTextureAtlas.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/UIElementTextureAtlas.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UIElementTextureAtlas.png.meta" afterDir="false" />
     </list>
@@ -76,10 +67,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemList.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BuildingsLevelUpMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TileCursor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Line.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buildings.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27hC1uqTyePKUIqdgqlSKwFrd24" />
@@ -207,7 +198,8 @@
       <workItem from="1659632349655" duration="1689000" />
       <workItem from="1659867964706" duration="6102000" />
       <workItem from="1659963206265" duration="8494000" />
-      <workItem from="1660042503964" duration="3569000" />
+      <workItem from="1660042503964" duration="4060000" />
+      <workItem from="1660076451214" duration="1000" />
     </task>
     <servers />
   </component>

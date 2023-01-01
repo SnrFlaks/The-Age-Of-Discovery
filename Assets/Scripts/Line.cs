@@ -12,8 +12,8 @@ public class Line : MonoBehaviour
     private Vector3Int _cellPosition;
     private TileBase[] _buildings;
     private string[] _buildingsName;
-    [SerializeField] private Transform _visibleGroup;
-    [SerializeField] private Transform _invisibleGroup;
+    private Transform _visibleGroup;
+    private Transform _invisibleGroup;
 
     public void LineDelete()
     {
