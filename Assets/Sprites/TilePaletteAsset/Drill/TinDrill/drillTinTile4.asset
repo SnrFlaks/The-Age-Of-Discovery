@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillTinTile4
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -8520023051755267139, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -6682561710068624894, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 8763782377157397078, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 82018940090406132, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -5859948670472979393, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -874836558, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 824322238, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1920985315, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 13068469, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -969456385, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1.6
   m_MaxSpeed: 1.6
   m_AnimationStartTime: 0

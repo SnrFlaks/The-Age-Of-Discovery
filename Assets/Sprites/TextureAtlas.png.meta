@@ -911,7 +911,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 15.9
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -955,6 +955,18 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -27775,7 +27787,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       TextureAtlas_756: 1068014615
-      TextureAtlas_821: -1802723000
       TextureAtlas_732: -1654045381
       TextureAtlas_976: -1167082516
       TextureAtlas_850: -1827300412
@@ -27858,11 +27869,11 @@ TextureImporter:
       TextureAtlas_941: -1590095431
       TextureAtlas_624: 1964969665
       TextureAtlas_145: 8218676947842734214
-      TextureAtlas_598: -165777199
       TextureAtlas_858: -851451848
-      TextureAtlas_628: -1393395661
+      TextureAtlas_598: -165777199
       TextureAtlas_398: 204290872
       TextureAtlas_110: 2518672675904058082
+      TextureAtlas_628: -1393395661
       TextureAtlas_315: 597212977
       TextureAtlas_606: 563632418
       TextureAtlas_1128: 1726862887
@@ -27912,41 +27923,41 @@ TextureImporter:
       TextureAtlas_474: -1534726329
       TextureAtlas_701: -1469235907
       TextureAtlas_94: 3035079035439783733
-      TextureAtlas_97: -4693296394304339904
+      TextureAtlas_1258: -775204955
       TextureAtlas_279: 5930378311477824324
-      TextureAtlas_1067: 1674265399
+      TextureAtlas_97: -4693296394304339904
       TextureAtlas_1051: -1891976531
       TextureAtlas_74: -1414712148148124528
       TextureAtlas_967: -165252022
       TextureAtlas_1154: 1838177922
+      TextureAtlas_1067: 1674265399
       TextureAtlas_655: 565854627
       TextureAtlas_1022: 1799636633
-      TextureAtlas_1105: 858419616
       TextureAtlas_301: 435115346
+      TextureAtlas_1160: 1704034840
       TextureAtlas_862: -1264046038
       TextureAtlas_356: -1349606789
-      TextureAtlas_174: -5019970455559343155
-      TextureAtlas_146: -870933273527208120
       TextureAtlas_889: 504455494
+      TextureAtlas_146: -870933273527208120
+      TextureAtlas_174: -5019970455559343155
+      TextureAtlas_30: 5641900586603438143
+      TextureAtlas_893: 451996377
       TextureAtlas_1049: 309078824
       TextureAtlas_166: -251081973211324293
-      TextureAtlas_30: 5641900586603438143
-      TextureAtlas_454: 1507356756
-      TextureAtlas_893: 451996377
-      TextureAtlas_1160: 1704034840
-      TextureAtlas_963: 1699352971
-      TextureAtlas_507: 1675008557
-      TextureAtlas_161: -7626397103213265136
-      TextureAtlas_520: 1786898169
-      TextureAtlas_767: -703639972
-      TextureAtlas_925: 336331945
+      TextureAtlas_1105: 858419616
       TextureAtlas_1082: 590781552
+      TextureAtlas_507: 1675008557
+      TextureAtlas_454: 1507356756
+      TextureAtlas_767: -703639972
+      TextureAtlas_520: 1786898169
+      TextureAtlas_925: 336331945
       TextureAtlas_665: -258597211
       TextureAtlas_1041: -647154415
-      TextureAtlas_1258: -775204955
       TextureAtlas_627: -135712943
       TextureAtlas_27: -3099651255819762848
       TextureAtlas_978: -1634920877
+      TextureAtlas_161: -7626397103213265136
+      TextureAtlas_963: 1699352971
       TextureAtlas_76: -7322037936131586634
       TextureAtlas_88: -2446177260308556142
       TextureAtlas_836: -1614060947
@@ -28096,8 +28107,8 @@ TextureImporter:
       TextureAtlas_681: -57293726
       TextureAtlas_1198: 573791259
       TextureAtlas_100: 3406250404460565396
-      TextureAtlas_160: -4491333928753478426
       TextureAtlas_601: -1931463521
+      TextureAtlas_160: -4491333928753478426
       TextureAtlas_516: -814851521
       TextureAtlas_1098: -1090043965
       TextureAtlas_382: -2036393103
@@ -28411,9 +28422,9 @@ TextureImporter:
       TextureAtlas_116: 5115187466779510972
       TextureAtlas_335: 970833752
       TextureAtlas_588: 771659949
+      TextureAtlas_668: 126581209
       TextureAtlas_519: 513272548
       TextureAtlas_1146: -2043935354
-      TextureAtlas_668: 126581209
       TextureAtlas_481: -1889103299
       TextureAtlas_173: -4277048618849202119
       TextureAtlas_1094: 48027540
@@ -29041,6 +29052,7 @@ TextureImporter:
       TextureAtlas_626: 1481930124
       TextureAtlas_442: 1410735311
       TextureAtlas_948: -1854292740
+      TextureAtlas_821: -1802723000
       TextureAtlas_527: 1226334034
       TextureAtlas_736: -1606193020
       TextureAtlas_565: -956768867

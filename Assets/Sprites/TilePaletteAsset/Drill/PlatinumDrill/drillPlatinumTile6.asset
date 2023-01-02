@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillPlatinumTile6
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -109323253, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2068820961, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1473420374, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -134272092, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -924026683, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -135866161, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -891042310, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1313616074, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1604734376, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1503566813, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 2
   m_MaxSpeed: 2
   m_AnimationStartTime: 0

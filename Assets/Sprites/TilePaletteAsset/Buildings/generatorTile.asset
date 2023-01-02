@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: generatorTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -251081973211324293, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2713302566297951241, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2713302566297951241, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2713302566297951241, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2713302566297951241, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2713302566297951241, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2713302566297951241, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2713302566297951241, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2713302566297951241, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2713302566297951241, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -985491942, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2114431886, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2114431886, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2114431886, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2114431886, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2114431886, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2114431886, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2114431886, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2114431886, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2114431886, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

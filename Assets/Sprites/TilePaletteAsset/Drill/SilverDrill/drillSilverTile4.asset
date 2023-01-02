@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillSilverTile4
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -682717364, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -753626583, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1507356756, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -747148380, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1448796757, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -1222658909, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 648996892, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1125020528, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -212503803, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1752953234, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1.6
   m_MaxSpeed: 1.6
   m_AnimationStartTime: 0

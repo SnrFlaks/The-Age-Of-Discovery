@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: furnaceTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -897748696008843410, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -8309808373777886955, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -4491333928753478426, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -7626397103213265136, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -6274609968984495999, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -7826576256211870004, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -7428384231474025305, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -3552524963857614275, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -1491443588, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1424248506, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -502476899, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1385593798, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1692599323, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1690705021, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 2122902002, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 17431873, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
   m_MinSpeed: 0.5
   m_MaxSpeed: 0.5
   m_AnimationStartTime: 0

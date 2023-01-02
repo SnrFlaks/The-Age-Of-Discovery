@@ -222,7 +222,7 @@ PrefabInstance:
       objectReference: {fileID: 4160163948982171358, guid: 1e1a3884fb27b58419988cd2755d3961, type: 3}
     - target: {fileID: 2022973037901767415, guid: 4180830de25e5234685876329d490a7c, type: 3}
       propertyPath: TimeForShoot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2022973037901767415, guid: 4180830de25e5234685876329d490a7c, type: 3}
       propertyPath: speedOfShoot

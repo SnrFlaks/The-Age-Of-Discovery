@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillCopperTile4
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 5211711080805008788, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 5905073224008103179, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -8325449119810221731, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 980283024033843406, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 3038645407901836839, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -210555758, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -262229733, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1634553255, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1726182571, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1408101379, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

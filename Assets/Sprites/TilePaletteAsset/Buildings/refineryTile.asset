@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: refineryTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1628630988, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -364312623, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1883051491, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1167082516, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1410267906, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: 192150962, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 546274487, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 356904841, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 2103288836, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1746661531, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
   m_MinSpeed: 0.5
   m_MaxSpeed: 0.5
   m_AnimationStartTime: 0

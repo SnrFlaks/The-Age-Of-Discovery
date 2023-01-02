@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillTitaniumTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -395308759, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1692180442, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 654954216, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1860457950, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1203390460, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -1695747967, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1897072402, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -257279874, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 958862964, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -444177048, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

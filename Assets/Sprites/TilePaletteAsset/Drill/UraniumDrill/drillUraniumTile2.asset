@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillUraniumTile2
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1335474652, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -451208847, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 132536741, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -763248247, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -906652292, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: 1658301894, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1413947621, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 827888950, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1665578797, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -2099347975, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1.2
   m_MaxSpeed: 1.2
   m_AnimationStartTime: 0

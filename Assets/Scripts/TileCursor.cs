@@ -7,10 +7,10 @@ public class TileCursor : MonoBehaviour
 {
     private Camera _mainCam;
     private Tilemap _ground;
-    [SerializeField] private GameObject hotBar;
     [SerializeField] private Sprite cannonHb;
     [SerializeField] private Sprite empty;
     [SerializeField] private Sprite generator;
+    [SerializeField] private HotBar hotBar;
 
     private void Start()
     {
@@ -24,7 +24,7 @@ public class TileCursor : MonoBehaviour
         gameObject.transform.position = new Vector3(cellPosition.x + 0.5f, cellPosition.y + 0.5f, 0);
         for (var i = 0; i < 9; i++)
         {
-            if (!HotBar.HotBarSelect[i]) continue;
+            if (!hotBar.HotBarSelect[i]) continue;
             if (_ground.GetTile(cellPosition) != null)
             {
                 Sprite hBSprite = hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite;
@@ -54,8 +54,8 @@ public class TileCursor : MonoBehaviour
                     else transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = hotBar.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite;
                 }
                 else transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = hotBar.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite;
-                transform.GetChild(1).GetComponent<SpriteRenderer>().color = HotBar.spriteNN[i] == cannonHb ? new Color(1, 1, 1, 0.2f) : new Color(1f, 1f, 1f, 0f);
-                transform.GetChild(2).GetComponent<SpriteRenderer>().color = HotBar.spriteNN[i] == generator ? new Color(1, 1, 1, 0.2f) : new Color(1f, 1f, 1f, 0f);
+                transform.GetChild(1).GetComponent<SpriteRenderer>().color = hotBar.spriteNN[i] == cannonHb ? new Color(1, 1, 1, 0.2f) : new Color(1f, 1f, 1f, 0f);
+                transform.GetChild(2).GetComponent<SpriteRenderer>().color = hotBar.spriteNN[i] == generator ? new Color(1, 1, 1, 0.2f) : new Color(1f, 1f, 1f, 0f);
             }
         }
     }

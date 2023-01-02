@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: lavaPumpTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 2020190177, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 424184678, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -155542390, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 847521730, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1025325833, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1134861782, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1590095431, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 267641086, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 2128041256, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1585962940, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -412102098, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1215346016, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -173108706, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 129599735, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 639166635, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1494745008, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1151767743, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -427663909, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1734012576, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1445976127, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
   m_MinSpeed: 0.7
   m_MaxSpeed: 0.7
   m_AnimationStartTime: 0

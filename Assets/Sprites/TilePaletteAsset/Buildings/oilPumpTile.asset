@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: oilPumpTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 343067525, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1565721114, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 883282499, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1854292740, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -169327039, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 180787312, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2063937192, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1951292368, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1206712511, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1687707511, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -818610105, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 2107009195, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 766823633, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 395089090, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1202198528, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1928233060, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 32396398, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 395246388, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1513797249, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -474698595, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
   m_MinSpeed: 0.7
   m_MaxSpeed: 0.7
   m_AnimationStartTime: 0

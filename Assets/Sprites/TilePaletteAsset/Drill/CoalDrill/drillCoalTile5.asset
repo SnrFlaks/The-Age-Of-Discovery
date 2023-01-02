@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillCoalTile5
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1122372526, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -673808, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 40218386, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 204290872, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -931794843, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -104330995, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1193479794, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 733959732, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -110119015, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -57918613, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

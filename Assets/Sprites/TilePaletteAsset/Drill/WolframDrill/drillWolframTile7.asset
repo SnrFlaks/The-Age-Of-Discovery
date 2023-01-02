@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillWolframTile7
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1365851622, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 2097737782, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1193553017, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1224542661, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1440273881, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -1522418780, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1053526107, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 156200501, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1794074614, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1001376055, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 2.2
   m_MaxSpeed: 2.2
   m_AnimationStartTime: 0

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillLeadTile7
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -1711739416, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 935571112, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 775822671, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -91241459, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -999392068, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -212810860, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1441710919, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1401082785, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1597810379, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 363866798, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 2.2
   m_MaxSpeed: 2.2
   m_AnimationStartTime: 0

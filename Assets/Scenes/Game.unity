@@ -5337,10 +5337,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingsIns:
-  - {fileID: 11400000, guid: c56cf1b0ea1555442bf30c1765418a28, type: 2}
-  - {fileID: 11400000, guid: bd4e55f7fc91f004c8c3e991a4398019, type: 2}
   - {fileID: 11400000, guid: 16c9c9cdb1b056e449a443ef947ae67e, type: 2}
+  - {fileID: 11400000, guid: c56cf1b0ea1555442bf30c1765418a28, type: 2}
   - {fileID: 11400000, guid: abf9123e45d1d2844a9950fbb9ff3f05, type: 2}
+  - {fileID: 11400000, guid: bd4e55f7fc91f004c8c3e991a4398019, type: 2}
   - {fileID: 11400000, guid: 73b97e0b87218c841a228a3fc794cc87, type: 2}
   - {fileID: 11400000, guid: e8163dbadfbd5dc40b984f964127ec43, type: 2}
   - {fileID: 11400000, guid: aa661ca41a2d6c24e8f4d657201813f8, type: 2}
@@ -7086,7 +7086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60cf41da8e75b9f46a6ddcd791738923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotBar: {fileID: 4204435293025274303}
+  hotBar: {fileID: 4204435293025274299}
   errorText: {fileID: 1706522902}
   cannon: {fileID: 5856164682774362849, guid: 8351083fa1f0cd64dbef13a9c4e28028, type: 3}
   cannonHb: {fileID: 21300000, guid: 6b6a28da88a4165419eef203c7b232a3, type: 3}
@@ -7105,6 +7105,7 @@ MonoBehaviour:
   - {fileID: 693723048}
   emptyTile: {fileID: 11400000, guid: c8587fc68de8384448be1c0bafb775ad, type: 2}
   tokensText: {fileID: 2137384114}
+  cellPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &876926841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9298,10 +9299,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd06c7e4bf786a9429ba40e75d6141b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotBar: {fileID: 4204435293025274303}
   cannonHb: {fileID: 21300000, guid: 6b6a28da88a4165419eef203c7b232a3, type: 3}
   empty: {fileID: 21300000, guid: a59f8838ba9f97546bd84c4b29a2a975, type: 3}
   generator: {fileID: -251081973211324293, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  hotBar: {fileID: 4204435293025274299}
 --- !u!212 &1066860004
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14612,7 +14613,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7781886, y: 1}
+    m_SensorSize: {x: 1.7780678, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -17003,23 +17004,25 @@ Tilemap:
     m_Data:
       e00: 0
       e01: 0
-      e02: 1.5585427e-19
-      e03: 1.5585427e-19
+      e02: 5.14281e-39
+      e03: 5.14281e-39
       e10: 0
       e11: 0
-      e12: 8.14e-43
-      e13: 8.14e-43
-      e20: 491677.5
+      e12: 7.16e-43
+      e13: 7.16e-43
+      e20: -2.4065903e+22
       e21: 1e-45
-      e22: -1.2042524e-27
-      e23: -5.818048e-10
+      e22: -4.3095084e-18
+      e23: -5.584866e-10
       e30: 4.5904e-41
       e31: 0
-      e32: 8.14e-43
-      e33: 8.17e-43
+      e32: 7.16e-43
+      e33: 7.19e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 3.5926e-41, g: 3.5926e-41, b: 3.5926e-41, a: 3.5926e-41}
+    m_Data: {r: 5.2994e-41, g: 5.2994e-41, b: 5.2994e-41, a: 5.2994e-41}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -25592,6 +25595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d417d6066e2214fad1289c8b41fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotBar: {fileID: 4204435293025274299}
 --- !u!224 &4204435291136219864
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25774,6 +25778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d417d6066e2214fad1289c8b41fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotBar: {fileID: 4204435293025274299}
 --- !u!1 &4204435291145613382
 GameObject:
   m_ObjectHideFlags: 0
@@ -26038,6 +26043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d417d6066e2214fad1289c8b41fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotBar: {fileID: 4204435293025274299}
 --- !u!222 &4204435291436020228
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26058,6 +26064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d417d6066e2214fad1289c8b41fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotBar: {fileID: 4204435293025274299}
 --- !u!1 &4204435291436020248
 GameObject:
   m_ObjectHideFlags: 0
@@ -26408,6 +26415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d417d6066e2214fad1289c8b41fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotBar: {fileID: 4204435293025274299}
 --- !u!114 &4204435292458846548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26514,6 +26522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d417d6066e2214fad1289c8b41fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotBar: {fileID: 4204435293025274299}
 --- !u!1 &4204435292458846570
 GameObject:
   m_ObjectHideFlags: 0
@@ -26702,6 +26711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d417d6066e2214fad1289c8b41fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotBar: {fileID: 4204435293025274299}
 --- !u!1 &4204435292513826369
 GameObject:
   m_ObjectHideFlags: 0
@@ -27001,6 +27011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d417d6066e2214fad1289c8b41fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotBar: {fileID: 4204435293025274299}
 --- !u!222 &4204435292853394388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27152,6 +27163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c2f99b472046a4d82cfdf10566af88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CreateLock: 0
+  spriteNN: []
   spriteN:
   - {fileID: 7424223260539524593, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
   - {fileID: -897748696008843410, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
@@ -27163,6 +27176,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   emptySprite: {fileID: 21300000, guid: a59f8838ba9f97546bd84c4b29a2a975, type: 3}
+  HotBarSelect: 000000000000000000
+  hotBarButtonSelect: 0
 --- !u!1 &4204435293025274303
 GameObject:
   m_ObjectHideFlags: 0
@@ -27297,6 +27312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d417d6066e2214fad1289c8b41fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotBar: {fileID: 4204435293025274299}
 --- !u!224 &4204435293067884244
 RectTransform:
   m_ObjectHideFlags: 0

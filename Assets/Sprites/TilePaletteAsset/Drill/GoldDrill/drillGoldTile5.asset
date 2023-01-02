@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillGoldTile5
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -8068083513821876677, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 6323400596161956219, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2529653658522154003, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -6239426511264440953, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -7511624679647738567, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -520956492, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 2047555759, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1533512459, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1435305754, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1079005021, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

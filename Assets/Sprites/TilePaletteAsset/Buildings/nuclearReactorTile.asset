@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: nuclearReactorTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1585864402, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 972513583, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: 914037791, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1727746697, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
   m_MinSpeed: 0.2
   m_MaxSpeed: 0.2
   m_AnimationStartTime: 0

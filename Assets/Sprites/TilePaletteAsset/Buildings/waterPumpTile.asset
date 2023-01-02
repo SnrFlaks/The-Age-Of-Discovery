@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: waterPumpTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 336331945, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1129017898, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1558612679, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1860332061, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1290542445, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1583066479, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -424230270, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1787690789, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1451131243, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1157488838, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: 49308848, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1202874807, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1784418054, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1674626040, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -390584078, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 836097674, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -718397652, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 163256740, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1795599292, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1838423509, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
   m_MinSpeed: 0.7
   m_MaxSpeed: 0.7
   m_AnimationStartTime: 0

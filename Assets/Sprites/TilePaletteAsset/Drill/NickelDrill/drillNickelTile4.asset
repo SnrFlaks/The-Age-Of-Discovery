@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillNickelTile4
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 2071116916, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 889248403, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -536173733, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1651192135, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -30753081, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: 182546039, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1480962737, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 916153336, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 691950554, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1188228562, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1.6
   m_MaxSpeed: 1.6
   m_AnimationStartTime: 0

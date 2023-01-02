@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillIrridiumTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -1434324164, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1669731728, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -694462671, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -605488413, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 20020090, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -1604193894, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -175293935, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -148162709, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 80184002, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1037901359, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

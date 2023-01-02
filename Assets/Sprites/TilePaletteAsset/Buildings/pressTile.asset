@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: pressTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1112461772, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1614896376, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1173354028, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 658290497, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1851931813, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 608596672, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -450312263, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1705214493, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2046248239, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1806870666, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 544653138, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 2087404471, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
   m_MinSpeed: 0.7
   m_MaxSpeed: 0.7
   m_AnimationStartTime: 0

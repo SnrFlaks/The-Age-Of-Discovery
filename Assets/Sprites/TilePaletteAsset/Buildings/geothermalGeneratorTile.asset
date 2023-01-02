@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: geothermalGeneratorTile
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -1166470326, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1280771328, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1780729513, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1110695113, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1994343414, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -2098385478, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -1904846579, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -2033939549, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1411769629, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1026699180, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -39555819, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1320065282, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
   m_MinSpeed: 0.4
   m_MaxSpeed: 0.4
   m_AnimationStartTime: 0

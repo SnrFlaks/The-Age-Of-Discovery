@@ -166,6 +166,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1819,7 +1843,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       UIElementTextureAtlas_9: 313493009468441985
-      UIElementTextureAtlas_15: -477080929
+      UIElementTextureAtlas_61: -546861723
       UIElementTextureAtlas_13: -7017281764407890277
       UIElementTextureAtlas_5: -4804192429541154245
       UIElementTextureAtlas_24: -4108979301592481102
@@ -1896,7 +1920,7 @@ TextureImporter:
       UIElementTextureAtlas_32: -1059136884
       UIElementTextureAtlas_69: -795440325
       UIElementTextureAtlas_21: -471064680
-      UIElementTextureAtlas_61: -546861723
+      UIElementTextureAtlas_15: -477080929
       UIElementTextureAtlas_35: -679182513
   spritePackingTag: 
   pSDRemoveMatte: 0

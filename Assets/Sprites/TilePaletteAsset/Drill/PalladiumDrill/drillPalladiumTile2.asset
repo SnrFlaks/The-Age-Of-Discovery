@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillPalladiumTile2
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1634824864, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 847824970, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1862135452, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -1093284143, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 2128977867, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -938628594, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -1335711551, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -2083425518, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1318187881, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 232945040, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1.2
   m_MaxSpeed: 1.2
   m_AnimationStartTime: 0

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: "\u0441rusherTile"
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 946722263, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 653026656, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -210600760, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 626393338, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: -995675502, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -406507367, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: 1188599949, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
+  - {fileID: -1072918336, guid: feba34edb52289d408e9d4ef7e67756d, type: 3}
   m_MinSpeed: 0.7
   m_MaxSpeed: 0.7
   m_AnimationStartTime: 0

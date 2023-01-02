@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: drillIronTile5
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -7203845350248733345, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 1663450387653966982, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -6305479398759437089, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: 4127151233256013161, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
-  - {fileID: -582984663859848697, guid: fe9a6f0c36754674fbe27c0b835a383f, type: 3}
+  - {fileID: 1843236466, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1223932580, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 390180675, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: 1040702918, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
+  - {fileID: -249131418, guid: 90e538fba3dcc154ab8332b8619ad106, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0
