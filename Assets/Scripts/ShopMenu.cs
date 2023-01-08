@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class ShopMenu : MonoBehaviour
 {
+    [SerializeField] private ResourcesData resourcesData;
+    [SerializeField] private Buildings buildings;
     private Slider _slider;
     private Text _text;
     private Text _btext;
-    public  Text tokensText;
+    public Text tokensText;
     public static Text tokens;
-    
+
     public static int intTokens = 100000000;
 
     void Start()
@@ -22,61 +24,27 @@ public class ShopMenu : MonoBehaviour
     }
     public void AmountOfOre(float ore)
     {
-        if (ore == 0)
+        for (int i = 0; i < 4; i++)
         {
-            _slider.maxValue = Buildings._tin + 0.0001f;
-            _text.text = "" + Math.Round(_slider.value);
-            _btext.text = "You will get: \n" + Mathf.Round(_slider.value) + " Tokens";
-        }
-        else if (ore == 1)
-        {
-            _slider.maxValue = Buildings._iron + 0.0001f;
-            _text.text = "" + Math.Round(_slider.value);
-            _btext.text = "You will get: \n" + Mathf.Round(_slider.value * 2) + " Tokens";
-        }
-        else if (ore == 2)
-        {
-            _slider.maxValue = Buildings._copper + 0.0001f;
-            _text.text = "" + Math.Round(_slider.value);
-            _btext.text = "You will get: \n" + Mathf.Round(_slider.value * 4) + " Tokens";
-        }
-        else if (ore == 3)
-        {
-            _slider.maxValue = Buildings._gold + 0.0001f;
-            _text.text = "" + Math.Round(_slider.value);
-            _btext.text = "You will get: \n" + Mathf.Round(_slider.value * 8) + " Tokens";
+            if (ore == i)
+            {
+                _slider.maxValue = resourcesData._oreArray[i] + 0.0001f;
+                _text.text = "" + Math.Round(_slider.value);
+                _btext.text = "You will get: \n" + Mathf.Round(_slider.value) + " Tokens";
+            }
         }
     }
 
     public void Sell(int ore)
     {
-        if (ore == 0 && _slider.value < Buildings._tin)
+        for (int i = 0; i < 4; i++)
         {
+            if (ore == i && _slider.value < resourcesData._oreArray[i])
+            {
             intTokens += Convert.ToInt32(Regex.Match(_btext.text, @"\d+").Value);
             tokens.text = "Tokens: \n" + intTokens;
-            Buildings._tin -= _slider.value;
-
-        }
-        else if (ore == 1 && _slider.value < Buildings._iron)
-        {
-            intTokens += Convert.ToInt32(Regex.Match(_btext.text, @"\d+").Value);
-            tokens.text = "Tokens: \n" + intTokens;
-            Buildings._iron -= _slider.value;
-
-        }
-        else if (ore == 2 && _slider.value < Buildings._copper)
-        {
-            intTokens += Convert.ToInt32(Regex.Match(_btext.text, @"\d+").Value);
-            tokens.text = "Tokens: \n" + intTokens;
-            Buildings._copper -= _slider.value;
-
-        }
-        else if (ore == 3 && _slider.value < Buildings._gold)
-        {
-            intTokens += Convert.ToInt32(Regex.Match(_btext.text, @"\d+").Value);
-            tokens.text = "Tokens: \n" + intTokens;
-            Buildings._gold -= _slider.value;
-
+            resourcesData._oreArray[i] -= Convert.ToInt32(_slider.value);
+            }
         }
     }
 }

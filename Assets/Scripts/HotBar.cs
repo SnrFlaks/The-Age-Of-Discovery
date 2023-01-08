@@ -15,7 +15,7 @@ public class HotBar : MonoBehaviour
     private void Start()
     {
         spriteNN = spriteN;
-        hotBarSprite = ItemList.buildingsIcon;
+        hotBarSprite = BuildingsList.buildingsIcon;
     }
     private void Update()
     {

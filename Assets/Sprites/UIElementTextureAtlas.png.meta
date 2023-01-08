@@ -535,7 +535,7 @@ TextureImporter:
         serializedVersion: 2
         x: 159
         y: 162
-        width: 49
+        width: 30
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1843,7 +1843,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       UIElementTextureAtlas_9: 313493009468441985
-      UIElementTextureAtlas_61: -546861723
       UIElementTextureAtlas_13: -7017281764407890277
       UIElementTextureAtlas_5: -4804192429541154245
       UIElementTextureAtlas_24: -4108979301592481102
@@ -1853,6 +1852,7 @@ TextureImporter:
       UIElementTextureAtlas_45: 4041190664598927816
       UIElementTextureAtlas_78: 1857453322
       UIElementTextureAtlas_73: 1926947388
+      UIElementTextureAtlas_35: -679182513
       UIElementTextureAtlas_77: 1820304466
       UIElementTextureAtlas_53: -1547013852
       UIElementTextureAtlas_10: 6427620795106450355
@@ -1921,7 +1921,7 @@ TextureImporter:
       UIElementTextureAtlas_69: -795440325
       UIElementTextureAtlas_21: -471064680
       UIElementTextureAtlas_15: -477080929
-      UIElementTextureAtlas_35: -679182513
+      UIElementTextureAtlas_61: -546861723
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4622267297989256922, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4622267297989256923, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
       propertyPath: m_Name
       value: enemy_0 Variant
@@ -75,9 +79,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7047926269277767667, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047926269277767667, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 9209654556691734476, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
       propertyPath: hp
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209654556691734476, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
+      propertyPath: enemySpeed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9209654556691734476, guid: eb1ad2c9a48ab464f808b56f295291db, type: 3}
       propertyPath: TheoreticalHp
@@ -105,10 +121,10 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1127e1986bf420d49b5ad8b22f68ae85, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0

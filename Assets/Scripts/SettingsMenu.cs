@@ -14,21 +14,21 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private Text label;
     [SerializeField] private GameObject insideSettings;
-    private AudioSource audio;
-    
-  
+    private AudioSource audioMain;
+
+
     private void Start()
     {
-        audio = GetComponent<AudioSource>();
-        audio.Play();
+        audioMain = GetComponent<AudioSource>();
+        audioMain.Play();
 
         if (PlayerPrefs.HasKey("Volume"))
         {
             volumeSlider.value = PlayerPrefs.GetFloat("Volume");
             AudioListener.volume = volumeSlider.value;
         }
-     
-        
+
+
         if (PlayerPrefs.HasKey("Quality"))
         {
             QualitySettings.SetQualityLevel((int)PlayerPrefs.GetFloat("Quality"));
@@ -56,24 +56,24 @@ public class SettingsMenu : MonoBehaviour
     public void ChangeVolume()
     {
         AudioListener.volume = volumeSlider.value;
-        Save("Volume",volumeSlider.value);
+        Save("Volume", volumeSlider.value);
     }
 
     public void SetQuality(int index)
     {
         QualitySettings.SetQualityLevel(index);
-        Save("Quality",index);
-        PlayerPrefs.SetString("Label",label.text);
+        Save("Quality", index);
+        PlayerPrefs.SetString("Label", label.text);
     }
 
     private void Save(String name, float value)
     {
-        PlayerPrefs.SetFloat(name,value);
+        PlayerPrefs.SetFloat(name, value);
     }
 
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
     }
-   
+
 }

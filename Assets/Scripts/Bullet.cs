@@ -40,7 +40,6 @@ public class Bullet : MonoBehaviour
         pos1 = transform.position;
         pos2 = nearest.transform.position;
 
-        transform.position = Vector2.MoveTowards(new Vector2(pos1.x, pos1.y), new Vector2(pos2.x, pos2.y),
-            bulletSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(new Vector2(pos1.x, pos1.y), new Vector2(pos2.x, pos2.y), bulletSpeed * Time.deltaTime);
     }
 }

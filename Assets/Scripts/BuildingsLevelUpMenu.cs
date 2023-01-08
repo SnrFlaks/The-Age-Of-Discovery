@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class BuildingsLevelUpMenu : MonoBehaviour
 {
-    public static readonly int[] LevelNow = {1,1,1,1,1};
+    [SerializeField] private ResourcesData resourcesData;
+    public static readonly int[] LevelNow = { 1, 1, 1, 1, 1 };
     private readonly Sprite[][] _sprites = new Sprite[6][];
     private int _selectBuild = -1;
     [SerializeField] private Text[] costText = new Text[9];
@@ -13,43 +14,54 @@ public class BuildingsLevelUpMenu : MonoBehaviour
 
     private void Start()
     {
-        for (var i = 0; i < _sprites.Length; i++) {
-            _sprites[i] = ItemList.upgradeCostStat[i].levelSprite;
+        for (var i = 0; i < _sprites.Length; i++)
+        {
+            _sprites[i] = BuildingsList.upgradeCostStat[i].levelSprite;
         }
     }
-    
-    public void DrillCoalButton() {
+
+    public void DrillCoalButton()
+    {
         _selectBuild = 4;
-        for (var i = 0; i < costText.Length; i++) {
-            costText[i].text = ItemList.upgradeCostStat[4].level2Costs[i].ToString();
+        for (var i = 0; i < costText.Length; i++)
+        {
+            costText[i].text = BuildingsList.upgradeCostStat[4].level2Costs[i].ToString();
         }
         upgradeButtonText.text = LevelNow[4] != 7 ? $"Upgrade to level: \n {LevelNow[4] + 1}" : "Max level!";
     }
-    public void DrillTinButton() {
+    public void DrillTinButton()
+    {
         _selectBuild = 0;
-        for (var i = 0; i < costText.Length; i++) {
-            costText[i].text = ItemList.upgradeCostStat[0].level2Costs[i].ToString();
+        for (var i = 0; i < costText.Length; i++)
+        {
+            costText[i].text = BuildingsList.upgradeCostStat[0].level2Costs[i].ToString();
         }
         upgradeButtonText.text = LevelNow[0] != 7 ? $"Upgrade to level: \n {LevelNow[0] + 1}" : "Max level!";
     }
-    public void DrillIronButton() {
+    public void DrillIronButton()
+    {
         _selectBuild = 1;
-        for (var i = 0; i < costText.Length; i++) {
-            costText[i].text = ItemList.upgradeCostStat[1].level2Costs[i].ToString();
+        for (var i = 0; i < costText.Length; i++)
+        {
+            costText[i].text = BuildingsList.upgradeCostStat[1].level2Costs[i].ToString();
         }
         upgradeButtonText.text = LevelNow[1] != 7 ? $"Upgrade to level: \n {LevelNow[1] + 1}" : "Max level!";
     }
-    public void DrillCopperButton() {
+    public void DrillCopperButton()
+    {
         _selectBuild = 2;
-        for (var i = 0; i < costText.Length; i++) {
-            costText[i].text = ItemList.upgradeCostStat[2].level2Costs[i].ToString();
+        for (var i = 0; i < costText.Length; i++)
+        {
+            costText[i].text = BuildingsList.upgradeCostStat[2].level2Costs[i].ToString();
         }
         upgradeButtonText.text = LevelNow[2] != 7 ? $"Upgrade to level: \n {LevelNow[2] + 1}" : "Max level!";
     }
-    public void DrillGoldButton() {
+    public void DrillGoldButton()
+    {
         _selectBuild = 3;
-        for (var i = 0; i < costText.Length; i++) {
-            costText[i].text = ItemList.upgradeCostStat[3].level2Costs[i].ToString();
+        for (var i = 0; i < costText.Length; i++)
+        {
+            costText[i].text = BuildingsList.upgradeCostStat[3].level2Costs[i].ToString();
         }
         upgradeButtonText.text = LevelNow[3] != 7 ? $"Upgrade to level: \n {LevelNow[3] + 1}" : "Max level!";
     }
@@ -57,16 +69,11 @@ public class BuildingsLevelUpMenu : MonoBehaviour
     public void UpgradeButton()
     {
         if (_selectBuild == -1) return;
-        if (GetPermission()) {
+        if (GetPermission())
+        {
             ShopMenu.intTokens -= Convert.ToInt32(costText[0].text);
-            Buildings._tin -= Convert.ToInt32(costText[1].text);
-            Buildings._iron -= Convert.ToInt32(costText[2].text);
-            Buildings._copper -= Convert.ToInt32(costText[3].text);
-            Buildings._gold -= Convert.ToInt32(costText[4].text);
-            Buildings._tinIngot -= Convert.ToInt32(costText[5].text);
-            Buildings._ironIngot -= Convert.ToInt32(costText[6].text);
-            Buildings._copperIngot -= Convert.ToInt32(costText[7].text);
-            Buildings._goldIngot -= Convert.ToInt32(costText[8].text);
+            for (int o = 0; o < resourcesData._oreArray.Length; o++) resourcesData._oreArray[o] -= Convert.ToInt32(costText[o].text);
+            for (int i = 0; i < resourcesData._ingotArray.Length; i++) resourcesData._ingotArray[i] -= Convert.ToInt32(costText[i].text);
         }
         else return;
         if (_selectBuild == -1 || LevelNow[_selectBuild] == 7) return;
@@ -76,15 +83,19 @@ public class BuildingsLevelUpMenu : MonoBehaviour
         upgradeButtonText.text = LevelNow[_selectBuild] != 7 ? $"Upgrade to level: \n {LevelNow[_selectBuild] + 1}" : "Max level!";
     }
 
-    private bool GetPermission() {
-        return ShopMenu.intTokens >= Convert.ToInt32(costText[0].text) && 
-               Buildings._tin >= Convert.ToInt32(costText[1].text) && 
-               Buildings._iron >= Convert.ToInt32(costText[2].text) && 
-               Buildings._copper >= Convert.ToInt32(costText[3].text) &&
-               Buildings._gold >= Convert.ToInt32(costText[4].text) &&
-               Buildings._tinIngot >= Convert.ToInt32(costText[5].text) &&
-               Buildings._ironIngot >= Convert.ToInt32(costText[6].text) &&
-               Buildings._copperIngot >= Convert.ToInt32(costText[7].text) &&
-               Buildings._goldIngot >= Convert.ToInt32(costText[8].text);
+    private bool GetPermission()
+    {
+        bool permission = false;
+        for (int t = 0; t < 2; t++)
+        {
+            for (int r = 0; r < resourcesData._oreArray.Length; r++)
+            {
+                if (resourcesData._oreArray[r] >= Convert.ToInt32(costText[r].text)) permission = true;
+                else return false;
+                if (resourcesData._ingotArray[r] >= Convert.ToInt32(costText[r].text)) permission = true;
+                else return false;
+            }
+        }
+        return permission;
     }
 }

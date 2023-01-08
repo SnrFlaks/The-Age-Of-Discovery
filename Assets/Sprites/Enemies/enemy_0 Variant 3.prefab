@@ -15,10 +15,6 @@ PrefabInstance:
       propertyPath: TheoreticalHp
       value: 125
       objectReference: {fileID: 0}
-    - target: {fileID: 3868386195462262844, guid: 47e5eb02094b2794f8b64e89dcf588e5, type: 3}
-      propertyPath: m_Radius
-      value: 0.23
-      objectReference: {fileID: 0}
     - target: {fileID: 4172636461542157352, guid: 47e5eb02094b2794f8b64e89dcf588e5, type: 3}
       propertyPath: m_Color.g
       value: 0
@@ -77,6 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 5910629980679105773, guid: 47e5eb02094b2794f8b64e89dcf588e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 47e5eb02094b2794f8b64e89dcf588e5, type: 3}
 --- !u!1 &9210600422505434374 stripped
 GameObject:
@@ -97,10 +94,10 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1127e1986bf420d49b5ad8b22f68ae85, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0

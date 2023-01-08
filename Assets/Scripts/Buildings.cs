@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Profiling;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 
@@ -16,26 +17,13 @@ public class Buildings : MonoBehaviour
     [SerializeField] private TileBase waterTile;
     [SerializeField] private Text[] ore;
     [SerializeField] private Text[] ingot;
-    public static readonly int[] ConnectedIronDrillCount = new int[7];
-    public static readonly int[] ConnectedGoldDrillCount = new int[7];
-    public static readonly int[] ConnectedTinDrillCount = new int[7];
-    public static readonly int[] ConnectedCopperDrillCount = new int[7];
-    public static int ConnectedFurnaceCount;
+    public int[][] ConnectedDrillCount = new int[4][];
+    public int ConnectedFurnaceCount;
     private int _coalDrillCount;
     private int _ironDrillCount;
     private int _goldDrillCount;
     private int _tinDrillCount;
     private int _copperDrillCount;
-
-    public static float _tin;
-    public static float _iron;
-    public static float _copper;
-    public static float _gold;
-
-    public static int _tinIngot;
-    public static int _ironIngot;
-    public static int _copperIngot;
-    public static int _goldIngot;
 
     private Tilemap _ground;
     public static Tilemap _objectInGround;
@@ -47,6 +35,10 @@ public class Buildings : MonoBehaviour
     public Text tokensText;
     private Vector3 point;
     public Vector3Int cellPosition;
+    private Vector3Int firstPosition;
+    private Vector3Int secondPosition;
+
+    private bool mouseLock = false;
 
     private Transform _grid;
     private Transform _lineGroup;
@@ -56,13 +48,13 @@ public class Buildings : MonoBehaviour
     private void Awake()
     {
         mainCam = Camera.main;
-        _buildings = ItemList.buildings;
-        _buildingsName = ItemList.buildingsName;
+        _buildings = BuildingsList.buildings;
+        _buildingsName = BuildingsList.buildingsName;
         _ground = transform.GetChild(0).GetComponent<Tilemap>();
         _objectInGround = transform.GetChild(1).GetComponent<Tilemap>();
         _grid = transform;
         _lineGroup = _grid.GetChild(2);
-        StartCoroutine(OncePerSecond());
+        for (int i = 0; i < ConnectedDrillCount.Length; i++) ConnectedDrillCount[i] = new int[7];
         for (int i = 0; i < cannonBoolArr.Length; i++) cannonBoolArr[i] = new bool[500];
         ShopMenu.tokens = tokensText;
         ShopMenu.tokens.text = "Tokens: \n" + ShopMenu.intTokens;
@@ -70,8 +62,85 @@ public class Buildings : MonoBehaviour
 
     private void Update()
     {
-        UpdateInfo();
-        if (Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                firstPosition = new Vector3Int(-1, -1, -1);
+                point = mainCam.ScreenToWorldPoint(Input.mousePosition);
+                cellPosition = _ground.WorldToCell(point);
+                firstPosition = cellPosition;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                secondPosition = new Vector3Int(-1, -1, -1);
+                point = mainCam.ScreenToWorldPoint(Input.mousePosition);
+                cellPosition = _ground.WorldToCell(point);
+                secondPosition = cellPosition;
+                if (hotBar.CreateLock == false && Base.createLockHub == false && cellPosition.x >= 0 && cellPosition.y >= 0)
+                {
+                    if (hotBar.HotBarSelect[hotBar.hotBarButtonSelect])
+                    {
+                        Sprite hotBarSprite = hotBar.transform.GetChild(hotBar.hotBarButtonSelect).GetChild(0).GetComponentInChildren<Image>().sprite;
+                        TileBase changedTile = hotBarSprite == cannonHb ? null : hotBarSprite == empty ? null : _buildings[Array.IndexOf(BuildingsList.buildingsIcon, hotBar.transform.GetChild(hotBar.hotBarButtonSelect).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
+                        if (changedTile != _buildings[6])
+                        {
+                            mouseLock = true;
+                            if (secondPosition.x > firstPosition.x && firstPosition.y > secondPosition.y)
+                            {
+                                for (int x = firstPosition.x; x < secondPosition.x + 1; x++)
+                                {
+                                    for (int y = secondPosition.y; y < firstPosition.y + 1; y++)
+                                    {
+                                        cellPosition = new Vector3Int(x, y, cellPosition.z);
+                                        if (cannonBoolArr[cellPosition.x][cellPosition.y] != true && _objectInGround.GetTile(cellPosition) == null && _ground.GetTile(cellPosition) != waterTile) SetBuildings(changedTile);
+                                    }
+                                }
+                                mouseLock = false;
+                            }
+                            else if (firstPosition.x > secondPosition.x && secondPosition.y > firstPosition.y)
+                            {
+                                for (int x = secondPosition.x; x < firstPosition.x + 1; x++)
+                                {
+                                    for (int y = firstPosition.y; y < secondPosition.y + 1; y++)
+                                    {
+                                        cellPosition = new Vector3Int(x, y, cellPosition.z);
+                                        if (cannonBoolArr[cellPosition.x][cellPosition.y] != true && _objectInGround.GetTile(cellPosition) == null && _ground.GetTile(cellPosition) != waterTile) SetBuildings(changedTile);
+                                    }
+                                }
+                                mouseLock = false;
+                            }
+                            else if (secondPosition.x > firstPosition.x && secondPosition.y > firstPosition.y)
+                            {
+                                for (int x = firstPosition.x; x < secondPosition.x + 1; x++)
+                                {
+                                    for (int y = firstPosition.y; y < secondPosition.y + 1; y++)
+                                    {
+                                        cellPosition = new Vector3Int(x, y, cellPosition.z);
+                                        if (cannonBoolArr[cellPosition.x][cellPosition.y] != true && _objectInGround.GetTile(cellPosition) == null && _ground.GetTile(cellPosition) != waterTile) SetBuildings(changedTile);
+                                    }
+                                }
+                                mouseLock = false;
+                            }
+                            else if (firstPosition.x > secondPosition.x && firstPosition.y > secondPosition.y)
+                            {
+                                for (int x = secondPosition.x; x < firstPosition.x + 1; x++)
+                                {
+                                    for (int y = secondPosition.y; y < firstPosition.y + 1; y++)
+                                    {
+                                        cellPosition = new Vector3Int(x, y, cellPosition.z);
+                                        SetBuildings(changedTile);
+                                    }
+                                }
+                                mouseLock = false;
+                            }
+                        }
+                        else Error("Connectors cannot be placed by area");
+                    }
+                }
+            }
+        }
+        else if (Input.GetMouseButton(0) && !Input.GetKeyDown(KeyCode.LeftShift) && mouseLock == false)
         {
             point = mainCam.ScreenToWorldPoint(Input.mousePosition);
             cellPosition = _ground.WorldToCell(point);
@@ -80,12 +149,12 @@ public class Buildings : MonoBehaviour
                 if (hotBar.HotBarSelect[hotBar.hotBarButtonSelect])
                 {
                     Sprite hotBarSprite = hotBar.transform.GetChild(hotBar.hotBarButtonSelect).GetChild(0).GetComponentInChildren<Image>().sprite;
-                    TileBase changedTile = hotBarSprite == cannonHb ? null : hotBarSprite == empty ? null : _buildings[Array.IndexOf(ItemList.buildingsIcon, hotBar.transform.GetChild(hotBar.hotBarButtonSelect).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
+                    TileBase changedTile = hotBarSprite == cannonHb ? null : hotBarSprite == empty ? null : _buildings[Array.IndexOf(BuildingsList.buildingsIcon, hotBar.transform.GetChild(hotBar.hotBarButtonSelect).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
                     SetBuildings(changedTile);
                 }
             }
         }
-        else if (Input.GetMouseButton(1))
+        else if (Input.GetMouseButton(1) && mouseLock == false)
         {
             point = mainCam.ScreenToWorldPoint(Input.mousePosition);
             cellPosition = _ground.WorldToCell(point);
@@ -99,13 +168,9 @@ public class Buildings : MonoBehaviour
             TileBase buOig = _objectInGround.GetTile(cellPosition);
             if (buOig != null)
             {
-                if (buOig == _buildings[0]) _tinDrillCount--;
-                else if (buOig.name == $"drillIronTile{buOig.name[^1]}") _ironDrillCount--;
-                else if (buOig == _buildings[1]) _ironDrillCount--;
+                if (buOig.name == $"drillIronTile{buOig.name[^1]}") _ironDrillCount--;
                 else if (buOig.name == $"drillGoldTile{buOig.name[^1]}") _goldDrillCount--;
-                else if (buOig == _buildings[2]) _copperDrillCount--;
                 else if (buOig.name == $"drillTinTile{buOig.name[^1]}") _tinDrillCount--;
-                else if (buOig == _buildings[3]) _goldDrillCount--;
                 else if (buOig.name == $"drillCopperTile{buOig.name[^1]}") _copperDrillCount--;
             }
             else
@@ -120,19 +185,6 @@ public class Buildings : MonoBehaviour
             if (gameObjWithLine != null) gameObjWithLine.GetComponent<Line>().LineDelete();
             if (_objectInGround.GetTile(cellPosition) != emptyTile) _objectInGround.SetTile(cellPosition, null);
         }
-    }
-
-    private void UpdateInfo()
-    {
-        tokensText.text = "Tokens: \n" + ShopMenu.intTokens;
-        ore[0].text = "Tin: \n" + Mathf.Round(_tin);
-        ore[1].text = "Iron: \n" + Mathf.Round(_iron);
-        ore[2].text = "Copper: \n" + Mathf.Round(_copper);
-        ore[3].text = "Gold: \n" + Mathf.Round(_gold);
-        ingot[0].text = "Tin ingot: \n" + _tinIngot;
-        ingot[1].text = "Iron ingot: \n" + _ironIngot;
-        ingot[2].text = "Copper ingot: \n" + _copperIngot;
-        ingot[3].text = "Gold ingot: \n" + _goldIngot;
     }
 
     private void SetBuildings(TileBase changedTile)
@@ -223,8 +275,8 @@ public class Buildings : MonoBehaviour
 
     private void LineCreate()
     {
-        var lp = Instantiate(linePrefab, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f), Quaternion.identity, _lineGroup);
-        lp.name = cellPosition.ToString();
+        GameObject lineP = Instantiate(linePrefab, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f), Quaternion.identity, _lineGroup);
+        lineP.name = cellPosition.ToString();
     }
 
     public void LineCheck()
@@ -233,11 +285,8 @@ public class Buildings : MonoBehaviour
         {
             for (int y = cellPosition.y - 3; y < cellPosition.y + 4; y++)
             {
-                Vector3Int coord = new Vector3Int(x, y, 0);
-                Transform gm = _lineGroup.Find($"{coord}");
-                TileBase tile = _objectInGround.GetTile(coord);
-                if (tile == null || tile == _buildings[6] || tile == emptyTile) continue;
-                gm.GetComponent<Line>().LineSet();
+                Transform gm = _lineGroup.Find($"{new Vector3Int(x, y, 0)}");
+                if (gm) gm.GetComponent<Line>().LineSet();
             }
         }
     }
@@ -262,21 +311,6 @@ public class Buildings : MonoBehaviour
             textColor.a = 1f / hideTime * timer;
             errorText.color = textColor;
             yield return null;
-        }
-    }
-
-    private static IEnumerator OncePerSecond()
-    {
-        while (true)
-        {
-            for (int i = 0; i < ConnectedTinDrillCount.Length; i++)
-            {
-                _tin += 6 * (i + 1) * ConnectedTinDrillCount[i];
-                _iron += 4 * (i + 1) * ConnectedIronDrillCount[i];
-                _copper += 2 * (i + 1) * ConnectedCopperDrillCount[i];
-                _gold += 1 * (i + 1) * ConnectedGoldDrillCount[i];
-            }
-            yield return new WaitForSeconds(1);
         }
     }
 }

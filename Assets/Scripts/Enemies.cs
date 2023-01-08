@@ -18,15 +18,13 @@ public class Enemies : MonoBehaviour
 
     private Random r = new Random();
     [SerializeField] private bool ifSpawn = false;
-    
+
     void Start()
     {
-
         if (ifSpawn)
         {
             StartCoroutine(Spawn());
         }
-
         time = 5;
     }
 
@@ -40,7 +38,6 @@ public class Enemies : MonoBehaviour
     {
         while (true)
         {
-
             for (int i = 0; i < intStage / 2; i++)
             {
                 Instantiate(enemies[intStage / 2], new Vector3(0, r.Next(0, 500), 0f), Quaternion.identity, gameObject.transform);
@@ -48,7 +45,6 @@ public class Enemies : MonoBehaviour
                 Instantiate(enemies[intStage / 2], new Vector3(500, r.Next(0, 500)), Quaternion.identity, gameObject.transform);
                 Instantiate(enemies[intStage / 2], new Vector3(r.Next(0, 500), 0, 0), Quaternion.identity, gameObject.transform);
             }
-
             if (intStage == 1)
             {
                 Instantiate(enemies[intStage / 2], new Vector3(0, r.Next(0, 500), 0f), Quaternion.identity, gameObject.transform);
@@ -56,14 +52,10 @@ public class Enemies : MonoBehaviour
                 Instantiate(enemies[intStage / 2], new Vector3(500, r.Next(0, 500)), Quaternion.identity, gameObject.transform);
                 Instantiate(enemies[intStage / 2], new Vector3(r.Next(0, 500), 0, 0), Quaternion.identity, gameObject.transform);
             }
-
             stage.text = "Wave: " + intStage;
             intStage++;
-
             yield return new WaitForSeconds(5);
         }
-
     }
-
 }
 

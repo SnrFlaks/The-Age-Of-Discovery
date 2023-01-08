@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7381857970372962396, guid: 5ba4d5c498d597d4785d2482bc48411c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8678901753244971107, guid: 5ba4d5c498d597d4785d2482bc48411c, type: 3}
       propertyPath: hp
       value: 100
@@ -73,6 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: -6141125122992772670, guid: 5ba4d5c498d597d4785d2482bc48411c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5ba4d5c498d597d4785d2482bc48411c, type: 3}
 --- !u!1 &4172636461542157353 stripped
 GameObject:
@@ -93,10 +98,10 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1127e1986bf420d49b5ad8b22f68ae85, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0

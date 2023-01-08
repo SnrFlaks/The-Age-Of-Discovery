@@ -14,14 +14,14 @@ public class StatPanelButton : MonoBehaviour
             if (i == Convert.ToInt32(transform.name[transform.name.Length - 1].ToString()) - 1)
             {
                 statPanel[i].SetActive(true);
-                statButton[i].GetComponent<Image>().sprite = (i == 0) ? sprite[3] :  sprite[1];
+                statButton[i].GetComponent<Image>().sprite = (i == 0) ? sprite[3] : sprite[1];
             }
             else if (i != Convert.ToInt32(transform.name[transform.name.Length - 1].ToString()) - 1)
             {
                 statPanel[i].SetActive(false);
-                statButton[i].GetComponent<Image>().sprite = (i == 0) ? sprite[2] :  sprite[0];
+                statButton[i].GetComponent<Image>().sprite = (i == 0) ? sprite[2] : sprite[0];
             }
         }
     }
-    
+
 }
