@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: wolframPipeTile2
+  m_Name: ironPipeTileHorizontal
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -939799983, guid: 3ee489eb57d5a3e47bda60741d56edfa, type: 3}
+  m_Sprite: {fileID: -641312841, guid: 3ee489eb57d5a3e47bda60741d56edfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

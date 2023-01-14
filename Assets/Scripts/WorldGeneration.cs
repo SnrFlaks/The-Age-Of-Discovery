@@ -27,7 +27,6 @@ public class WorldGeneration : MonoBehaviour
             Generate(3, 0.09f, 4, 0.88f, false, 20);
             Generate(5, 0.2f, 5, 2f, false, 13);
         }
-
         for (int i = 243; i < 258; i++)
         {
             for (int j = 243; j < 258; j++)
@@ -35,8 +34,6 @@ public class WorldGeneration : MonoBehaviour
                 _ground.SetTile(new Vector3Int(i, j, 0), tile[0]);
             }
         }
-
-
     }
 
     private void Generate(int firstOre, float first, int secondOre, float second, bool stone, float scale)
@@ -59,13 +56,7 @@ public class WorldGeneration : MonoBehaviour
                 {
                     _ground.SetTile(new Vector3Int(i, j, 0), tile[secondOre]);
                 }
-
             }
         }
     }
-
-
-
-
-
 }

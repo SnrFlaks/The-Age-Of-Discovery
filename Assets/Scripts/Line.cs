@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.Profiling;
 
 public class Line : MonoBehaviour
 {
@@ -9,7 +8,6 @@ public class Line : MonoBehaviour
     private Vector3 _position;
     private readonly Tilemap _buildOig = Buildings._objectInGround;
     private TileBase _tile;
-    private TileBase _getTile;
     public bool _isPowered;
     private Vector3Int _cellPosition;
     private TileBase[] _buildings;
@@ -48,6 +46,7 @@ public class Line : MonoBehaviour
 
     public void LineSet()
     {
+        TileBase _getTile;
         TileBase buOig = _buildOig.GetTile(_cellPosition);
         for (int x = _cellPosition.x - 3; x < _cellPosition.x + 4; x++)
         {

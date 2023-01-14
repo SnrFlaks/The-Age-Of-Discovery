@@ -8,6 +8,7 @@ using UnityEngine.Tilemaps;
 
 public class Buildings : MonoBehaviour
 {
+    [SerializeField] private Pipes pipes;
     [SerializeField] private HotBar hotBar;
     [SerializeField] private Text errorText;
     [SerializeField] private GameObject cannon;
@@ -149,7 +150,11 @@ public class Buildings : MonoBehaviour
                 if (hotBar.HotBarSelect[hotBar.hotBarButtonSelect])
                 {
                     Sprite hotBarSprite = hotBar.transform.GetChild(hotBar.hotBarButtonSelect).GetChild(0).GetComponentInChildren<Image>().sprite;
-                    TileBase changedTile = hotBarSprite == cannonHb ? null : hotBarSprite == empty ? null : _buildings[Array.IndexOf(BuildingsList.buildingsIcon, hotBar.transform.GetChild(hotBar.hotBarButtonSelect).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
+                    TileBase changedTile;
+                    if (hotBarSprite == cannonHb) changedTile = null;
+                    else if (hotBarSprite == empty) changedTile = null;
+                    else if (hotBarSprite == pipes.pipesArray[10]) return;
+                    else changedTile = _buildings[Array.IndexOf(BuildingsList.buildingsIcon, hotBarSprite)]!;
                     SetBuildings(changedTile);
                 }
             }
