@@ -6,33 +6,42 @@ using UnityEngine.Tilemaps;
 
 public class Pipe : MonoBehaviour
 {
+    [SerializeField] private Pipes pipes;
     [SerializeField] private bool[] isNeighbors = new bool[4];
-    [SerializeField] private int[] neighborsData = new int[4];
     private Tilemap _objectInGround;
     private Vector3 _position;
     private Vector3Int _cellPosition;
-    void Start()
+    void Awake()
     {
+        pipes = transform.parent.GetComponent<Pipes>();
         _position = transform.position;
         _objectInGround = Buildings._objectInGround;
         _cellPosition = _objectInGround.WorldToCell(_position);
     }
+    public void PipeDelete()
+    {
+        Destroy(gameObject);
+    }
 
-    void Update()
+    public void ChangeCurrentTile()
     {
         for (int i = 0; i < isNeighbors.Length; i++) isNeighbors[i] = CheckNeighbors(i);
-        for (int i = 0; i < neighborsData.Length; i++) neighborsData[i] = isNeighbors[i] ? Convert.ToInt32($"{Convert.ToInt32(isNeighbors[i])}{GetNeighborType(i)}") : 00;
+        int fromBinaryIndex = Convert.ToInt32($"{Convert.ToInt32(isNeighbors[0])}{Convert.ToInt32(isNeighbors[1])}{Convert.ToInt32(isNeighbors[2])}{Convert.ToInt32(isNeighbors[3])}", 2);
+        int index = fromBinaryIndex + (GetCurrentTileType() * 16);
+        if (_objectInGround.GetTile(_cellPosition) == pipes.pipesArray[index]) return;
+        _objectInGround.SetTile(_cellPosition, pipes.pipesArray[index]);
     }
-    private void ChangeTile()
+    public void RefreshNeighbors()
     {
-        for (int i = 0; i < isNeighbors.Length; i++)
-        {
-            if (isNeighbors[i] && i == 0);
-        }
-    }
-    private void GetRule()
-    {
-        
+        Transform pipe = transform.parent.Find($"{_cellPosition}");
+        pipe = transform.parent.Find($"{new Vector3Int(_cellPosition.x, _cellPosition.y + 1, 0)}");
+        if (pipe != null) pipe.GetComponent<Pipe>().ChangeCurrentTile();
+        pipe = transform.parent.Find($"{new Vector3Int(_cellPosition.x + 1, _cellPosition.y, 0)}");
+        if (pipe != null) pipe.GetComponent<Pipe>().ChangeCurrentTile();
+        pipe = transform.parent.Find($"{new Vector3Int(_cellPosition.x, _cellPosition.y - 1, 0)}");
+        if (pipe != null) pipe.GetComponent<Pipe>().ChangeCurrentTile();
+        pipe = transform.parent.Find($"{new Vector3Int(_cellPosition.x - 1, _cellPosition.y, 0)}");
+        if (pipe != null) pipe.GetComponent<Pipe>().ChangeCurrentTile();
     }
     private bool CheckNeighbors(int side)
     {
@@ -40,16 +49,11 @@ public class Pipe : MonoBehaviour
         for (int i = 0; i < neighbors.Length; i++) neighbors[i] = GetNeighborTileBySide(side);
         return neighbors[side];
     }
-    private int GetNeighborType(int side)
+    private int GetNeighborNumber()
     {
-        int type = -1;
-        string name = GetNeighborTileBySide(side).name.Substring(0, GetNeighborTileBySide(side).name.Length - 9);
-        if (name == "iron") type = 0;
-        else if (name == "lead") type = 1;
-        else if (name == "platinum") type = 2;
-        else if (name == "wolfram") type = 3;
-        else if (name == "titanium") type = 4;
-        return type;
+        int number = 0;
+        for (int i = 0; i < 4; i++) number += isNeighbors[i] ? 1 : 0;
+        return number;
     }
     private TileBase GetNeighborTileBySide(int side)
     {
@@ -59,5 +63,10 @@ public class Pipe : MonoBehaviour
         else if (side == 2) tile = _objectInGround.GetTile(new Vector3Int(_cellPosition.x, _cellPosition.y - 1, _cellPosition.z));
         else if (side == 3) tile = _objectInGround.GetTile(new Vector3Int(_cellPosition.x - 1, _cellPosition.y, _cellPosition.z));
         return tile;
+    }
+    private int GetCurrentTileType()
+    {
+        int type = Mathf.FloorToInt(Convert.ToInt32(_objectInGround.GetTile(_cellPosition).name.Replace("TA_Pipes_", "")) / 16);
+        return type;
     }
 }

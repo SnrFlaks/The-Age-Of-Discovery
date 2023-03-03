@@ -15,6 +15,7 @@ public class Buildings : MonoBehaviour
     [SerializeField] private Sprite cannonHb;
     [SerializeField] private Sprite empty;
     [SerializeField] private GameObject linePrefab;
+    [SerializeField] private GameObject pipePrefab;
     [SerializeField] private TileBase waterTile;
     [SerializeField] private Text[] ore;
     [SerializeField] private Text[] ingot;
@@ -43,6 +44,7 @@ public class Buildings : MonoBehaviour
 
     private Transform _grid;
     private Transform _lineGroup;
+    private Transform _pipeGroup;
 
     private Camera mainCam;
 
@@ -55,6 +57,7 @@ public class Buildings : MonoBehaviour
         _objectInGround = transform.GetChild(1).GetComponent<Tilemap>();
         _grid = transform;
         _lineGroup = _grid.GetChild(2);
+        _pipeGroup = _grid.GetChild(6);
         for (int i = 0; i < ConnectedDrillCount.Length; i++) ConnectedDrillCount[i] = new int[7];
         for (int i = 0; i < cannonBoolArr.Length; i++) cannonBoolArr[i] = new bool[500];
         ShopMenu.tokens = tokensText;
@@ -83,58 +86,42 @@ public class Buildings : MonoBehaviour
                     if (hotBar.HotBarSelect[hotBar.hotBarButtonSelect])
                     {
                         Sprite hotBarSprite = hotBar.transform.GetChild(hotBar.hotBarButtonSelect).GetChild(0).GetComponentInChildren<Image>().sprite;
-                        TileBase changedTile = hotBarSprite == cannonHb ? null : hotBarSprite == empty ? null : _buildings[Array.IndexOf(BuildingsList.buildingsIcon, hotBar.transform.GetChild(hotBar.hotBarButtonSelect).GetChild(0).GetComponentInChildren<Image>().sprite)]!;
+                        TileBase changedTile;
+                        if (hotBarSprite == cannonHb) changedTile = null;
+                        else if (hotBarSprite == empty) changedTile = null;
+                        else if (hotBarSprite == pipes.pipesSprite[0]) changedTile = pipes.pipesArray[0];
+                        else changedTile = _buildings[Array.IndexOf(BuildingsList.buildingsIcon, hotBarSprite)]!;
                         if (changedTile != _buildings[6])
                         {
                             mouseLock = true;
-                            if (secondPosition.x > firstPosition.x && firstPosition.y > secondPosition.y)
+                            int minX = Mathf.Min(firstPosition.x, secondPosition.x);
+                            int maxX = Mathf.Max(firstPosition.x, secondPosition.x);
+                            int minY = Mathf.Min(firstPosition.y, secondPosition.y);
+                            int maxY = Mathf.Max(firstPosition.y, secondPosition.y);
+                            StartCoroutine(ProcessCells(minX, maxX, minY, maxY));
+                            IEnumerator ProcessCells(int minX, int maxX, int minY, int maxY)
                             {
-                                for (int x = firstPosition.x; x < secondPosition.x + 1; x++)
+                                BoundsInt bounds = new BoundsInt(minX, minY, 0, maxX - minX + 1, maxY - minY + 1, 1);
+                                TileBase[] objectTiles = _objectInGround.GetTilesBlock(bounds);
+                                TileBase[] groundTiles = _ground.GetTilesBlock(bounds);
+                                for (int x = minX; x <= maxX; x++)
                                 {
-                                    for (int y = secondPosition.y; y < firstPosition.y + 1; y++)
+                                    yield return null;
+
+                                    for (int y = minY; y <= maxY; y++)
                                     {
                                         cellPosition = new Vector3Int(x, y, cellPosition.z);
-                                        if (cannonBoolArr[cellPosition.x][cellPosition.y] != true && _objectInGround.GetTile(cellPosition) == null && _ground.GetTile(cellPosition) != waterTile) SetBuildings(changedTile);
+                                        bool cannonBool = cannonBoolArr[cellPosition.x][cellPosition.y];
+                                        bool isObjectNull = !objectTiles[(x - minX) + (y - minY) * bounds.size.x];
+                                        bool isGroundNotWater = groundTiles[(x - minX) + (y - minY) * bounds.size.x] != waterTile;
+                                        if (!cannonBool && isObjectNull && isGroundNotWater)
+                                        {
+                                            SetBuildings(changedTile);
+                                        }
                                     }
                                 }
-                                mouseLock = false;
                             }
-                            else if (firstPosition.x > secondPosition.x && secondPosition.y > firstPosition.y)
-                            {
-                                for (int x = secondPosition.x; x < firstPosition.x + 1; x++)
-                                {
-                                    for (int y = firstPosition.y; y < secondPosition.y + 1; y++)
-                                    {
-                                        cellPosition = new Vector3Int(x, y, cellPosition.z);
-                                        if (cannonBoolArr[cellPosition.x][cellPosition.y] != true && _objectInGround.GetTile(cellPosition) == null && _ground.GetTile(cellPosition) != waterTile) SetBuildings(changedTile);
-                                    }
-                                }
-                                mouseLock = false;
-                            }
-                            else if (secondPosition.x > firstPosition.x && secondPosition.y > firstPosition.y)
-                            {
-                                for (int x = firstPosition.x; x < secondPosition.x + 1; x++)
-                                {
-                                    for (int y = firstPosition.y; y < secondPosition.y + 1; y++)
-                                    {
-                                        cellPosition = new Vector3Int(x, y, cellPosition.z);
-                                        if (cannonBoolArr[cellPosition.x][cellPosition.y] != true && _objectInGround.GetTile(cellPosition) == null && _ground.GetTile(cellPosition) != waterTile) SetBuildings(changedTile);
-                                    }
-                                }
-                                mouseLock = false;
-                            }
-                            else if (firstPosition.x > secondPosition.x && firstPosition.y > secondPosition.y)
-                            {
-                                for (int x = secondPosition.x; x < firstPosition.x + 1; x++)
-                                {
-                                    for (int y = secondPosition.y; y < firstPosition.y + 1; y++)
-                                    {
-                                        cellPosition = new Vector3Int(x, y, cellPosition.z);
-                                        SetBuildings(changedTile);
-                                    }
-                                }
-                                mouseLock = false;
-                            }
+                            mouseLock = false;
                         }
                         else Error("Connectors cannot be placed by area");
                     }
@@ -153,7 +140,7 @@ public class Buildings : MonoBehaviour
                     TileBase changedTile;
                     if (hotBarSprite == cannonHb) changedTile = null;
                     else if (hotBarSprite == empty) changedTile = null;
-                    else if (hotBarSprite == pipes.pipesArray[10]) return;
+                    else if (hotBarSprite == pipes.pipesSprite[0]) changedTile = pipes.pipesArray[0];
                     else changedTile = _buildings[Array.IndexOf(BuildingsList.buildingsIcon, hotBarSprite)]!;
                     SetBuildings(changedTile);
                 }
@@ -187,17 +174,25 @@ public class Buildings : MonoBehaviour
                 }
             }
             Transform gameObjWithLine = _lineGroup.Find($"{cellPosition}");
+            Transform pipe = _pipeGroup.Find($"{cellPosition}");
             if (gameObjWithLine != null) gameObjWithLine.GetComponent<Line>().LineDelete();
+            else if (pipe != null)
+            {
+                _objectInGround.SetTile(cellPosition, null);
+                pipe.GetComponent<Pipe>().RefreshNeighbors();
+                pipe.GetComponent<Pipe>().PipeDelete();
+            }
             if (_objectInGround.GetTile(cellPosition) != emptyTile) _objectInGround.SetTile(cellPosition, null);
         }
     }
 
     private void SetBuildings(TileBase changedTile)
     {
-        if (changedTile == _buildings[0]) SetDrill(_ground.GetTile(cellPosition).name);
+        if (changedTile == _buildings[1]) SetDrill(_ground.GetTile(cellPosition).name);
         else if (changedTile == _buildings[4]) PutBuilding(50, false, false, changedTile);
         else if (changedTile == _buildings[5]) PutBuilding(1500, true, false, changedTile);
         else if (changedTile == _buildings[6]) PutBuilding(1500, false, true, changedTile);
+        else if (changedTile == pipes.pipesArray[0]) PutPipe(100, changedTile);
         else if (hotBar.transform.GetChild(hotBar.hotBarButtonSelect).GetChild(0).GetComponentInChildren<Image>().sprite == cannonHb)
         {
             if (ShopMenu.intTokens >= 1000)
@@ -210,7 +205,16 @@ public class Buildings : MonoBehaviour
             else Error("You don't have enough tokens");
         }
     }
-
+    private void PutPipe(int buildingCost, TileBase changedTile)
+    {
+        if (ShopMenu.intTokens >= buildingCost)
+        {
+            _objectInGround.SetTile(cellPosition, changedTile);
+            ShopMenu.intTokens -= buildingCost;
+            PipeCreate();
+        }
+        else Error("You don't have enough tokens");
+    }
     private void PutBuilding(int buildingCost, bool lineCreate, bool lineCheck, TileBase changedTile)
     {
         if (ShopMenu.intTokens >= buildingCost)
@@ -294,6 +298,13 @@ public class Buildings : MonoBehaviour
                 if (gm) gm.GetComponent<Line>().LineSet();
             }
         }
+    }
+    public void PipeCreate()
+    {
+        GameObject pipeP = Instantiate(pipePrefab, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f), Quaternion.identity, _pipeGroup);
+        pipeP.name = cellPosition.ToString();
+        pipeP.GetComponent<Pipe>().ChangeCurrentTile();
+        pipeP.GetComponent<Pipe>().RefreshNeighbors();
     }
 
     private void Error(string error)
