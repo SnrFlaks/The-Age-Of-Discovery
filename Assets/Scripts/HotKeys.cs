@@ -5,6 +5,7 @@ public class HotKeys : MonoBehaviour
 {
     [SerializeField] private GameObject inventoryWindow;
     [SerializeField] private GameObject menuWindow;
+    [SerializeField] private Buildings buildings;
     private void Update()
     {
         if (Input.anyKeyDown)
@@ -37,6 +38,10 @@ public class HotKeys : MonoBehaviour
                 }
                 menuWindow.SetActive(true);
                 return;
+            }
+            else if (Input.GetKeyDown(KeyCode.R))
+            {
+                buildings.pipeRotateMode = !buildings.pipeRotateMode;
             }
         }
     }

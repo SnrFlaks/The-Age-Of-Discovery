@@ -48,12 +48,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Resources
+    uniqueID: 3274957607
+    locked: 0
+  - name: ObjectInGround
+    uniqueID: 4246824025
+    locked: 0
+  - name: Cannon
+    uniqueID: 4069269425
+    locked: 0
   - name: UI
     uniqueID: 3168709527
     locked: 0
   - name: Settings
     uniqueID: 2481468183
-    locked: 0
-  - name: Cannon
-    uniqueID: 4069269425
     locked: 0

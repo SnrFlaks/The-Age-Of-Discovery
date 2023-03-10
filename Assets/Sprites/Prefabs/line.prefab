@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4599475967503960667}
+  - component: {fileID: -2359469850642255724}
   - component: {fileID: 4361094571842454724}
   - component: {fileID: 4926001021025775068}
   m_Layer: 0
@@ -33,6 +34,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2359469850642255724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553881882130532204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05672ae2fefa33c41af7ab755f52cd6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcePrefabs:
+  - {fileID: 1987180764375448950, guid: 6f1402cb6bf4afa4eae3ea514b83c5b0, type: 3}
+  - {fileID: 7937639267009239206, guid: 4c16428704aeccd4b99d5a89a16eb0fe, type: 3}
+  - {fileID: 8606719809901533123, guid: 7e9d646f5b8e4aa4b84fb54ea5cc0e5f, type: 3}
+  - {fileID: 7110464015088233048, guid: 5ae0374c8d988b0499f467bcfed75faa, type: 3}
+  pipesOutput: 00000000
+  capacityLimit: 100
+  resourceQuantity: 0
 --- !u!120 &4361094571842454724
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -71,9 +92,9 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -48143271
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}

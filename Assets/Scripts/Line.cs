@@ -1,19 +1,19 @@
+using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Cysharp.Threading.Tasks;
 
 public class Line : MonoBehaviour
 {
-    [SerializeField]
-    private Buildings buildings;
+    [SerializeField] private Buildings buildings;
     private LineRenderer _line;
     private Vector3 _position;
     private readonly Tilemap _buildOig = Buildings._objectInGround;
     private TileBase _tile;
     public bool _isPowered;
     private Vector3Int _cellPosition;
-    private TileBase[] _buildings;
     private Transform _visibleGroup;
     private Transform _invisibleGroup;
 
@@ -21,25 +21,12 @@ public class Line : MonoBehaviour
     {
         if (_isPowered)
         {
-            TileBase buOig = _buildOig.GetTile(_cellPosition);
-            if (buOig.name == $"drillIronTile{buOig.name[^1]}")
-                buildings.ConnectedDrillCount[0][
-                    (int)char.GetNumericValue((char)(buOig.name[^1] - 1))
-                ]--;
-            else if (buOig.name == $"drillGoldTile{buOig.name[^1]}")
-                buildings.ConnectedDrillCount[1][
-                    (int)char.GetNumericValue((char)(buOig.name[^1] - 1))
-                ]--;
-            else if (buOig.name == $"drillTinTile{buOig.name[^1]}")
-                buildings.ConnectedDrillCount[2][
-                    (int)char.GetNumericValue((char)(buOig.name[^1] - 1))
-                ]--;
-            else if (buOig.name == $"drillCopperTile{buOig.name[^1]}")
-                buildings.ConnectedDrillCount[3][
-                    (int)char.GetNumericValue((char)(buOig.name[^1] - 1))
-                ]--;
-            else if (buOig == BuildingsList.buildings[5])
-                buildings.ConnectedFurnaceCount--;
+            TileBase tile = _buildOig.GetTile(_cellPosition);
+            if (tile.name == $"drillIronTile{tile.name[^1]}") buildings.ConnectedDrillCount[0][(int)char.GetNumericValue((char)(tile.name[^1] - 1))]--;
+            else if (tile.name == $"drillGoldTile{tile.name[^1]}") buildings.ConnectedDrillCount[1][(int)char.GetNumericValue((char)(tile.name[^1] - 1))]--;
+            else if (tile.name == $"drillTinTile{tile.name[^1]}") buildings.ConnectedDrillCount[2][(int)char.GetNumericValue((char)(tile.name[^1] - 1))]--;
+            else if (tile.name == $"drillCopperTile{tile.name[^1]}") buildings.ConnectedDrillCount[3][(int)char.GetNumericValue((char)(tile.name[^1] - 1))]--;
+            else if (tile == BuildingsList.buildings[5]) buildings.ConnectedFurnaceCount--;
         }
         Destroy(gameObject);
     }
@@ -56,13 +43,14 @@ public class Line : MonoBehaviour
         _invisibleGroup = parent.GetChild(0);
         _line.SetPosition(0, _position);
         _line.SetPosition(1, new Vector2(_cellPosition.x + 0.5f, _cellPosition.y + 0.5f));
+        _line.enabled = false;
         LineSet();
     }
 
     public void LineSet()
     {
         TileBase _getTile;
-        TileBase buOig = _buildOig.GetTile(_cellPosition);
+        TileBase tile = _buildOig.GetTile(_cellPosition);
         bool wasPowered = _isPowered;
         _isPowered = false;
         for (int x = _cellPosition.x - 3; x < _cellPosition.x + 4; x++)
@@ -72,76 +60,21 @@ public class Line : MonoBehaviour
                 _getTile = _buildOig.GetTile(new Vector3Int(x, y, 0));
                 if (_getTile == _tile)
                 {
+                    _line.enabled = true;
                     _line.SetPosition(1, new Vector2(x + 0.5f, y + 0.5f));
                     _isPowered = true;
                     if (!wasPowered)
                     {
-                        if (buOig.name.StartsWith("drillTinTile"))
-                            buildings.ConnectedDrillCount[0][
-                                (int)char.GetNumericValue((char)(buOig.name[^1] - 1))
-                            ]++;
-                        else if (buOig.name.StartsWith("drillIronTile"))
-                            buildings.ConnectedDrillCount[1][
-                                (int)char.GetNumericValue((char)(buOig.name[^1] - 1))
-                            ]++;
-                        else if (buOig.name.StartsWith("drillCopperTile"))
-                            buildings.ConnectedDrillCount[2][
-                                (int)char.GetNumericValue((char)(buOig.name[^1] - 1))
-                            ]++;
-                        else if (buOig.name.StartsWith("drillGoldTile"))
-                            buildings.ConnectedDrillCount[3][
-                                (int)char.GetNumericValue((char)(buOig.name[^1] - 1))
-                            ]++;
-                        else if (buOig == BuildingsList.buildings[5])
-                            buildings.ConnectedFurnaceCount++;
+                        if (tile.name.StartsWith("drillTinTile")) buildings.ConnectedDrillCount[0][(int)char.GetNumericValue((char)(tile.name[^1] - 1))]++;
+                        else if (tile.name.StartsWith("drillIronTile")) buildings.ConnectedDrillCount[1][(int)char.GetNumericValue((char)(tile.name[^1] - 1))]++;
+                        else if (tile.name.StartsWith("drillCopperTile")) buildings.ConnectedDrillCount[2][(int)char.GetNumericValue((char)(tile.name[^1] - 1))]++;
+                        else if (tile.name.StartsWith("drillGoldTile")) buildings.ConnectedDrillCount[3][(int)char.GetNumericValue((char)(tile.name[^1] - 1))]++;
+                        else if (tile == BuildingsList.buildings[5]) buildings.ConnectedFurnaceCount++;
                     }
                     break;
                 }
             }
-            if (_isPowered)
-                break;
-        }
-    }
-
-    private List<Line> linesToReattach = new List<Line>();
-    private Coroutine reattachCoroutine;
-
-    private void OnBecameInvisible()
-    {
-        if (gameObject.activeInHierarchy)
-        {
-            linesToReattach.Add(this);
-            if (reattachCoroutine == null)
-            {
-                reattachCoroutine = StartCoroutine(ReattachCoroutine());
-            }
-        }
-    }
-
-    private IEnumerator ReattachCoroutine()
-    {
-        while (linesToReattach.Count > 0)
-        {
-            yield return new WaitForSeconds(1f);
-            int batchSize = Mathf.Min(linesToReattach.Count, 100);
-            List<Line> batch = linesToReattach.GetRange(0, batchSize);
-            linesToReattach.RemoveRange(0, batchSize);
-            foreach (Line line in batch)
-            {
-                if (line.gameObject.activeInHierarchy)
-                {
-                    line.transform.SetParent(_invisibleGroup, true);
-                }
-            }
-        }
-        reattachCoroutine = null;
-    }
-
-    private void OnBecameVisible()
-    {
-        if (gameObject.activeInHierarchy)
-        {
-            transform.SetParent(_visibleGroup, true);
+            if (_isPowered) break;
         }
     }
 }

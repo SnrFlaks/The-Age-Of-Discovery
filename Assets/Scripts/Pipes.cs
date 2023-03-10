@@ -5,8 +5,14 @@ using UnityEngine.Tilemaps;
 
 public class Pipes : MonoBehaviour
 {
+    public TileBase[] allowedBuildings;
     public TileBase[] pipesArray;
     public Sprite[] pipesSprite;
-    public TileBase[] routerArray;
-    public Sprite[] routerSprite;
+    public TileBase[] DirectionTile;
+    public TileBase[] TurnPipesUp;
+    public TileBase[] TurnPipesRight;
+    public TileBase[] TurnPipesDown;
+    public TileBase[] TurnPipesLeft;
+    public TileBase[] TeePipes;
+    public TileBase CrossPipes;
 }

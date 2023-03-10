@@ -26,34 +26,37 @@ public class TileCursor : MonoBehaviour
     {
         var cellPosition = _ground.WorldToCell(_mainCam.ScreenToWorldPoint(Input.mousePosition));
         gameObject.transform.position = new Vector3(cellPosition.x + 0.5f, cellPosition.y + 0.5f, 0);
-        TileBase tile = _ground.GetTile(cellPosition);
-        string tileName = _ground.GetTile(cellPosition).name;
-        for (var i = 0; i < 9; i++)
+        if ((cellPosition.x >= 0 && cellPosition.x < 500) && (cellPosition.y >= 0 && cellPosition.y < 500))
         {
-            if (!hotBar.HotBarSelect[i]) continue;
-            Sprite hotBarSprite = hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite;
-            TileBase changedTile;
-            changedTile = GetChangedTile(i, hotBarSprite);
-            if (hotBarSprite == cannonHb && cannonGroup.Find($"{new Vector3Int(cellPosition.x, cellPosition.y, 0)}") != null) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = empty;
-            else if (hotBarSprite == cannonHb) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = cannonHb;
-            else if (changedTile == null) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = empty;
-            else if (_objectInGround.GetTile(cellPosition) == changedTile) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = empty;
-            else if (_objectInGround.GetTile(cellPosition) != null && _objectInGround.GetTile(cellPosition).name.StartsWith("TA_Pipes_")) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = empty;
-            else if (changedTile != null)
+            TileBase tile = _ground.GetTile(cellPosition);
+            string tileName = _ground.GetTile(cellPosition).name;
+            for (var i = 0; i < 9; i++)
             {
-                if (changedTile == BuildingsList.buildings[0])
+                if (!hotBar.HotBarSelect[i]) continue;
+                Sprite hotBarSprite = hotBar.transform.GetChild(i).GetChild(0).GetComponentInChildren<Image>().sprite;
+                TileBase changedTile;
+                changedTile = GetChangedTile(i, hotBarSprite);
+                if (hotBarSprite == cannonHb && cannonGroup.Find($"{new Vector3Int(cellPosition.x, cellPosition.y, 0)}") != null) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = empty;
+                else if (hotBarSprite == cannonHb) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = cannonHb;
+                else if (changedTile == null) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = empty;
+                else if (_objectInGround.GetTile(cellPosition) == changedTile) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = empty;
+                else if (_objectInGround.GetTile(cellPosition) != null && _objectInGround.GetTile(cellPosition).name.StartsWith("TA_Pipes_")) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = empty;
+                else if (changedTile != null)
                 {
-                    if (tileName == "tinRandomTile") ChangeSprite(0);
-                    else if (tileName == "ironRandomTile") ChangeSprite(1);
-                    else if (tileName == "copperRandomTile") ChangeSprite(2);
-                    else if (tileName == "goldRandomTile") ChangeSprite(3);
+                    if (changedTile == BuildingsList.buildings[0])
+                    {
+                        if (tileName == "tinRandomTile") ChangeSprite(0);
+                        else if (tileName == "ironRandomTile") ChangeSprite(1);
+                        else if (tileName == "copperRandomTile") ChangeSprite(2);
+                        else if (tileName == "goldRandomTile") ChangeSprite(3);
+                        else transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = hotBar.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite;
+                    }
+                    else if (changedTile == pipes.pipesArray[0]) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = pipes.pipesSprite[0];
                     else transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = hotBar.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite;
                 }
-                else if (changedTile == pipes.pipesArray[0]) transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = pipes.pipesSprite[0];
-                else transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = hotBar.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite;
+                transform.GetChild(1).GetComponent<SpriteRenderer>().color = hotBar.spriteNN[i] == cannonHb ? new Color(1, 1, 1, 0.2f) : new Color(1f, 1f, 1f, 0f);
+                transform.GetChild(2).GetComponent<SpriteRenderer>().color = hotBar.spriteNN[i] == generator ? new Color(1, 1, 1, 0.2f) : new Color(1f, 1f, 1f, 0f);
             }
-            transform.GetChild(1).GetComponent<SpriteRenderer>().color = hotBar.spriteNN[i] == cannonHb ? new Color(1, 1, 1, 0.2f) : new Color(1f, 1f, 1f, 0f);
-            transform.GetChild(2).GetComponent<SpriteRenderer>().color = hotBar.spriteNN[i] == generator ? new Color(1, 1, 1, 0.2f) : new Color(1f, 1f, 1f, 0f);
         }
     }
 
