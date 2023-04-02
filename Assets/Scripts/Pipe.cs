@@ -1,26 +1,36 @@
 using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.Profiling;
 
 public class Pipe : MonoBehaviour
 {
     [SerializeField] private Pipes pipes;
     [SerializeField] private Buildings buildings;
     [SerializeField] private bool[] isNeighbors = new bool[4];
-    public bool[] IsNeighbor
-    {
-        get { return isNeighbors; }
-    }
-    [SerializeField] private bool[] pipesOutput = new bool[4];
-    public bool[] PipesOutput
+    [SerializeField] private bool[][] pipesOutput = new bool[4][];
+    public bool[][] PipesOutput
     {
         get { return pipesOutput; }
         set { pipesOutput = value; }
     }
+    public int numOfNeighbors;
+    public bool isTimelyBlocked = false;
+    public bool isBusy;
+    public Vector3Int pos;
     private Tilemap _objectInGround;
     private Vector3 _position;
     private Vector3Int _cellPosition;
     public TileBase currentTile;
+    public bool[] isNeighboringPipes;
+    public Vector3[] neighboringPipesPosition;
+    public Pipe[] neighboringPipesComponent;
+    private Vector3Int[] offsets = new Vector3Int[] {
+        new Vector3Int(0, 1, 0),
+        new Vector3Int(1, 0, 0),
+        new Vector3Int(0, -1, 0),
+        new Vector3Int(-1, 0, 0)
+    };
     void Awake()
     {
         pipes = transform.parent.GetComponent<Pipes>();
@@ -28,6 +38,10 @@ public class Pipe : MonoBehaviour
         _objectInGround = Buildings._objectInGround;
         buildings = transform.parent.parent.GetComponent<Buildings>();
         _cellPosition = _objectInGround.WorldToCell(_position);
+        isNeighboringPipes = new bool[4];
+        neighboringPipesPosition = new Vector3[4];
+        neighboringPipesComponent = new Pipe[4];
+        for (int i = 0; i < 4; i++) PipesOutput[i] = new bool[4];
     }
     public void PipeDelete()
     {
@@ -35,54 +49,46 @@ public class Pipe : MonoBehaviour
     }
     public void ChangeCurrentTile()
     {
-        for (int i = 0; i < isNeighbors.Length; i++) isNeighbors[i] = CheckNeighbors(i);
+        numOfNeighbors = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            isNeighbors[i] = CheckNeighbors(i);
+            if (isNeighbors[i]) numOfNeighbors++;
+            isNeighboringPipes[i] = pipes._pipeGroupDict.ContainsKey(_cellPosition + offsets[i]);
+        }
         int fromBinaryIndex = Convert.ToInt32($"{Convert.ToInt32(isNeighbors[0])}{Convert.ToInt32(isNeighbors[1])}{Convert.ToInt32(isNeighbors[2])}{Convert.ToInt32(isNeighbors[3])}", 2);
         int index = fromBinaryIndex + (GetCurrentTileType() * 16);
         if (_objectInGround.GetTile(_cellPosition) == pipes.pipesArray[index]) return;
         _objectInGround.SetTile(_cellPosition, pipes.pipesArray[index]);
         currentTile = pipes.pipesArray[index];
+        for (int i = 0; i < 4; i++) ChangeNeighborsData(i);
     }
     private bool CheckNeighbors(int side)
     {
-        bool[] neighbors = new bool[4];
-        for (int i = 0; i < neighbors.Length; i++) neighbors[i] = GetNeighborTileBySide(side);
-        return neighbors[side];
-    }
-    private TileBase CheckTile(TileBase tile)
-    {
-        if (tile != null)
-        {
-            if (tile.name.StartsWith("TA_Pipes_")) return tile;
-            else if (tile.name.StartsWith("drill")) return tile;
-            else for (int i = 0; i < pipes.allowedBuildings.Length; i++) if (tile == pipes.allowedBuildings[i]) return tile;
-        }
-        return null;
-    }
-    private TileBase GetNeighborTileBySide(int side)
-    {
         TileBase tile = null;
-        if (side == 0)
+        Vector3Int adjustedPosition = _cellPosition + offsets[side];
+        tile = _objectInGround.GetTile(adjustedPosition);
+        if (tile != null && tile.name.StartsWith("TA_Pipes_") || buildings._lineGroupDict.TryGetValue(adjustedPosition, out Transform lipe))
         {
-            tile = _objectInGround.GetTile(new Vector3Int(_cellPosition.x, _cellPosition.y + 1, _cellPosition.z));
-            return CheckTile(tile);
+            ChangeNeighborsData(-1);
+            return true;
         }
-        else if (side == 1)
+        return false;
+    }
+    public void ChangeNeighborsData(int side)
+    {
+        Vector3Int adjustedPosition = side == -1 ? _cellPosition : _cellPosition + offsets[side];
+        if (pipes._pipeGroupDict.TryGetValue(adjustedPosition, out Pipe mainPipe))
         {
-            tile = _objectInGround.GetTile(new Vector3Int(_cellPosition.x + 1, _cellPosition.y, _cellPosition.z));
-            return CheckTile(tile);
+            for (int i = 0; i < 4; i++)
+            {
+                if (pipes._pipeGroupDict.TryGetValue(adjustedPosition + offsets[i], out Pipe neiPipe))
+                {
+                    mainPipe.neighboringPipesPosition[i] = neiPipe.transform.localPosition;
+                    mainPipe.neighboringPipesComponent[i] = neiPipe;
+                }
+            }
         }
-        else if (side == 2)
-        {
-            tile = _objectInGround.GetTile(new Vector3Int(_cellPosition.x, _cellPosition.y - 1, _cellPosition.z));
-            return CheckTile(tile);
-        }
-        else if (side == 3)
-        {
-
-            tile = _objectInGround.GetTile(new Vector3Int(_cellPosition.x - 1, _cellPosition.y, _cellPosition.z));
-            return CheckTile(tile);
-        }
-        return tile;
     }
     public int GetCurrentTileType()
     {
@@ -97,33 +103,35 @@ public class Pipe : MonoBehaviour
         }
         return type;
     }
-    public TileBase[] GetNeighborTiles(int shiftF, int shiftS)
+    public TileBase[] GetNeighborTiles(int offsetF, int offsetS)
     {
         TileBase[] tiles = new TileBase[4];
+        Vector3Int[] offsets = new Vector3Int[] {
+            new Vector3Int(0, 1 + offsetF, 0),
+            new Vector3Int(1 + offsetF, 0, 0),
+            new Vector3Int(0, 0 - (1 + offsetS), 0),
+            new Vector3Int(0 - (1 + offsetS), 0, 0)
+        };
         for (int i = 0; i < 4; i++)
         {
-            if (CheckNeighbors(i))
-            {
-                if (i == 0) tiles[i] = _objectInGround.GetTile(new Vector3Int(_cellPosition.x, _cellPosition.y + 1 + shiftF, _cellPosition.z));
-                else if (i == 1) tiles[i] = _objectInGround.GetTile(new Vector3Int(_cellPosition.x + 1 + shiftF, _cellPosition.y, _cellPosition.z));
-                else if (i == 2) tiles[i] = _objectInGround.GetTile(new Vector3Int(_cellPosition.x, _cellPosition.y - (1 + shiftS), _cellPosition.z));
-                else if (i == 3) tiles[i] = _objectInGround.GetTile(new Vector3Int(_cellPosition.x - (1 + shiftS), _cellPosition.y, _cellPosition.z));
-            }
+            Vector3Int adjustedPosition = _cellPosition + offsets[i];
+            if (CheckNeighbors(i)) tiles[i] = _objectInGround.GetTile(adjustedPosition);
         }
         return tiles;
     }
-    public Transform[] GetNeighborPipes(int shiftF, int shiftS)
+    public Transform[] GetNeighborPipes(int offsetF, int offsetS)
     {
+        Vector3Int[] offsets = new Vector3Int[] {
+            new Vector3Int(0, 1 + offsetF, 0),
+            new Vector3Int(1 + offsetF, 0, 0),
+            new Vector3Int(0, 0 - (1 + offsetS), 0),
+            new Vector3Int(0 - (1 + offsetS), 0, 0)
+        };
         Transform[] transforms = new Transform[4];
         for (int i = 0; i < 4; i++)
         {
-            if (CheckNeighbors(i))
-            {
-                if (i == 0 && buildings._pipeGroupDict.TryGetValue(new Vector3Int(_cellPosition.x, _cellPosition.y + 1 + shiftF, 0), out Transform pipe)) transforms[i] = pipe;
-                else if (i == 1 && buildings._pipeGroupDict.TryGetValue(new Vector3Int(_cellPosition.x + 1 + shiftF, _cellPosition.y, 0), out Transform pipe1)) transforms[i] = pipe1;
-                else if (i == 2 && buildings._pipeGroupDict.TryGetValue(new Vector3Int(_cellPosition.x, _cellPosition.y - (1 + shiftS), 0), out Transform pipe2)) transforms[i] = pipe2;
-                else if (i == 3 && buildings._pipeGroupDict.TryGetValue(new Vector3Int(_cellPosition.x - (1 + shiftS), _cellPosition.y, 0), out Transform pipe3)) transforms[i] = pipe3;
-            }
+            Vector3Int adjustedPosition = _cellPosition + offsets[i];
+            if (CheckNeighbors(i) && pipes._pipeGroupDict.TryGetValue(adjustedPosition, out Pipe pipe)) transforms[i] = pipe.transform;
         }
         return transforms;
     }

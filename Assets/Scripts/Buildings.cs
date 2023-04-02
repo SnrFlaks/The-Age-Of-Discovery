@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Jobs;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
@@ -52,8 +54,7 @@ public class Buildings : MonoBehaviour
 
     private Camera mainCam;
 
-    Dictionary<Vector3Int, Transform> _lineGroupDict = new Dictionary<Vector3Int, Transform>();
-    public Dictionary<Vector3Int, Transform> _pipeGroupDict = new Dictionary<Vector3Int, Transform>();
+    public Dictionary<Vector3Int, Transform> _lineGroupDict = new Dictionary<Vector3Int, Transform>();
 
     private void Awake()
     {
@@ -70,6 +71,7 @@ public class Buildings : MonoBehaviour
         ShopMenu.tokens = tokensText;
         ShopMenu.tokens.text = "Tokens: \n" + ShopMenu.intTokens;
     }
+
 
     async private void Update()
     {
@@ -155,15 +157,15 @@ public class Buildings : MonoBehaviour
             {
                 if (_objectInGround.GetTile(cellPosition) == allowedToRotatePipes[i] && hotBar.CreateLock == false && Base.createLockHub == false)
                 {
-                    if (_pipeGroupDict.TryGetValue(new Vector3Int(cellPosition.x, cellPosition.y, 0), out Transform pipe))
+                    if (pipes._pipeGroupDict.TryGetValue(new Vector3Int(cellPosition.x, cellPosition.y, 0), out Pipe pipe))
                     {
                         int shiftF = 0;
                         int shiftS = 0;
                         int limit = 0;
                         _objectInGround.SetTile(cellPosition, rotatedPipes[i]);
-                        pipe.GetComponent<Pipe>().currentTile = _objectInGround.GetTile(_objectInGround.WorldToCell(cellPosition));
-                        TileBase[] tiles = pipe.GetComponent<Pipe>().GetNeighborTiles(shiftF, shiftS);
-                        Transform[] transforms = pipe.GetComponent<Pipe>().GetNeighborPipes(shiftF, shiftS);
+                        pipe.currentTile = _objectInGround.GetTile(_objectInGround.WorldToCell(cellPosition));
+                        TileBase[] tiles = pipe.GetNeighborTiles(shiftF, shiftS);
+                        Transform[] transforms = pipe.GetNeighborPipes(shiftF, shiftS);
                         do
                         {
                             if ((i + 1) % 2 == 0 && (tiles[0] == allowedToRotatePipes[i] || tiles[2] == allowedToRotatePipes[i]))
@@ -180,8 +182,8 @@ public class Buildings : MonoBehaviour
                                     transforms[2].GetComponent<Pipe>().currentTile = _objectInGround.GetTile(_objectInGround.WorldToCell(transforms[2].position));
                                     shiftS++;
                                 }
-                                tiles = pipe.GetComponent<Pipe>().GetNeighborTiles(shiftF, shiftS);
-                                transforms = pipe.GetComponent<Pipe>().GetNeighborPipes(shiftF, shiftS);
+                                tiles = pipe.GetNeighborTiles(shiftF, shiftS);
+                                transforms = pipe.GetNeighborPipes(shiftF, shiftS);
                             }
                             if ((i + 1) % 2 == 1 && (tiles[1] == allowedToRotatePipes[i] || tiles[3] == allowedToRotatePipes[i]))
                             {
@@ -197,8 +199,8 @@ public class Buildings : MonoBehaviour
                                     transforms[3].GetComponent<Pipe>().currentTile = _objectInGround.GetTile(_objectInGround.WorldToCell(transforms[3].position));
                                     shiftS++;
                                 }
-                                tiles = pipe.GetComponent<Pipe>().GetNeighborTiles(shiftF, shiftS);
-                                transforms = pipe.GetComponent<Pipe>().GetNeighborPipes(shiftF, shiftS);
+                                tiles = pipe.GetNeighborTiles(shiftF, shiftS);
+                                transforms = pipe.GetNeighborPipes(shiftF, shiftS);
                             }
                             limit++;
                         } while ((tiles[0] == allowedToRotatePipes[i] || tiles[1] == allowedToRotatePipes[i] || tiles[2] == allowedToRotatePipes[i] || tiles[3] == allowedToRotatePipes[i]) && limit < 500);
@@ -236,11 +238,11 @@ public class Buildings : MonoBehaviour
                 gameObjWithLine.GetComponent<Line>().LineDelete();
                 _lineGroupDict.Remove(cellPosition);
             }
-            if (_pipeGroupDict.TryGetValue(new Vector3Int(cellPosition.x, cellPosition.y, 0), out Transform pipe))
+            if (pipes._pipeGroupDict.TryGetValue(new Vector3Int(cellPosition.x, cellPosition.y, 0), out Pipe pipe))
             {
                 RefreshNeighborsPipes();
-                pipe.GetComponent<Pipe>().PipeDelete();
-                _pipeGroupDict.Remove(cellPosition);
+                pipe.PipeDelete();
+                pipes._pipeGroupDict.Remove(cellPosition);
             }
             if (buOig != emptyTile)
             {
@@ -366,18 +368,26 @@ public class Buildings : MonoBehaviour
     }
     public void PipeCreate()
     {
-        GameObject pipeP = Instantiate(pipePrefab, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f), Quaternion.identity, _pipeGroup);
-        pipeP.name = cellPosition.ToString();
-        pipeP.GetComponent<Pipe>().ChangeCurrentTile();
+        // GameObject pipeP = Instantiate(pipePrefab, new Vector2(cellPosition.x + 0.5f, cellPosition.y + 0.5f), Quaternion.identity, _pipeGroup);
+        // pipeP.name = cellPosition.ToString();
+        // Pipe pipe = pipeP.GetComponent<Pipe>();
+        pipes._pipeGroupDict.Add(cellPosition, Pipes.PipeStruct);
+        pipes._pipeGroupDict[cellPosition].ChangeCurrentTile();
         RefreshNeighborsPipes();
-        _pipeGroupDict[new Vector3Int(cellPosition.x, cellPosition.y, 0)] = pipeP.transform;
     }
     public void RefreshNeighborsPipes()
     {
-        if (_pipeGroupDict.TryGetValue(new Vector3Int(cellPosition.x, cellPosition.y + 1, 0), out Transform pipe)) pipe.GetComponent<Pipe>().ChangeCurrentTile();
-        if (_pipeGroupDict.TryGetValue(new Vector3Int(cellPosition.x + 1, cellPosition.y, 0), out Transform pipe1)) pipe1.GetComponent<Pipe>().ChangeCurrentTile();
-        if (_pipeGroupDict.TryGetValue(new Vector3Int(cellPosition.x, cellPosition.y - 1, 0), out Transform pipe2)) pipe2.GetComponent<Pipe>().ChangeCurrentTile();
-        if (_pipeGroupDict.TryGetValue(new Vector3Int(cellPosition.x - 1, cellPosition.y, 0), out Transform pipe3)) pipe3.GetComponent<Pipe>().ChangeCurrentTile();
+        Vector3Int[] offsets = new Vector3Int[] {
+            new Vector3Int(0, 1, 0),
+            new Vector3Int(1, 0, 0),
+            new Vector3Int(0, -1, 0),
+            new Vector3Int(-1, 0, 0)
+        };
+        for (int i = 0; i < 4; i++)
+        {
+            Vector3Int adjustedPosition = cellPosition + offsets[i];
+            if (pipes._pipeGroupDict.TryGetValue(adjustedPosition, out Pipe pipe)) pipe.ChangeCurrentTile();
+        }
     }
 
     private void Error(string error)

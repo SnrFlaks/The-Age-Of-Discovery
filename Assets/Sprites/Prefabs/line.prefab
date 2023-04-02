@@ -46,11 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05672ae2fefa33c41af7ab755f52cd6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   resourcePrefabs:
-  - {fileID: 1987180764375448950, guid: 6f1402cb6bf4afa4eae3ea514b83c5b0, type: 3}
-  - {fileID: 7937639267009239206, guid: 4c16428704aeccd4b99d5a89a16eb0fe, type: 3}
-  - {fileID: 8606719809901533123, guid: 7e9d646f5b8e4aa4b84fb54ea5cc0e5f, type: 3}
-  - {fileID: 7110464015088233048, guid: 5ae0374c8d988b0499f467bcfed75faa, type: 3}
+  - {fileID: 1987180764375448950, guid: 0691dffe57dca3e48878cf5d47234e2b, type: 3}
+  - {fileID: 7937639267009239206, guid: 31c575827a4b93648b224eef01edbdfb, type: 3}
+  - {fileID: 8606719809901533123, guid: aaf48c916be9ad1488604e3f3abed4c5, type: 3}
+  - {fileID: 7110464015088233048, guid: 6914b8661ee78f74f9ab8e697b061dab, type: 3}
   pipesOutput: 00000000
   capacityLimit: 100
   resourceQuantity: 0
@@ -93,7 +94,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -48143271
-  m_SortingLayer: 5
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}

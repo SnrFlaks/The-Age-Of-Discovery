@@ -11,6 +11,7 @@ TagManager:
   - Cannon
   - Line
   - Pipe
+  - Resource
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Pipe
+  - Resource
   - 
   - 
   - 

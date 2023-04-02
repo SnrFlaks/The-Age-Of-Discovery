@@ -9,6 +9,7 @@ public class Zoom : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
     [SerializeField] private float sensivity;
+    [SerializeField] private Camera meshCamera;
     public static float cameraSize;
 
     private void Start()
@@ -19,7 +20,7 @@ public class Zoom : MonoBehaviour
     void Update()
     {
         cameraSize = virtualCamera.m_Lens.OrthographicSize;
-
+        ResourceManager.camSize = cameraSize;
         if (virtualCamera.m_Lens.OrthographicSize <= 4)
         {
             if (Input.GetAxis("Mouse ScrollWheel") * sensivity < 0) { virtualCamera.m_Lens.OrthographicSize -= Input.GetAxis("Mouse ScrollWheel") * sensivity; }
@@ -29,6 +30,7 @@ public class Zoom : MonoBehaviour
             if (Input.GetAxis("Mouse ScrollWheel") * sensivity > 0) { virtualCamera.m_Lens.OrthographicSize -= Input.GetAxis("Mouse ScrollWheel") * sensivity; }
         }
         else { virtualCamera.m_Lens.OrthographicSize -= Input.GetAxis("Mouse ScrollWheel") * sensivity; }
-
+        meshCamera.orthographicSize = virtualCamera.m_Lens.OrthographicSize;
+        meshCamera.transform.position = virtualCamera.transform.position;
     }
 }
