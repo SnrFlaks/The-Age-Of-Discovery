@@ -8,86 +8,81 @@ using Cysharp.Threading.Tasks;
 
 public class Mining : MonoBehaviour
 {
-    [SerializeField] private ResourceManager resourceManager;
-    [SerializeField] private GameObject[] resourcePrefabs;
-    [SerializeField] private bool[] pipesOutput = new bool[4];
-    [SerializeField] private int capacityLimit = 100;
-    [SerializeField] private int resourceQuantity;
-    private Transform resourcesGroup;
+    private ResourceManager resourceManager;
+    private bool[] pipesOutput = new bool[4];
+    private int capacityLimit = 10;
+    private int resourceQuantity;
     private Tilemap _objectInGround;
-    private Pipes pipes;
+    private PipeManager pipeManager;
     private CancellationTokenSource cancellationTokenSource;
-    private Vector3 _position;
     private Vector3Int _cellPosition;
+    private Line line;
     private readonly Tilemap _buildOig = Buildings._objectInGround;
-    private Vector3Int[] offsets = new Vector3Int[] {
-        new Vector3Int(0, 1, 0),
-        new Vector3Int(1, 0, 0),
-        new Vector3Int(0, -1, 0),
-        new Vector3Int(-1, 0, 0)
-    };
+    private Vector3Int[] offsets = new Vector3Int[] { Vector3Int.up, Vector3Int.right, Vector3Int.down, Vector3Int.left };
     public async void Awake()
     {
-        _position = transform.position;
-        _cellPosition = _buildOig.WorldToCell(_position);
-        _objectInGround = transform.parent.parent.GetChild(1).GetComponent<Tilemap>();
-        pipes = transform.parent.parent.GetChild(6).GetComponent<Pipes>();
+        _cellPosition = _buildOig.WorldToCell(transform.position);
+        _objectInGround = _buildOig;
+        pipeManager = transform.parent.parent.GetChild(6).GetComponent<PipeManager>();
         resourceManager = transform.parent.parent.GetChild(7).GetComponent<ResourceManager>();
-        resourcesGroup = transform.parent.parent.GetChild(7);
+        line = gameObject.GetComponent<Line>();
         cancellationTokenSource = new CancellationTokenSource();
-        if (_buildOig.GetTile(_cellPosition).name.StartsWith("drill")) await MiningOre(cancellationTokenSource.Token);
+        if (_buildOig.GetTile(_cellPosition).name.StartsWith("drill"))
+        {
+            gameObject.GetComponent<Smelting>().enabled = false;
+            await MiningOre(cancellationTokenSource.Token);
+        }
     }
 
     private async UniTask MiningOre(CancellationToken cancellationToken)
     {
-        while (true)
+        while (this != null)
         {
-            if (this != null)
+            if (resourceQuantity >= 0 && pipeManager.resourceNumber < 10000)
             {
-                if (resourceQuantity >= 0 && pipes.resourceNumber < 5000)
+                int number = 0;
+                for (int i = 0; i < 4; i++)
                 {
-                    if (resourceQuantity < capacityLimit && gameObject.GetComponent<Line>()._isPowered) resourceQuantity++;
-                    for (int i = 0; i < 4; i++)
+                    if (pipesOutput[i] || (pipeManager._pipeConnectionsDict.TryGetValue(_cellPosition + offsets[i], out PipeManager.PipeConnection pipeByPosCon) && pipeByPosCon.IsBusy)) number++;
+                    else if (pipeManager._pipeConnectionsDict.TryGetValue(_cellPosition + offsets[i], out PipeManager.PipeConnection pipe) == false) number++;
+                }
+                if (number == 4) for (int i = 0; i < 4; i++) pipesOutput[i] = false;
+                for (int i = 0; i < 4; i++)
+                {
+                    if (resourceQuantity > 1 && pipesOutput[i] == false && GetDrillType() != -1)
                     {
-                        if (resourceQuantity > 1 && pipesOutput[i] == false && GetDrillType() != -1)
+                        if (pipeManager._pipeConnectionsDict.TryGetValue(_cellPosition + offsets[i], out PipeManager.PipeConnection pipeByPosCon))
                         {
-                            if (pipes._pipeGroupDict.TryGetValue(_cellPosition + offsets[i], out Pipe pipeByPos) && pipeByPos.isBusy == false)
+                            if (pipeByPosCon.IsBusy == false && _objectInGround.GetTile(_cellPosition + offsets[i]) != pipeManager.DirectionTile[(i + 2) % 4])
                             {
-                                if (_objectInGround.GetTile(_cellPosition + offsets[i]) != pipes.DirectionTile[(i + 2) % 4])
+                                pipeByPosCon.SetValue(true);
+                                pipeManager._pipeConnectionsDict[_cellPosition + offsets[i]] = pipeByPosCon;
+                                int key = pipeManager.resourceNumber;
+                                if (resourceManager._deadIndices.Count > 0)
                                 {
-                                    // GameObject res = Instantiate(resourcePrefabs[GetDrillType()], GetPositionForInstantiate(i), Quaternion.identity, resourcesGroup);
-                                    // res.GetComponent<Resource>().lastDirection = i;
-                                    pipeByPos.isBusy = true;
-                                    int key = pipes.resourceNumber;
-                                    if (resourceManager._deadIndices.Count > 0)
-                                    {
-                                        key = resourceManager._deadIndices.First();
-                                        resourceManager._deadIndices.Remove(key);
-                                        resourceManager._deadIndices.Add(pipes.resourceNumber);
-                                    }
-                                    ResourceManager.Resource resource = new ResourceManager.Resource();
-                                    resource.position = GetPositionForInstantiate(i);
-                                    resource.lastDirection = i;
-                                    resource.targetPosition = _cellPosition + offsets[i] + new Vector3(0.5f, 0.5f);
-                                    resource.oreType = GetDrillType();
-                                    resourceManager._resourcesDict.Add(key, resource);
-                                    resourceManager.keyArray = resourceManager._resourcesDict.Keys.ToArray();
-                                    resourceManager.resourceDictCount = resourceManager._resourcesDict.Count;
-                                    pipes.resourceNumber++;
-                                    resourceQuantity -= 1;
-                                    pipesOutput[i] = true;
-                                    break;
+                                    key = resourceManager._deadIndices.First();
+                                    resourceManager._deadIndices.Remove(key);
+                                    resourceManager._deadIndices.Add(pipeManager.resourceNumber);
                                 }
+                                ResourceManager.Resource resource = new ResourceManager.Resource();
+                                resource.type = GetDrillType();
+                                resource.position = GetPositionForInstantiate(i);
+                                resource.lastDirection = i;
+                                resource.targetPosition = _cellPosition + offsets[i] + new Vector3(0.5f, 0.5f);
+                                resourceManager._resourcesDict.Add(key, resource);
+                                resourceManager.keyArray = resourceManager._resourcesDict.Keys.ToArray();
+                                resourceManager.resourceDictCount = resourceManager._resourcesDict.Count;
+                                pipeManager.resourceNumber++;
+                                resourceQuantity--;
+                                pipesOutput[i] = true;
+                                break;
                             }
-                            else if (pipes._pipeGroupDict.TryGetValue(_cellPosition + offsets[i], out Pipe pipe) == false || pipe.isBusy) pipesOutput[i] = true;
                         }
                     }
-                    int number = 0;
-                    for (int i = 0; i < 4; i++) if (pipesOutput[i]) number++;
-                    if (number == 4) for (int i = 0; i < 4; i++) pipesOutput[i] = false;
                 }
+                if (resourceQuantity < capacityLimit && line._isPowered) resourceQuantity++;
             }
-            await UniTask.Delay(1, cancellationToken: cancellationToken);
+            await UniTask.Delay(1000, cancellationToken: cancellationToken);
         }
     }
     private Vector3 GetPositionForInstantiate(int side)

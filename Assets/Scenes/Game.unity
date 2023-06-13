@@ -3990,7 +3990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f10b049f151d6384faebeba13f3a9162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipes: {fileID: 948863506}
+  pipeManager: {fileID: 948863506}
   buildings: {fileID: 876926839}
   mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
   material:
@@ -3998,6 +3998,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: e0e1bd9e00ddef4428bd41861d2acb26, type: 2}
   - {fileID: 2100000, guid: 97ab19025f55ece47bb61417838c5af9, type: 2}
   - {fileID: 2100000, guid: c4844977fc0d64345959fda05ffd72df, type: 2}
+  - {fileID: 2100000, guid: a25a421aa0f031e45ae922b850eca304, type: 2}
+  - {fileID: 2100000, guid: 37880ac8228632740a01df26d77e528c, type: 2}
+  - {fileID: 2100000, guid: 6237402ae6a92ca43ad32a1b781b07a8, type: 2}
+  - {fileID: 2100000, guid: 8cf2c84018f0e9949bd7c8f9c25775ce, type: 2}
   keyArray: 
   resourceDictCount: 0
 --- !u!1 &254221034
@@ -7199,6 +7203,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437117863}
   m_CullTransparentMesh: 1
+--- !u!1 &447748812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 447748813}
+  - component: {fileID: 447748814}
+  m_Layer: 0
+  m_Name: MiningManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &447748813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447748812}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 876926838}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &447748814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447748812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92175ced05fb93b4eb1dd8678092d7e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceManager: {fileID: 246272247}
+  pipeManager: {fileID: 948863506}
+  buildings: {fileID: 876926839}
+  keyArray: []
+  drillDictCount: 0
 --- !u!1 &465689037
 GameObject:
   m_ObjectHideFlags: 0
@@ -13480,6 +13533,7 @@ Transform:
   - {fileID: 759038141}
   - {fileID: 948863505}
   - {fileID: 246272246}
+  - {fileID: 447748813}
   - {fileID: 1066860002}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -13496,7 +13550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60cf41da8e75b9f46a6ddcd791738923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipes: {fileID: 948863506}
+  pipeManager: {fileID: 948863506}
+  miningManager: {fileID: 447748814}
   hotBar: {fileID: 4204435293025274299}
   errorText: {fileID: 1706522902}
   cannon: {fileID: 5856164682774362849, guid: 8351083fa1f0cd64dbef13a9c4e28028, type: 3}
@@ -14058,6 +14113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f2a49846e983545a16047962bf2fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worldGeneration: {fileID: 876926841}
   inventoryWindow: {fileID: 1797927767}
   menuWindow: {fileID: 576042878}
   buildings: {fileID: 876926839}
@@ -15197,7 +15253,7 @@ GameObject:
   - component: {fileID: 948863505}
   - component: {fileID: 948863506}
   m_Layer: 0
-  m_Name: PipeGroup
+  m_Name: PipeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15431,24 +15487,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 175c0ae080e92714cbd5a19ab75f9565, type: 2}
   - {fileID: 11400000, guid: 41844bf924d4c114ba6dee17e5ad9a41, type: 2}
   - {fileID: 11400000, guid: 7c245b50bd6dc654aaa3000ee0a15aa6, type: 2}
-  TurnPipesUp:
-  - {fileID: 11400000, guid: ddafe58005dc3e64b97ca820e0789201, type: 2}
-  - {fileID: 11400000, guid: 70956acb6dff0e14fb9fd40bc2619867, type: 2}
-  TurnPipesRight:
-  - {fileID: 11400000, guid: ddafe58005dc3e64b97ca820e0789201, type: 2}
-  - {fileID: 11400000, guid: 805bb1f4b944fe849bdafb13da9ef868, type: 2}
-  TurnPipesDown:
-  - {fileID: 11400000, guid: 805bb1f4b944fe849bdafb13da9ef868, type: 2}
-  - {fileID: 11400000, guid: 26f9d429a9d60694dbfb6c7cbeaa3dd0, type: 2}
-  TurnPipesLeft:
-  - {fileID: 11400000, guid: 70956acb6dff0e14fb9fd40bc2619867, type: 2}
-  - {fileID: 11400000, guid: 26f9d429a9d60694dbfb6c7cbeaa3dd0, type: 2}
-  TeePipes:
-  - {fileID: 11400000, guid: 895984c1070ff094892337672cccf4d9, type: 2}
-  - {fileID: 11400000, guid: 883a6516af67ecf459575ec301d5b7db, type: 2}
-  - {fileID: 11400000, guid: 5a5021787f2f9b5458374017899a2107, type: 2}
-  - {fileID: 11400000, guid: 6d82529dcafee9342a709032ff9993cd, type: 2}
-  CrossPipe: {fileID: 11400000, guid: 16454f3227d05194787d8320757ee8c7, type: 2}
 --- !u!1 &949255837
 GameObject:
   m_ObjectHideFlags: 0
@@ -17367,7 +17405,7 @@ Transform:
   - {fileID: 581409251817548490}
   - {fileID: 347333698}
   m_Father: {fileID: 876926838}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1066860003
 MonoBehaviour:
@@ -35680,7 +35718,6 @@ GameObject:
   - component: {fileID: 2064323138}
   - component: {fileID: 2064323140}
   - component: {fileID: 2064323139}
-  - component: {fileID: 2064323141}
   m_Layer: 0
   m_Name: objectInGround
   m_TagString: Build
@@ -38176,7 +38213,7 @@ Tilemap:
   m_AnimationFrameRate: 15
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -130, y: -64, z: 0}
-  m_Size: {x: 454, y: 467, z: 1}
+  m_Size: {x: 462, y: 467, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -38196,22 +38233,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &2064323141
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064323137}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
 --- !u!1 &2064950877
 GameObject:
   m_ObjectHideFlags: 0

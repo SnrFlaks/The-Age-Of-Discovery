@@ -51,7 +51,7 @@ public class EnemiesMove : MonoBehaviour
         }
         else if (col.gameObject.tag == "Cannon")
         {
-            Buildings.cannonBoolArr[(int)col.transform.position.x][(int)col.transform.position.y] = false;
+            //Buildings.cannonBoolArr[(int)col.transform.position.x][(int)col.transform.position.y] = false;
             hp -= 25;
             Destroy(col.gameObject);
             if (hp == 0) Destroy(gameObject);

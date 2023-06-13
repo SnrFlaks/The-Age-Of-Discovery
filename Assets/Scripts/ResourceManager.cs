@@ -14,56 +14,39 @@ using Cysharp.Threading.Tasks;
 
 public class ResourceManager : MonoBehaviour
 {
-    [SerializeField] private Pipes pipes;
+    [SerializeField] private PipeManager pipeManager;
     [SerializeField] private Buildings buildings;
     [SerializeField] private Mesh mesh;
     [SerializeField] private Material[] material;
-    [SerializeField] private Matrix4x4[][] matrixPacks;
     private int numRows;
     private int numColumns;
-    private TileBase[] directionTile;
-    private TileBase[][] turnPipes = new TileBase[4][];
-    private TileBase[] teePipes = new TileBase[4];
-    private TileBase crossPipe;
     private int numOfNeighbors;
-    //public Dictionary<int, Transform> _resourcesDict = new Dictionary<int, Transform>();
-    //public Dictionary<int, Resource> _resourcesComponentDict = new Dictionary<int, Resource>();
+    private Camera mainCam;
     public Dictionary<int, Resource> _resourcesDict = new Dictionary<int, Resource>();
     public HashSet<int> _deadIndices = new HashSet<int>();
     private int[] indices = new int[3];
+    public Matrix4x4[][][] matrixPacks;
     public int[] keyArray;
     public int resourceDictCount = 0;
-    private Camera mainCam;
     public static float camSize;
 
-    private Vector3Int[] offsets = new Vector3Int[] {
-        new Vector3Int(0, 1, 0),
-        new Vector3Int(1, 0, 0),
-        new Vector3Int(0, -1, 0),
-        new Vector3Int(-1, 0, 0)
+    private Vector3[] offsets = new Vector3[] {
+        new Vector3(0.5f, 1.5f, 0),
+        new Vector3(1.5f, 0.5f, 0),
+        new Vector3(0.5f, -0.5f, 0),
+        new Vector3(-0.5f, 0.5f, 0)
     };
+    private Vector3Int[] offsetsInt = new Vector3Int[] { Vector3Int.up, Vector3Int.right, Vector3Int.down, Vector3Int.left };
     private Quaternion resourceRotation = Quaternion.identity;
-    private Vector3 resourceScale = new Vector3(0.85f, 0.85f, 0.85f);
+    private Vector3 resourceScale = new Vector3(0.6f, 0.6f, 0.6f);
     private void Awake()
     {
-        directionTile = pipes.DirectionTile;
-        turnPipes[0] = pipes.TurnPipesUp;
-        turnPipes[1] = pipes.TurnPipesRight;
-        turnPipes[2] = pipes.TurnPipesDown;
-        turnPipes[3] = pipes.TurnPipesLeft;
-        teePipes = pipes.TeePipes;
-        crossPipe = pipes.CrossPipe;
         mainCam = Camera.main;
-        matrixPacks = new Matrix4x4[100][];
-        for (int i = 0; i < 100; i++)
+        matrixPacks = new Matrix4x4[8][][];
+        for (int i = 0; i < 8; i++)
         {
-            matrixPacks[i] = new Matrix4x4[1023];
-            for (int j = 0; j < 1023; j++)
-            {
-                Matrix4x4 matrix = matrixPacks[i][j];
-                matrix = Matrix4x4.Scale(resourceScale) * matrix;
-                matrixPacks[i][j] = matrix;
-            }
+            matrixPacks[i] = new Matrix4x4[100][];
+            for (int j = 0; j < 100; j++) matrixPacks[i][j] = new Matrix4x4[1023];
         }
     }
 
@@ -77,14 +60,11 @@ public class ResourceManager : MonoBehaviour
         {
             get
             {
-                if (inpDir == null) inpDir = new int[4] { 2, 3, 1, 0 };
+                if (inpDir == null) inpDir = new int[4] { 2, 3, 0, 1 };
                 return inpDir;
             }
         }
-        public Pipe startPipe { get; set; }
-        public Pipe lastPipe { get; set; }
-        public bool isStart { get; set; }
-        public int oreType { get; set; }
+        public int type { get; set; }
     }
 
     [BurstCompile]
@@ -92,125 +72,156 @@ public class ResourceManager : MonoBehaviour
     {
         Profiler.BeginSample("Pipe.Calculating");
         float deltaTime = Time.deltaTime;
-        for (int s = 0; s < 100000; s++)
+        for (int k = 0; k < resourceDictCount; k++)
         {
-            for (int k = 0; k < resourceDictCount; k++)
+            //Debug.Log("R: " + k / 1023 + " - " + k % 1023 + "Count: " + resourceDictCount + " - " + matrixPacks[k / 1023][k % 1023]);
+            if (_resourcesDict.TryGetValue(keyArray[k], out Resource r))
             {
-                if (_resourcesDict.TryGetValue(keyArray[k], out Resource r))
+                Vector3 position = r.position;
+                Vector3Int positionInt = Vector3Int.FloorToInt(position);
+                Vector3 previousTargetPosition = r.targetPosition;
+                if (pipeManager._pipeConnectionsDict.TryGetValue(positionInt, out PipeManager.PipeConnection pipeByPos))
                 {
-                    numRows = k / 1023;
-                    numColumns = k % 1023;
-                    Vector3 position = r.position;
-                    if (pipes._pipeGroupDict.TryGetValue(Vector3Int.FloorToInt(position), out Pipe pipeByPos))
+                    numOfNeighbors = pipeByPos.numOfNeighbors;
+                    if ((position - r.targetPosition).sqrMagnitude < 0.001f)
                     {
-                        if (r.lastPipe != pipeByPos) if (Enumerable.ReferenceEquals(r.lastPipe, null) == false) r.lastPipe.isBusy = false;
-                        r.lastPipe = pipeByPos;
-                        numOfNeighbors = pipeByPos.numOfNeighbors;
-                        //Profiler.BeginSample("Pipe.ChangeTargetPosition");
-                        if ((position - r.targetPosition).sqrMagnitude < 0.01f)
+                        if (numOfNeighbors == 2)
                         {
-                            if (numOfNeighbors == 2)
+                            int index = TGP_DirectionAndTurn(pipeByPos, positionInt, r.lastDirection, r.inputDirection[r.lastDirection], pipeByPos.direction);
+                            if (index >= 0)
                             {
-                                int index = TGP_DirectionAndTurn(pipeByPos.isNeighboringPipes, r.lastDirection, r.inputDirection[r.lastDirection], pipeByPos.neighboringPipesComponent, pipeByPos.currentTile);
-                                if (index >= 0)
-                                {
-                                    r.targetPosition = pipeByPos.neighboringPipesPosition[index];
-                                    pipeByPos.neighboringPipesComponent[index].isBusy = true;
-                                    r.lastDirection = index;
-                                }
+                                r.targetPosition = positionInt + offsets[index];
+                                r.lastDirection = index;
+                                PipeManager.PipeConnection targetPipe = pipeManager._pipeConnectionsDict[positionInt + offsetsInt[index]];
+                                targetPipe.SetValue(true);
+                                pipeByPos.SetValue(false);
+                                pipeManager._pipeConnectionsDict[positionInt + offsetsInt[index]] = targetPipe;
+                                pipeManager._pipeConnectionsDict[positionInt] = pipeByPos;
                             }
-                            else if (numOfNeighbors > 2)
+                        }
+                        else if (numOfNeighbors > 2)
+                        {
+                            int index = TGP_TeeAndCross(pipeByPos, positionInt, r.inputDirection[r.lastDirection], numOfNeighbors);
+                            if (index >= 0)
                             {
-                                int index = TGP_TeeAndCross(pipeByPos.isNeighboringPipes, r.inputDirection[r.lastDirection], pipeByPos.neighboringPipesComponent, numOfNeighbors);
-                                if (index >= 0)
+                                r.targetPosition = positionInt + offsets[index];
+                                PipeManager.PipeConnection targetPipe = pipeManager._pipeConnectionsDict[positionInt + offsetsInt[index]];
+                                targetPipe.SetValue(true);
+                                pipeByPos.SetValues(false, index, true);
+                                pipeManager._pipeConnectionsDict[positionInt + offsetsInt[index]] = targetPipe;
+                                pipeManager._pipeConnectionsDict[positionInt] = pipeByPos;
+                                int num = 0;
+                                for (int i = 0; i < 4; i++)
                                 {
-                                    r.targetPosition = pipeByPos.neighboringPipesPosition[index];
-                                    pipeByPos.neighboringPipesComponent[index].isBusy = true;
-                                    pipeByPos.neighboringPipesComponent[index].isTimelyBlocked = true;
-                                    r.lastDirection = index;
-                                    int num = 0;
-                                    for (int i = 0; i < 4; i++)
+                                    if (pipeByPos.IsConnected[i] == false || pipeByPos.IsTemporarilyBlocked[i] || i == r.inputDirection[r.lastDirection])
                                     {
-                                        if (pipeByPos.isNeighboringPipes[i] || i == r.inputDirection[r.lastDirection] || (pipeByPos.isNeighboringPipes[i] && pipeByPos.neighboringPipesComponent[i].isTimelyBlocked))
+                                        if (++num == 4)
                                         {
-                                            if (++num == 4) for (int j = 0; j < 4; j++) if (pipeByPos.isNeighboringPipes[j]) pipeByPos.neighboringPipesComponent[j].isTimelyBlocked = false;
+                                            pipeByPos.IsTemporarilyBlocked = new bool[4];
+                                            pipeManager._pipeConnectionsDict[positionInt] = pipeByPos;
                                         }
                                     }
-                                    //  || r.neighboringPipesComponent[i].isBusy
                                 }
+                                r.lastDirection = index;
                             }
                         }
-                        if ((position - r.targetPosition).sqrMagnitude > 0.01f || numOfNeighbors != 1 && pipeByPos.isNeighboringPipes[r.lastDirection])
-                        {
-                            matrixPacks[numRows][numColumns] = Matrix4x4.TRS(Vector3.MoveTowards(position, r.targetPosition, 10 * deltaTime), resourceRotation, resourceScale);
-                            r.position = matrixPacks[numRows][numColumns].GetPosition();
-                        }
-                        //Profiler.EndSample();
                     }
-                    else
+                    if ((position - r.targetPosition).sqrMagnitude > 0.001f || numOfNeighbors != 1 && pipeByPos.IsConnected[r.lastDirection])
                     {
-                        _deadIndices.Add(keyArray[k]);
+                        numRows = keyArray[k] / 1023;
+                        numColumns = keyArray[k] % 1023;
+                        matrixPacks[r.type][numRows][numColumns] = Matrix4x4.TRS(Vector3.MoveTowards(position, r.targetPosition, 3 * deltaTime), resourceRotation, resourceScale);
+                        r.position = matrixPacks[r.type][numRows][numColumns].GetPosition();
+                    }
+                }
+                else if (r.type < 4 && buildings._lineGroupDict.TryGetValue(positionInt, out Transform transform))
+                {
+                    Smelting smelting = transform.GetComponent<Smelting>();
+                    if (smelting.enabled)
+                    {
+                        smelting._resourceDict.Add(keyArray[k], r);
+                        smelting.keyArray = smelting._resourceDict.Keys.ToArray();
+                        smelting.resourceDictCount = smelting._resourceDict.Count;
+                        matrixPacks[r.type][keyArray[k] / 1023][keyArray[k] % 1023] = new Matrix4x4();
                         _resourcesDict.Remove(keyArray[k]);
                         resourceDictCount = _resourcesDict.Count;
                         keyArray = _resourcesDict.Keys.ToArray();
-                        if (r.lastPipe) r.lastPipe.isBusy = false;
                     }
+                    else ResourceDelete(k, r, positionInt, previousTargetPosition);
                 }
+                else ResourceDelete(k, r, positionInt, previousTargetPosition);
             }
         }
         Profiler.BeginSample("Pipe.Draw");
         if (camSize < 55 && resourceDictCount > 0)
         {
             int limit = Mathf.CeilToInt(resourceDictCount / 1023) + 1;
-            for (int i = 0; i < limit; i++)
+            for (int i = 0; i < 8; i++)
             {
-                Graphics.DrawMeshInstanced(mesh, 0, material[0], matrixPacks[i]);
-            }
-        }
-        Profiler.EndSample();
-        Profiler.EndSample();
-    }
-
-    [BurstCompile]
-    private int TGP_DirectionAndTurn(bool[] isPipe, int lastDirection, int inputSide, Pipe[] pipeArrayComp, TileBase currentTile)
-    {
-        // Profiler.BeginSample("Pipe.DirOrTurn");
-        if (isPipe[lastDirection])
-        {
-            if (pipeArrayComp[lastDirection].isBusy == false && currentTile == directionTile[lastDirection]) return lastDirection;
-            else if (isPipe[inputSide] && currentTile == directionTile[inputSide] && pipeArrayComp[inputSide].isBusy == false) return inputSide;
-        }
-        else
-        {
-            for (int j = 0; j < 4; j++)
-            {
-                if (isPipe[j])
+                for (int j = 0; j < limit; j++)
                 {
-                    if (j != inputSide && pipeArrayComp[j].isBusy == false) return j;
-                    else if (j == inputSide && isPipe[inputSide] && pipeArrayComp[j].isBusy && pipeArrayComp[inputSide].isBusy == false) return inputSide;
+                    Graphics.DrawMeshInstanced(mesh, 0, material[i], matrixPacks[i][j]);
                 }
             }
         }
-        // Profiler.EndSample();
+        Profiler.EndSample();
+        Profiler.EndSample();
+    }
+
+    [BurstCompile]
+    private int TGP_DirectionAndTurn(PipeManager.PipeConnection currentPipe, Vector3Int pos, int lastDirection, int inputSide, int direction)
+    {
+        //if (direction == lastDirection) Debug.Log(direction + " - " + lastDirection + " - " + currentPipe.IsConnected[direction] + " - " + pipeManager._pipeConnectionsDict[pos + offsetsInt[direction]].IsBusy);
+        if ((direction == lastDirection || direction == inputSide) && pipeManager._pipeConnectionsDict.TryGetValue(pos + offsetsInt[direction], out PipeManager.PipeConnection pipe) && currentPipe.IsConnected[direction] && pipe.IsBusy == false) return direction;
+        else if (direction == -1)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                if (pipeManager._pipeConnectionsDict.TryGetValue(pos + offsetsInt[j], out PipeManager.PipeConnection pipeTurn) && currentPipe.IsConnected[j])
+                {
+                    if (j != inputSide && pipeTurn.IsBusy == false) return j;
+                    else if (pipeManager._pipeConnectionsDict.TryGetValue(Vector3Int.FloorToInt(pos + offsets[inputSide]), out PipeManager.PipeConnection pipeTurnInp) && currentPipe.IsConnected[inputSide])
+                    {
+                        if (j == inputSide && pipeTurnInp.IsBusy && pipeTurnInp.IsBusy == false) return inputSide;
+                    }
+                }
+            }
+        }
         return -1;
     }
 
     [BurstCompile]
-    private int TGP_TeeAndCross(bool[] isPipe, int inputSide, Pipe[] pipeArrayComp, int numOfNeighbors)
+    private int TGP_TeeAndCross(PipeManager.PipeConnection currentPipe, Vector3Int pos, int inputSide, int numOfNeighbors)
     {
-        // Profiler.BeginSample("Pipe.CalculateSideForMoving");
         int numOfBlockedSides = 0;
         for (int j = 0; j < 4; j++)
         {
-            if (j != inputSide && isPipe[j])
+            //Debug.Log("j:" + j);
+            if (j != inputSide && currentPipe.IsConnected[j] && pipeManager._pipeConnectionsDict.TryGetValue(pos + offsetsInt[j], out PipeManager.PipeConnection pipeCon))
             {
-                if (pipeArrayComp[j].isBusy == false && pipeArrayComp[j].isTimelyBlocked == false) return j;
-                else if (pipeArrayComp[j].isBusy || pipeArrayComp[j].isTimelyBlocked) numOfBlockedSides++;
+                //Debug.Log("IsBusy: " + pipeCon.IsBusy + " - " + currentPipe.IsTemporarilyBlocked[j]);
+                if (pipeCon.IsBusy == false && currentPipe.IsTemporarilyBlocked[j] == false) return j;
+                else if (pipeCon.IsBusy || currentPipe.IsTemporarilyBlocked[j]) numOfBlockedSides++;
             }
+            else if (currentPipe.IsConnected[j] == false) numOfBlockedSides++;
         }
-        for (int i = 0; i < 4; i++) if (numOfBlockedSides >= (numOfNeighbors - 2) && isPipe[i] && pipeArrayComp[i].isBusy == false) return i;
-        if (isPipe[inputSide] && numOfBlockedSides == (numOfNeighbors - 1) && pipeArrayComp[inputSide].isBusy == false) return inputSide;
-        // Profiler.EndSample();
+        //Debug.Log("Num: " + numOfBlockedSides);
+        for (int i = 0; i < 4; i++) if (numOfBlockedSides >= (numOfNeighbors - 2) && pipeManager._pipeConnectionsDict.TryGetValue(pos + offsetsInt[i], out PipeManager.PipeConnection pipeCon) && pipeCon.IsBusy == false) return i;
+        if (pipeManager._pipeConnectionsDict.TryGetValue(pos + offsetsInt[inputSide], out PipeManager.PipeConnection pipeInput) && numOfBlockedSides == (numOfNeighbors - 1) && pipeInput.IsBusy == false) return inputSide;
         return -1;
+    }
+
+    private void ResourceDelete(int k, Resource r, Vector3Int positionInt, Vector3 previousTargetPosition)
+    {
+        if (pipeManager._pipeConnectionsDict.TryGetValue(positionInt + offsetsInt[r.lastDirection], out PipeManager.PipeConnection targetPipe) && previousTargetPosition == r.targetPosition && targetPipe.IsBusy)
+        {
+            targetPipe.SetValue(false);
+            pipeManager._pipeConnectionsDict[positionInt + offsetsInt[r.lastDirection]] = targetPipe;
+        }
+        matrixPacks[r.type][keyArray[k] / 1023][keyArray[k] % 1023] = new Matrix4x4();
+        _deadIndices.Add(keyArray[k]);
+        _resourcesDict.Remove(keyArray[k]);
+        resourceDictCount = _resourcesDict.Count;
+        keyArray = _resourcesDict.Keys.ToArray();
     }
 }

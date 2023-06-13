@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class TileCursor : MonoBehaviour
 {
-    [SerializeField] private Pipes pipes;
+    [SerializeField] private PipeManager pipes;
     private Camera _mainCam;
     private Tilemap _ground;
     private Tilemap _objectInGround;
@@ -25,6 +25,7 @@ public class TileCursor : MonoBehaviour
     private void Update()
     {
         var cellPosition = _ground.WorldToCell(_mainCam.ScreenToWorldPoint(Input.mousePosition));
+        FPSView.cellPosition = cellPosition;
         gameObject.transform.position = new Vector3(cellPosition.x + 0.5f, cellPosition.y + 0.5f, 0);
         if ((cellPosition.x >= 0 && cellPosition.x < 500) && (cellPosition.y >= 0 && cellPosition.y < 500))
         {

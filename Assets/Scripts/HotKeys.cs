@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class HotKeys : MonoBehaviour
 {
+    [SerializeField] private WorldGeneration worldGeneration;
     [SerializeField] private GameObject inventoryWindow;
     [SerializeField] private GameObject menuWindow;
     [SerializeField] private Buildings buildings;
@@ -42,6 +43,10 @@ public class HotKeys : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.R))
             {
                 buildings.pipeRotateMode = !buildings.pipeRotateMode;
+            }
+            else if (Input.GetKeyDown(KeyCode.G))
+            {
+                worldGeneration.GenerateWorld();
             }
         }
     }
